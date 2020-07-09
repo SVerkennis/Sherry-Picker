@@ -1,5 +1,7 @@
-# Sherry-Picker
-Share your food with your neighbours and do something good. 
+# Sherry Picker
+Share your selfgrown food with the peolple around you!
+
+If you don't have the time, not that much hunger, let someone else do the harvest and don't let it go to waste.
 
 
 Frontend
