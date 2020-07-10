@@ -10,9 +10,9 @@ const styles = makeStyles((theme) => ({
         backgroundRepeat: 'no-repeat',
         backgroundImage: 'url("images/backgroundShape.png")',
         backgroundPosition: 'center',
-        minHeight: '95vh',
+        minHeight: '100vh',
         minWidth: '70vw',
-        marginTop: "30px",
+        marginTop: "35px",
     }
 
 }));
@@ -27,7 +27,7 @@ export default function MainContent() {
             container
             className={classes.shapeContainer}
         >
-            <div></div>
+            <ShapeContent/>
         </Grid>
     </>
     );

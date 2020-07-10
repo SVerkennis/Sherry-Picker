@@ -7,19 +7,18 @@ import { makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import {Box} from '@material-ui/core';
-import { shadows } from '@material-ui/system';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
     menuButton: {
-        marginTop: '-5px',
+        marginTop: '5px',
         marginLeft: '5px',
         marginRight: theme.spacing(1),
     },
     searchButton: {
-        marginTop: '13px',
+        marginTop: '25px',
     },
     toolbar: {
         minHeight: 80,
