@@ -16,10 +16,9 @@ const useStyles = makeStyles((theme) => ({
         marginRight: theme.spacing(2),
     },
     toolbar: {
-        minHeight: 128,
+        minHeight: 80,
         alignItems: 'flex-start',
         paddingTop: theme.spacing(1),
-        paddingBottom: theme.spacing(2),
     },
     title: {
         flexGrow: 1,
@@ -37,18 +36,17 @@ export default function ProminentAppBar() {
                     <IconButton
                         edge="start"
                         className={classes.menuButton}
-                        color="inherit"
+                        color="secondary"
                         aria-label="open drawer"
                     >
                         <MenuIcon />
                     </IconButton>
                     <Typography className={classes.title} variant="h5" noWrap>
-                        Material-UI
                     </Typography>
-                    <IconButton aria-label="search" color="inherit">
+                    <IconButton aria-label="search" color="secondary">
                         <SearchIcon />
                     </IconButton>
-                    <IconButton aria-label="display more actions" edge="end" color="inherit">
+                    <IconButton aria-label="display more actions" edge="end" color="secondary">
                         <MoreIcon />
                     </IconButton>
                 </Toolbar>
