@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
     },
     menuButton: {
         marginTop: '-5px',
+        marginLeft: '5px',
         marginRight: theme.spacing(1),
     },
     searchButton: {
@@ -30,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
         alignSelf: 'flex-end',
     },
     logo: {
-        marginLeft: '2em',
+        marginLeft: '1.8em',
         textAlign: 'center',
         maxWidth: '100%',
         maxHeight: '100%',
@@ -47,7 +48,7 @@ export default function ProminentAppBar() {
             bgcolor="background.paper"
             m={0}
             p={0}
-            style={{ width: '4', height: '4' }}
+            style={{ width: '0', height: '0' }}
             className={classes.root}>
             <AppBar position="static">
                 <Toolbar className={classes.toolbar}>

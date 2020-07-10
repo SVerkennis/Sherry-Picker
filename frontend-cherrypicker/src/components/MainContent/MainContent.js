@@ -7,12 +7,12 @@ import { makeStyles } from '@material-ui/core/styles';
 const styles = makeStyles((theme) => ({
 
     shapeContainer: {
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
         backgroundImage: 'url("images/backgroundShape.png")',
-        minHeight: "95vh",
-        marginTop: "5px",
-
+        backgroundPosition: 'center',
+        minHeight: '95vh',
+        minWidth: '70vw',
+        marginTop: "30px",
     }
 
 }));
@@ -27,7 +27,7 @@ export default function MainContent() {
             container
             className={classes.shapeContainer}
         >
-            <div># TEILEN</div>
+            <div></div>
         </Grid>
     </>
     );
