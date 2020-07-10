@@ -8,6 +8,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import MoreIcon from '@material-ui/icons/MoreVert';
 
+
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -40,6 +41,7 @@ export default function ProminentAppBar() {
                         aria-label="open drawer"
                     >
                         <MenuIcon />
+                        <img src="./images/NewLogo.png"/>
                     </IconButton>
                     <Typography className={classes.title} variant="h5" noWrap>
                     </Typography>
