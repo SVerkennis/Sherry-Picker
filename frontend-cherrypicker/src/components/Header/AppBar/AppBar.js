@@ -6,9 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import MoreIcon from '@material-ui/icons/MoreVert';
 import {Box} from '@material-ui/core';
-
+import { shadows } from '@material-ui/system';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -16,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     },
     menuButton: {
         marginTop: '-5px',
-        marginRight: theme.spacing(2),
+        marginRight: theme.spacing(1),
     },
     searchButton: {
         marginTop: '13px',
@@ -25,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
         minHeight: 80,
         alignItems: 'flex-start',
         paddingTop: theme.spacing(1),
+        boxShadow: "none",
     },
     title: {
         flexGrow: 1,
@@ -36,8 +36,6 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: '100%',
         maxHeight: '100%',
     },
-
-
 }));
 
 export default function ProminentAppBar() {
@@ -45,7 +43,13 @@ export default function ProminentAppBar() {
 
     return (
 
-        <Box className={classes.root}>
+        <Box
+            boxShadow={0}
+            bgcolor="background.paper"
+            m={1}
+            p={1}
+            style={{ width: '0rem', height: '0rem' }}
+            className={classes.root}>
             <AppBar position="static">
                 <Toolbar className={classes.toolbar}>
                     <IconButton

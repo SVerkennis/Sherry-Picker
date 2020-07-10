@@ -10,12 +10,13 @@ function App() {
 
     // color palette for header
     const headerPalette = createMuiTheme ({
+
         palette: {
             primary: {
                 main: '#FFFFFF',
             },
             secondary: {
-                main: '#5CDB95',
+                main: '#373C41',
             },
         },
     });
