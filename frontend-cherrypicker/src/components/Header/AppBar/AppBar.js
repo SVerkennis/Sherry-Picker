@@ -7,6 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import {Box} from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -14,7 +15,11 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     menuButton: {
+        marginTop: '-5px',
         marginRight: theme.spacing(2),
+    },
+    searchButton: {
+        marginTop: '13px',
     },
     toolbar: {
         minHeight: 80,
@@ -25,34 +30,42 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         alignSelf: 'flex-end',
     },
+    logo: {
+        marginLeft: '2em',
+        textAlign: 'center',
+        maxWidth: '100%',
+        maxHeight: '100%',
+    },
+
+
 }));
 
 export default function ProminentAppBar() {
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
+
+        <Box className={classes.root}>
             <AppBar position="static">
                 <Toolbar className={classes.toolbar}>
                     <IconButton
                         edge="start"
                         className={classes.menuButton}
                         color="secondary"
-                        aria-label="open drawer"
-                    >
+                        aria-label="open drawer">
                         <MenuIcon />
-                        <img src="./images/NewLogo.png"/>
+
+                        {/*cherrypicker logo*/}
+                        <img src="./images/NewLogo.png" className={classes.logo}/>
+
                     </IconButton>
                     <Typography className={classes.title} variant="h5" noWrap>
                     </Typography>
-                    <IconButton aria-label="search" color="secondary">
+                    <IconButton className={classes.searchButton} aria-label="search" color="secondary">
                         <SearchIcon />
-                    </IconButton>
-                    <IconButton aria-label="display more actions" edge="end" color="secondary">
-                        <MoreIcon />
                     </IconButton>
                 </Toolbar>
             </AppBar>
-        </div>
+        </Box>
     );
 }
