@@ -24,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
         minHeight: 80,
         alignItems: 'flex-start',
         paddingTop: theme.spacing(1),
-        boxShadow: "none",
     },
     title: {
         flexGrow: 1,
@@ -46,9 +45,9 @@ export default function ProminentAppBar() {
         <Box
             boxShadow={0}
             bgcolor="background.paper"
-            m={1}
-            p={1}
-            style={{ width: '0rem', height: '0rem' }}
+            m={0}
+            p={0}
+            style={{ width: '4', height: '4' }}
             className={classes.root}>
             <AppBar position="static">
                 <Toolbar className={classes.toolbar}>

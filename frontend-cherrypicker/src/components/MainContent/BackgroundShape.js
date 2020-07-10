@@ -1,3 +1,4 @@
+/*
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -20,4 +21,4 @@ export default function BackgroundShape() {
     <img src="./images/backgroundShape.png" className={classes.backgroundShape}/>
     )
 
-}
+}*/
