@@ -22,8 +22,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Lato-Black, sans-serif',
         letterSpacing: '1.6pt',
         textAlign: 'left',
-        marginLeft: '58px',
-
+        marginLeft: '64px',
         marginTop: '130px',
         background: 'none',
         boxShadow: 'none',
@@ -35,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '22px',
         fontSize: '15px',
         textAlign: 'left',
-        marginLeft: '58px',
+        marginLeft: '64px',
         marginRight: '55px',
         marginTop: '-18px',
         marginBottom: '-15px',
@@ -44,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     buttonOne: {
-        marginLeft: "50px",
+        marginLeft: "55px",
         backgroundRepeat: 'no-repeat',
         boxShadow: 'none',
         maxWidth: '80%',
@@ -60,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     registerText: {
-        marginLeft: '58px',
+        marginLeft: '64px',
         marginRight: '80px',
         background: 'none',
         boxShadow: 'none',
@@ -73,6 +72,7 @@ const useStyles = makeStyles((theme) => ({
     registerButton: {
         background: 'none',
         boxShadow: 'none',
+        marginLeft: '64px',
     },
 
     login: {
