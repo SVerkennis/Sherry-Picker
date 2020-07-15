@@ -1,11 +1,10 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import {makeStyles} from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
 import myTheme from "../../styling/muiTheme";
 import Paper from "@material-ui/core/Paper";
 import Button from '@material-ui/core/Button';
-
+import {Link}  from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -78,7 +77,6 @@ const useStyles = makeStyles((theme) => ({
         color: myTheme.palette.secondary.contrastText,
         fontFamily: 'Lato-Bolditalic, sans-serif',
         marginTop: '-12px',
-
     },
 
     login: {
@@ -112,14 +110,15 @@ export default function ShapeContent() {
 
                  {/*fruits and vegetables button*/}
                 <Grid item xs={6} container spacing={1}>
-                    <a href="https://google.de">
+                    <Link to="/fruits">
                     <img src="images/obst.png" className={classes.buttonOne}/>
-                    </a>
+                    </Link>
                 </Grid>
+
                 <Grid item xs={6} container spacing={1}>
-                    <a href="https://google.de">
+                    <Link to="https://google.de">
                     <img src="images/gemuese.png" className={classes.buttonTwo}/>
-                    </a>
+                    </Link>
                 </Grid>
             </Grid>
 

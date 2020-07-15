@@ -1,8 +1,9 @@
 import React from "react";
-import BackgroundShape from "./BackgroundShape";
 import ShapeContent from "./ShapeContent";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from '@material-ui/core/styles';
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import FruitPage from "../FruitPage/FruitPage";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -24,11 +25,23 @@ export default function MainContent() {
     return (
 
 <>
+
+
         <Grid
+
             container
             className={classes.shapeContainer}
         >
-            <ShapeContent/>
+            <Switch>
+                <Route path="/fruits" exact>
+                    <FruitPage/>
+                </Route>
+
+                <Route path="/">
+                    <ShapeContent/>
+                </Route>
+            </Switch>
+
         </Grid>
     </>
     );
