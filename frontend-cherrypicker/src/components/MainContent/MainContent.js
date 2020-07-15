@@ -4,7 +4,8 @@ import ShapeContent from "./ShapeContent";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from '@material-ui/core/styles';
 
-const styles = makeStyles((theme) => ({
+
+const useStyles = makeStyles((theme) => ({
 
     shapeContainer: {
         backgroundRepeat: 'no-repeat',
@@ -18,7 +19,7 @@ const styles = makeStyles((theme) => ({
 }));
 
 export default function MainContent() {
-    const classes = styles();
+    const classes = useStyles();
 
     return (
 
