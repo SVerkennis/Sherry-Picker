@@ -18,12 +18,12 @@ const useStyles = makeStyles((theme) => ({
 
     Headline: {
         color: myTheme.palette.primary.contrastText,
-        fontSize: '30px',
+        fontSize: '24px',
         fontFamily: 'Lato-Black, sans-serif',
-        letterSpacing: '1.8pt',
+        letterSpacing: '1.6pt',
         textAlign: 'left',
         marginLeft: '58px',
-        marginRight: '55px',
+
         marginTop: '130px',
         background: 'none',
         boxShadow: 'none',
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'left',
         marginLeft: '58px',
         marginRight: '55px',
-        marginTop: '-14px',
+        marginTop: '-18px',
         marginBottom: '-15px',
         background: 'none',
         boxShadow: 'none',
@@ -59,6 +59,26 @@ const useStyles = makeStyles((theme) => ({
         maxHeight: '80%',
     },
 
+    registerText: {
+        marginLeft: '58px',
+        marginRight: '80px',
+        background: 'none',
+        boxShadow: 'none',
+        color: myTheme.palette.secondary.contrastText,
+        fontFamily: 'Lato-Regular, sans-serif',
+        lineHeight: '22px',
+        fontSize: '15px',
+    },
+
+    registerButton: {
+        background: 'none',
+        boxShadow: 'none',
+    },
+
+    login: {
+        background: 'none',
+        boxShadow: 'none',
+    }
 
 }));
 
@@ -71,7 +91,7 @@ export default function ShapeContent() {
         <div className={classes.root}>
             <Grid container spacing={3}>
                 <Grid item xs={12}>
-                    <Paper className={classes.Headline}>GEMEINSAM HABEN WIR MEHR!</Paper>
+                    <Paper className={classes.Headline}>GEMEINSAM<br/>HABEN WIR MEHR!</Paper>
                 </Grid>
                 <Grid item xs={12}>
                     <Paper className={classes.SubHeadline}>
@@ -92,6 +112,21 @@ export default function ShapeContent() {
                     </a>
                 </Grid>
             </Grid>
+
+            {/*registertext and button and login*/}
+            <Grid container spacing={3}>
+                <Grid item xs={12}>
+                    <Paper className={classes.registerText}>Werde Teil der Community <br/>& registriert euch hier!</Paper>
+                </Grid>
+                <Grid item xs={6}>
+                    <Paper className={classes.registerButton}>button</Paper>
+                </Grid>
+                <Grid item xs={6}>
+                    <Paper className={classes.login}>login</Paper>
+                </Grid>
+            </Grid>
+
+
         </div>
     );
 }
