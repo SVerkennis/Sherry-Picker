@@ -18,10 +18,11 @@ const useStyles = makeStyles((theme) => ({
 
     Headline: {
         color: myTheme.palette.primary.contrastText,
-        fontSize: '28px',
-        fontFamily: 'Lato, sans-serif',
+        fontSize: '30px',
+        fontFamily: 'Lato-Black, sans-serif',
+        letterSpacing: '1.8pt',
         textAlign: 'left',
-        marginLeft: '60px',
+        marginLeft: '58px',
         marginRight: '55px',
         marginTop: '130px',
         background: 'none',
@@ -30,28 +31,32 @@ const useStyles = makeStyles((theme) => ({
 
     SubHeadline: {
         color: myTheme.palette.secondary.contrastText,
+        fontFamily: 'Lato-Regular, sans-serif',
+        lineHeight: '22px',
+        fontSize: '15px',
         textAlign: 'left',
-        marginLeft: '60px',
+        marginLeft: '58px',
         marginRight: '55px',
-        marginTop: '-10px',
+        marginTop: '-14px',
+        marginBottom: '-15px',
         background: 'none',
         boxShadow: 'none',
     },
 
     buttonOne: {
-        marginLeft: "55px",
+        marginLeft: "50px",
         backgroundRepeat: 'no-repeat',
         boxShadow: 'none',
-        maxWidth: '90%',
-        maxHeight: '90%',
+        maxWidth: '80%',
+        maxHeight: '80%',
     },
 
     buttonTwo: {
-        marginRight: "55px",
+        marginRight: "50px",
         background: 'none',
         boxShadow: 'none',
-        maxWidth: '90%',
-        maxHeight: '90%',
+        maxWidth: '80%',
+        maxHeight: '80%',
     },
 
 
@@ -77,10 +82,14 @@ export default function ShapeContent() {
 
                  {/*fruits and vegetables button*/}
                 <Grid item xs={6} container spacing={1}>
+                    <a href="https://google.de">
                     <img src="images/obst.png" className={classes.buttonOne}/>
+                    </a>
                 </Grid>
                 <Grid item xs={6} container spacing={1}>
+                    <a href="https://google.de">
                     <img src="images/gemuese.png" className={classes.buttonTwo}/>
+                    </a>
                 </Grid>
             </Grid>
         </div>
