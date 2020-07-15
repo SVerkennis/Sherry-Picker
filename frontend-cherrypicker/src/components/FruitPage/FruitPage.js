@@ -78,15 +78,15 @@ export default function FruitPage() {
                     </Paper>
                 </Grid>
 
-                {/*fruits and vegetables button*/}
+                {/*fruit buttons*/}
                 <Grid item xs={6} container spacing={1}>
-                    <Link to="/apfel">
+                    <Link to="/">
                         <img src="images/apfel.png" className={classes.buttonOne}/>
                     </Link>
                 </Grid>
 
                 <Grid item xs={6} container spacing={1}>
-                    <Link to="https://google.de">
+                    <Link to="/">
                         <img src="images/moehre.png" className={classes.buttonTwo}/>
                     </Link>
                 </Grid>
