@@ -4,6 +4,7 @@ import {makeStyles} from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import myTheme from "../../styling/muiTheme";
 import Paper from "@material-ui/core/Paper";
+import Button from '@material-ui/core/Button';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -36,8 +37,8 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'left',
         marginLeft: '64px',
         marginRight: '55px',
-        marginTop: '-18px',
-        marginBottom: '-15px',
+        marginTop: '-10px',
+        marginBottom: '-10px',
         background: 'none',
         boxShadow: 'none',
     },
@@ -61,6 +62,7 @@ const useStyles = makeStyles((theme) => ({
     registerText: {
         marginLeft: '64px',
         marginRight: '80px',
+        marginTop: '20px',
         background: 'none',
         boxShadow: 'none',
         color: myTheme.palette.secondary.contrastText,
@@ -73,11 +75,19 @@ const useStyles = makeStyles((theme) => ({
         background: 'none',
         boxShadow: 'none',
         marginLeft: '64px',
+        color: myTheme.palette.secondary.contrastText,
+        fontFamily: 'Lato-Bolditalic, sans-serif',
+        marginTop: '-12px',
+
     },
 
     login: {
         background: 'none',
         boxShadow: 'none',
+        fontSize: '18px',
+        marginLeft: '35px',
+        opacity: '70%',
+        marginTop: '-5px',
     }
 
 }));
@@ -119,10 +129,17 @@ export default function ShapeContent() {
                     <Paper className={classes.registerText}>Werde Teil der Community <br/>& registriert euch hier!</Paper>
                 </Grid>
                 <Grid item xs={6}>
-                    <Paper className={classes.registerButton}>button</Paper>
+                    <Paper className={classes.registerButton}>
+                        {/*registerButton*/}
+                        <Button variant="contained" color="primary" disableElevation>
+                            registrieren
+                        </Button>
+                    </Paper>
                 </Grid>
+
+                {/*login option*/}
                 <Grid item xs={6}>
-                    <Paper className={classes.login}>login</Paper>
+                    <Paper className={classes.login}>or login</Paper>
                 </Grid>
             </Grid>
 
