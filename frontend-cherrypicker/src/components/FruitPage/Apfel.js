@@ -1,108 +1,12 @@
-// import React from 'react';
-// import { makeStyles } from '@material-ui/core/styles';
-// import clsx from 'clsx';
-// import Card from '@material-ui/core/Card';
-// import CardHeader from '@material-ui/core/CardHeader';
-// import CardMedia from '@material-ui/core/CardMedia';
-// import CardContent from '@material-ui/core/CardContent';
-// import CardActions from '@material-ui/core/CardActions';
-// import Collapse from '@material-ui/core/Collapse';
-// import IconButton from '@material-ui/core/IconButton';
-// import Typography from '@material-ui/core/Typography';
-// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-//
-// const useStyles = makeStyles((theme) => ({
-//     root: {
-//         maxWidth: 245,
-//         maxHeight: 425,
-//         marginTop: '120px',
-//         marginLeft: '65px',
-//         borderRadius: '20px',
-//         backgroundColor: '#5CDB95',
-//         boxShadow: 'none',
-//     },
-//
-//     text: {
-//         fontFamily: 'Lato-Black, sans-serif',
-//     },
-//
-//     media: {
-//         height: 0,
-//         paddingTop: '59%', // 16:9
-//     },
-//
-//     expand: {
-//         transform: 'rotate(0deg)',
-//         marginLeft: 'auto',
-//         transition: theme.transitions.create('transform', {
-//             duration: theme.transitions.duration.shortest,
-//         }),
-//     },
-//
-//     expandOpen: {
-//         transform: 'rotate(180deg)',
-//     },
-// }));
-//
-// export default function Apfel() {
-//     const classes = useStyles();
-//     const [expanded, setExpanded] = React.useState(false);
-//
-//     const handleExpandClick = () => {
-//         setExpanded(!expanded);
-//     };
-//
-//     return (
-//
-//
-//         <Card className={classes.root}>
-//             <CardHeader className={classes.text}
-//                 title="All about Apfel"
-//                 subheader="und wo du sie finden kannst"
-//             />
-//
-//             <CardMedia
-//                 className={classes.media}
-//                 image="images/cardApfel.png"
-//                 title="Apfel"
-//             />
-//             <CardContent>
-//                 <Typography variant="body2" color="textSecondary" component="p">
-//                     This impressive paella is a perfect party dish and a fun meal to cook together with your
-//                     guests.
-//                 </Typography>
-//             </CardContent>
-//             <CardActions disableSpacing>
-//                 <IconButton
-//                     className={clsx(classes.expand, {
-//                         [classes.expandOpen]: expanded,
-//                     })}
-//                     onClick={handleExpandClick}
-//                     aria-expanded={expanded}
-//                     aria-label="show more"
-//                 >
-//                     <ExpandMoreIcon />
-//                 </IconButton>
-//             </CardActions>
-//             <Collapse in={expanded} timeout="auto" unmountOnExit>
-//                 <CardContent>
-//                     <Typography paragraph>Method:</Typography>
-//                     <Typography paragraph>
-//                         Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-//                         minutes.
-//                     </Typography>
-//                 </CardContent>
-//             </Collapse>
-//         </Card>
-//
-//     );
-// }
-
 import React from "react";
-import {makeStyles} from "@material-ui/core/styles";
+import {makeStyles, fade} from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import myTheme from "../../styling/muiTheme";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import InputBase from "@material-ui/core/InputBase";
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -126,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: 'none',
     },
 
-    SubHeadline: {
+    infoText: {
         color: myTheme.palette.secondary.contrastText,
         fontFamily: 'Lato-Regular, sans-serif',
         lineHeight: '22px',
@@ -140,6 +44,21 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: 'none',
     },
 
+    // just the search bar
+    grow: {
+        flexGrow: 1,
+    },
+    appBar: {
+        marginRight: '90px',
+        marginTop: '330px',
+        maxWidth: '220px',
+        maxHeight: '35px',
+        borderRadius: '10px',
+        backgroundColor: '',
+    },
+    inlineText: {
+        paddingBottom: '14px',
+    },
 
 }));
 
@@ -148,18 +67,37 @@ export default function Apfel() {
 
     return(
 
+            // Headline und infoText
         <div className={classes.root}>
             <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <Paper className={classes.Headline}>Der APFEL</Paper>
                 </Grid>
                 <Grid item xs={12}>
-                    <Paper className={classes.SubHeadline}>
+                    <Paper className={classes.infoText}>
                         enthält über 30 Mineralstoffe und Spurenelemente,
                         zu erwähnen sind vor allem Kalium, das den Wasserhaushalt reguliert,
                         und Eisen.
                     </Paper>
                 </Grid>
+
+                {/*searchBar*/}
+                <Grid item xs={12}>
+                        <AppBar className={classes.appBar}>
+                            <Toolbar>
+                                <div className={classes.search}>
+                                    <InputBase
+                                        className={classes.inlineText}
+                                        placeholder="Wo willst du suchen?"
+                                        inputProps={{ "aria-label": "search" }}
+                                    />
+                                </div>
+                            </Toolbar>
+                        </AppBar>
+                </Grid>
+
+
+
             </Grid>
         </div>
     );
