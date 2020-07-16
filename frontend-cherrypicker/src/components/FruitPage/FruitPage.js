@@ -3,7 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import {makeStyles} from "@material-ui/core/styles";
 import myTheme from "../../styling/muiTheme";
 import Paper from "@material-ui/core/Paper";
-import {Link}  from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -88,7 +88,7 @@ export default function FruitPage() {
 
     return (
 
-
+        // Überschriften
         <div className={classes.root}>
             <Grid container spacing={3}>
                 <Grid item xs={12}>
@@ -99,21 +99,8 @@ export default function FruitPage() {
                         -is healthy as fuck-
                     </Paper>
                 </Grid>
-
-{/*                fruit buttons
-                <Grid item xs={6} container spacing={1}>
-                    <Link to="/">
-                        <img src="images/apfel.png" alt="apfel-logo" className={classes.buttonOne}/>
-                    </Link>
-                </Grid>
-
-                <Grid item xs={6} container spacing={1}>
-                    <Link to="/">
-                        <img src="images/traube.png" alt="traube-logo" className={classes.buttonTwo}/>
-                    </Link>
-                </Grid>*/}
-
             </Grid>
+
 
             {/*NEW buttons*/}
             <div className={classes.root}>
@@ -166,5 +153,6 @@ export default function FruitPage() {
 
 
         </div>
+
     );
 }
