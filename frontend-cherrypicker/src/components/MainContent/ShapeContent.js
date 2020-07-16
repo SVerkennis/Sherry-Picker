@@ -116,7 +116,7 @@ export default function ShapeContent() {
                 </Grid>
 
                 <Grid item xs={6} container spacing={1}>
-                    <Link to="https://google.de">
+                    <Link to="/vegetables">
                     <img src="images/gemuese.png" alt="gemuese-logo" className={classes.buttonTwo}/>
                     </Link>
                 </Grid>

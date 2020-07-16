@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Lato-Black, sans-serif',
         letterSpacing: '1.6pt',
         textAlign: 'left',
-        marginLeft: '145px',
+        marginLeft: '130px',
         marginTop: '120px',
         background: 'none',
         boxShadow: 'none',
@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: 'none',
     },
 
-    buttonApfel: {
+    buttonMoehre: {
         marginLeft: "65px",
         backgroundRepeat: 'no-repeat',
         boxShadow: 'none',
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
         maxHeight: '80%',
     },
 
-    buttonTraube: {
+    buttonTomate: {
         marginLeft: '-15px',
         background: 'none',
         boxShadow: 'none',
@@ -57,24 +57,24 @@ const useStyles = makeStyles((theme) => ({
         maxHeight: '80%',
     },
 
-    buttonBirne: {
+    buttonBrokkoli: {
         marginLeft: '65px',
         marginTop: '-40px',
     },
 
-    buttonKirsche: {
+    buttonGurke: {
         marginLeft: '-15px',
         background: 'none',
         boxShadow: 'none',
         marginTop: '-40px',
     },
 
-    buttonWassermelone: {
+    buttonPaprika: {
         marginLeft: '65px',
         marginTop: '-40px',
     },
 
-    buttonErdbeere: {
+    buttonZwiebel: {
         marginLeft: '-15px',
         background: 'none',
         boxShadow: 'none',
@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-export default function FruitPage() {
+export default function VetetablePage() {
     const classes = useStyles();
 
     return (
@@ -92,7 +92,7 @@ export default function FruitPage() {
         <div className={classes.root}>
             <Grid container spacing={3}>
                 <Grid item xs={12}>
-                    <Paper className={classes.Headline}>OBST</Paper>
+                    <Paper className={classes.Headline}>Gemüse</Paper>
                 </Grid>
                 <Grid item xs={12}>
                     <Paper className={classes.SubHeadline}>
@@ -100,7 +100,7 @@ export default function FruitPage() {
                     </Paper>
                 </Grid>
 
-{/*                fruit buttons
+                {/*                fruit buttons
                 <Grid item xs={6} container spacing={1}>
                     <Link to="/">
                         <img src="images/apfel.png" alt="apfel-logo" className={classes.buttonOne}/>
@@ -119,45 +119,45 @@ export default function FruitPage() {
             <div className={classes.root}>
                 <Grid container spacing={3}>
 
-                    {/*apfel button*/}
+                    {/*möhre button*/}
                     <Grid item xs={6}>
                         <Link to="/">
-                            <img src="images/apfel.png" alt="apfel-logo" className={classes.buttonApfel}/>
+                            <img src="images/moehre.png" alt="moehre-logo" className={classes.buttonMoehre}/>
                         </Link>
                     </Grid>
 
-                    {/*traube button*/}
+                    {/*tomate button*/}
                     <Grid item xs={6}>
                         <Link to="/">
-                            <img src="images/traube.png" alt="traube-logo" className={classes.buttonTraube}/>
+                            <img src="images/tomate.png" alt="tomate-logo" className={classes.buttonTomate}/>
                         </Link>
                     </Grid>
 
-                    {/*birne button*/}
+                    {/*brokkoli button*/}
                     <Grid item xs={6}>
                         <Link to="/">
-                            <img src="images/birne.png" alt="birne-logo" className={classes.buttonBirne}/>
+                            <img src="images/brokkoli.png" alt="brokkoli-logo" className={classes.buttonBrokkoli}/>
                         </Link>
                     </Grid>
 
-                    {/*kirsche button*/}
+                    {/*gurke button*/}
                     <Grid item xs={6}>
                         <Link to="/">
-                            <img src="images/kirsche.png" alt="kirsche-logo" className={classes.buttonKirsche}/>
+                            <img src="images/gurke.png" alt="gurke-logo" className={classes.buttonGurke}/>
                         </Link>
                     </Grid>
 
-                    {/*wassermelone button*/}
+                    {/*paprika button*/}
                     <Grid item xs={6}>
                         <Link to="/">
-                            <img src="images/wassermelone.png" alt="traube-logo" className={classes.buttonWassermelone}/>
+                            <img src="images/paprika.png" alt="paprika-logo" className={classes.buttonPaprika}/>
                         </Link>
                     </Grid>
 
-                    {/*erdbeere button*/}
+                    {/*zwiebel button*/}
                     <Grid item xs={6}>
                         <Link to="/">
-                            <img src="images/erdbeere.png" alt="erdbeere-logo" className={classes.buttonErdbeere}/>
+                            <img src="images/zwiebel.png" alt="zwiebel-logo" className={classes.buttonZwiebel}/>
                         </Link>
                     </Grid>
 

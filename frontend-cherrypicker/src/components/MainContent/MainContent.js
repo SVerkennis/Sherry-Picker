@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import { makeStyles } from '@material-ui/core/styles';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import FruitPage from "../FruitPage/FruitPage";
-
+import VegetablePage from "../VegetablePage/VegetablePage";
 
 const useStyles = makeStyles((theme) => ({
 
@@ -34,6 +34,10 @@ export default function MainContent() {
             <Switch>
                 <Route path="/fruits" exact>
                     <FruitPage/>
+                </Route>
+
+                <Route path="/vegetables" exact>
+                    <VegetablePage/>
                 </Route>
 
                 <Route path="/">
