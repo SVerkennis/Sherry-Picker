@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Lato-Black, sans-serif',
         letterSpacing: '1.6pt',
         textAlign: 'left',
-        marginLeft: '110px',
+        marginLeft: '140px',
         marginTop: '120px',
         background: 'none',
         boxShadow: 'none',
@@ -50,15 +50,20 @@ const useStyles = makeStyles((theme) => ({
     },
     appBar: {
         marginRight: '90px',
-        marginTop: '330px',
+        marginTop: '265px',
         maxWidth: '220px',
-        maxHeight: '35px',
-        borderRadius: '10px',
-        backgroundColor: '',
+        maxHeight: '30px',
+        borderRadius: '14px',
     },
     inlineText: {
-        paddingBottom: '14px',
+        fontSize: '14px',
+        paddingBottom: '20px',
     },
+    mapsImage: {
+        marginLeft: '40px',
+        background: 'none',
+        boxShadow: 'none',
+    }
 
 }));
 
@@ -71,13 +76,11 @@ export default function Apfel() {
         <div className={classes.root}>
             <Grid container spacing={3}>
                 <Grid item xs={12}>
-                    <Paper className={classes.Headline}>Der APFEL</Paper>
+                    <Paper className={classes.Headline}>APFEL</Paper>
                 </Grid>
                 <Grid item xs={12}>
                     <Paper className={classes.infoText}>
-                        enthält über 30 Mineralstoffe und Spurenelemente,
-                        zu erwähnen sind vor allem Kalium, das den Wasserhaushalt reguliert,
-                        und Eisen.
+                        Suche dir Anbieter in deiner Nähe & rette ein paar Äpfel.
                     </Paper>
                 </Grid>
 
@@ -96,7 +99,12 @@ export default function Apfel() {
                         </AppBar>
                 </Grid>
 
-
+                {/* Maps Ausschnitt*/}
+                <Grid item xs={12}>
+                    <Paper className={classes.mapsImage}>
+                        <img src="images/mapsImage.png" alt="mapsImage-logo"/>
+                    </Paper>
+                </Grid>
 
             </Grid>
         </div>
