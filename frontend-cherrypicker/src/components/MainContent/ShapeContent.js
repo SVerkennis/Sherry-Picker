@@ -125,7 +125,7 @@ export default function ShapeContent() {
             {/*registertext and button and login*/}
             <Grid container spacing={3}>
                 <Grid item xs={12}>
-                    <Paper className={classes.registerText}>Werde Teil der Community <br/>& registriert euch hier!</Paper>
+                    <Paper className={classes.registerText}>Werde Teil der Community <br/>& registrier dich hier!</Paper>
                 </Grid>
                 <Grid item xs={6}>
                     <Paper className={classes.registerButton}>

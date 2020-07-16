@@ -28,7 +28,6 @@ export default function MainContent() {
 
 
         <Grid
-
             container
             className={classes.shapeContainer}
         >
