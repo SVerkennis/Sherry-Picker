@@ -111,13 +111,13 @@ export default function ShapeContent() {
                  {/*fruits and vegetables button*/}
                 <Grid item xs={6} container spacing={1}>
                     <Link to="/fruits">
-                    <img src="images/obst.png" className={classes.buttonOne}/>
+                    <img src="images/obst.png" alt="obst-logo" className={classes.buttonOne}/>
                     </Link>
                 </Grid>
 
                 <Grid item xs={6} container spacing={1}>
                     <Link to="https://google.de">
-                    <img src="images/gemuese.png" className={classes.buttonTwo}/>
+                    <img src="images/gemuese.png" alt="gemuese-logo" className={classes.buttonTwo}/>
                     </Link>
                 </Grid>
             </Grid>

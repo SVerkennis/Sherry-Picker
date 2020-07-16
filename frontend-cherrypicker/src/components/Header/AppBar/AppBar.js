@@ -59,7 +59,7 @@ export default function ProminentAppBar() {
                         <MenuIcon />
 
                         {/*cherrypicker logo*/}
-                        <img src="./images/NewLogo.png" className={classes.logo}/>
+                        <img src="./images/NewLogo.png" alt="" className={classes.logo}/>
 
                     </IconButton>
                     <Typography className={classes.title} variant="h5" noWrap>

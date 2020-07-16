@@ -3,7 +3,6 @@ import Grid from "@material-ui/core/Grid";
 import {makeStyles} from "@material-ui/core/styles";
 import myTheme from "../../styling/muiTheme";
 import Paper from "@material-ui/core/Paper";
-import Button from '@material-ui/core/Button';
 import {Link}  from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -42,22 +41,45 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: 'none',
     },
 
-    buttonOne: {
-        marginLeft: "55px",
+    buttonApfel: {
+        marginLeft: "65px",
         backgroundRepeat: 'no-repeat',
         boxShadow: 'none',
         maxWidth: '80%',
         maxHeight: '80%',
     },
 
-    buttonTwo: {
-        marginRight: "50px",
+    buttonTraube: {
+        marginLeft: '-15px',
         background: 'none',
         boxShadow: 'none',
         maxWidth: '80%',
         maxHeight: '80%',
     },
 
+    buttonBirne: {
+        marginLeft: '65px',
+        marginTop: '-40px',
+    },
+
+    buttonKirsche: {
+        marginLeft: '-15px',
+        background: 'none',
+        boxShadow: 'none',
+        marginTop: '-40px',
+    },
+
+    buttonWassermelone: {
+        marginLeft: '65px',
+        marginTop: '-40px',
+    },
+
+    buttonErdbeere: {
+        marginLeft: '-15px',
+        background: 'none',
+        boxShadow: 'none',
+        marginTop: '-40px',
+    }
 
 }));
 
@@ -78,19 +100,70 @@ export default function FruitPage() {
                     </Paper>
                 </Grid>
 
-                {/*fruit buttons*/}
+{/*                fruit buttons
                 <Grid item xs={6} container spacing={1}>
                     <Link to="/">
-                        <img src="images/apfel.png" className={classes.buttonOne}/>
+                        <img src="images/apfel.png" alt="apfel-logo" className={classes.buttonOne}/>
                     </Link>
                 </Grid>
 
                 <Grid item xs={6} container spacing={1}>
                     <Link to="/">
-                        <img src="images/moehre.png" className={classes.buttonTwo}/>
+                        <img src="images/traube.png" alt="traube-logo" className={classes.buttonTwo}/>
                     </Link>
-                </Grid>
+                </Grid>*/}
+
             </Grid>
+
+            {/*NEW buttons*/}
+            <div className={classes.root}>
+                <Grid container spacing={3}>
+
+                    {/*apfel button*/}
+                    <Grid item xs={6}>
+                        <Link to="/">
+                            <img src="images/apfel.png" alt="apfel-logo" className={classes.buttonApfel}/>
+                        </Link>
+                    </Grid>
+
+                    {/*traube button*/}
+                    <Grid item xs={6}>
+                        <Link to="/">
+                            <img src="images/traube.png" alt="traube-logo" className={classes.buttonTraube}/>
+                        </Link>
+                    </Grid>
+
+                    {/*birne button*/}
+                    <Grid item xs={6}>
+                        <Link to="/">
+                            <img src="images/birne.png" alt="birne-logo" className={classes.buttonBirne}/>
+                        </Link>
+                    </Grid>
+
+                    {/*kirsche button*/}
+                    <Grid item xs={6}>
+                        <Link to="/">
+                            <img src="images/kirsche.png" alt="kirsche-logo" className={classes.buttonKirsche}/>
+                        </Link>
+                    </Grid>
+
+                    {/*wassermelone button*/}
+                    <Grid item xs={6}>
+                        <Link to="/">
+                            <img src="images/wassermelone.png" alt="traube-logo" className={classes.buttonWassermelone}/>
+                        </Link>
+                    </Grid>
+
+                    {/*erdbeere button*/}
+                    <Grid item xs={6}>
+                        <Link to="/">
+                            <img src="images/erdbeere.png" alt="erdbeere-logo" className={classes.buttonErdbeere}/>
+                        </Link>
+                    </Grid>
+
+                </Grid>
+            </div>
+
 
         </div>
     );
