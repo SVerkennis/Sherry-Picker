@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '22px',
         fontSize: '15px',
         textAlign: 'left',
-        marginLeft: '64px',
+        marginLeft: '80px',
         marginRight: '55px',
         marginTop: '-10px',
         marginBottom: '-10px',

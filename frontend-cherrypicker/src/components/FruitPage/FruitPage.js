@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '22px',
         fontSize: '15px',
         textAlign: 'left',
-        marginLeft: '64px',
+        marginLeft: '80px',
         marginRight: '55px',
         marginTop: '-10px',
         marginBottom: '-10px',
@@ -108,7 +108,7 @@ export default function FruitPage() {
 
                     {/*apfel button*/}
                     <Grid item xs={6}>
-                        <Link to="/">
+                        <Link to="/apfel">
                             <img src="images/apfel.png" alt="apfel-logo" className={classes.buttonApfel}/>
                         </Link>
                     </Grid>
