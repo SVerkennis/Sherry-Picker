@@ -6,6 +6,12 @@ import myTheme from "../../styling/muiTheme";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import InputBase from "@material-ui/core/InputBase";
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import Divider from '@material-ui/core/Divider';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import Avatar from '@material-ui/core/Avatar';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -66,29 +72,21 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '-10px',
     },
 
-    // name and adress output
-    nameOutput: {
+    // NEW MUI component
+    profil: {
+        color: myTheme.palette.secondary.contrastText,
         background: 'none',
         boxShadow: 'none',
-        textAlign: 'right',
-        marginTop: '-45px',
-        marginRight: '100px',
-        color: myTheme.palette.secondary.contrastText,
-        fontFamily: 'Lato-Bold, sans-serif',
-        fontSize: '15px',
+        marginTop: '-70px',
+        marginLeft: '70px',
     },
-
-    adressOutput: {
+    profilTamai: {
         color: myTheme.palette.secondary.contrastText,
-        textAlign: 'right',
         background: 'none',
         boxShadow: 'none',
-        marginTop: '5px',
-        marginRight: '100px',
-        fontSize: '14px',
-        fontFamily: 'Lato-Regular, sans-serif',
-        lineHeight: '22px',
-    }
+        marginTop: '-30px',
+        marginLeft: '70px',
+    },
 
 }));
 
@@ -124,24 +122,55 @@ export default function Apfel() {
                         </AppBar>
                 </Grid>
 
-                {/* Maps Ausschnitt*/}
+                {/*Maps Ausschnitt*/}
                 <Grid item xs={12}>
                     <Paper className={classes.mapsImage}>
                         <img src="images/mapsImage.png" alt="mapsImage-logo"/>
                     </Paper>
                 </Grid>
 
-                {/* Adressen Aussgabe */}
+                {/*name and adress output*/}
                 <Grid item xs={12}>
-                    <Paper className={classes.nameOutput}>
-                        Paula Hildemann
-                    </Paper>
-                    <Paper className={classes.adressOutput}>
-                        0208 34 4389 43 <br/>
-                        Kreuzstraße 14b <br/>
-                        Mülheim an der Ruhr <br/>
-                    </Paper>
+                    <List className={classes.profil}>
+                        <ListItem alignItems="flex-start">
+                            <ListItemAvatar>
+                                <Avatar alt="Paula Hildemann" src="/static/images/avatar/1.jpg" />
+                            </ListItemAvatar>
+                            <ListItemText
+                                primary="Paula Hildemann"
+                                secondary={
+                                    <React.Fragment>
+                                        {' 0208 34 4389 43 '}
+                                        <br/>
+                                        {' Kreuzstraße 14 '}
+                                        <br/>
+                                        {' Mülheim an der Ruhr '}
+                                    </React.Fragment>
+                                }
+                            />
+                        </ListItem>
+                    </List>
+
+                    <List className={classes.profilTamai}>
+                        <ListItem alignItems="flex-start">
+                            <ListItemAvatar>
+                                <Avatar alt="Tamai Donan" src="/static/images/avatar/2.jpg" />
+                            </ListItemAvatar>
+                            <ListItemText
+                                primary="Tamai Donan"
+                                secondary={
+                                    <React.Fragment>
+                                       {' 0208 34 4389 43 '}
+   {/*                                  <br/>
+                                        {' Kreuzstraße 14 '}
+                                        <br/>
+                                        {' Mülheim an der Ruhr '}*/}
+                                    </React.Fragment>
+                                } />
+                        </ListItem>
+                    </List>
                 </Grid>
+
 
             </Grid>
         </div>
