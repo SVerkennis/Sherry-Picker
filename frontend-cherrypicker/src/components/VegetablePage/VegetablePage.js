@@ -4,6 +4,8 @@ import {makeStyles} from "@material-ui/core/styles";
 import myTheme from "../../styling/muiTheme";
 import Paper from "@material-ui/core/Paper";
 import {Link}  from "react-router-dom";
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import SvgIcon from "@material-ui/core/SvgIcon";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -75,9 +77,29 @@ const useStyles = makeStyles((theme) => ({
         background: 'none',
         boxShadow: 'none',
         marginTop: '-40px',
-    }
+    },
+
+    homeIcon: {
+        marginTop: '-40px',
+        opacity: '80%',
+        marginLeft: '-5px',
+    },
+    backIcon: {
+        marginTop: '-40px',
+        marginLeft: '155px',
+        opacity: '80%',
+    },
 
 }));
+
+// just for homeIcon
+function HomeIcon(props) {
+    return (
+        <SvgIcon {...props}>
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+        </SvgIcon>
+    );
+}
 
 export default function VetetablePage() {
     const classes = useStyles();
@@ -140,6 +162,28 @@ export default function VetetablePage() {
                     <Grid item xs={6}>
                         <Link to="/">
                             <img src="images/zwiebel.png" alt="zwiebel-logo" className={classes.buttonZwiebel}/>
+                        </Link>
+                    </Grid>
+
+                    {/*back icon*/}
+                    <Grid item xs={6}>
+                        <Link to="/">
+                            <div className={classes.backIcon}>
+                                <ArrowBackIosIcon fontSize="large"
+                                                  color="primary"
+                                />
+                            </div>
+                        </Link>
+                    </Grid>
+
+                    {/*home icon*/}
+                    <Grid item xs={6}>
+                        <Link to="/">
+                            <div className={classes.homeIcon}>
+                                <HomeIcon fontSize="large"
+                                          color="primary"
+                                />
+                            </div>
                         </Link>
                     </Grid>
 
