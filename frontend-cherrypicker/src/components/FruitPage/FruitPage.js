@@ -4,6 +4,8 @@ import {makeStyles} from "@material-ui/core/styles";
 import myTheme from "../../styling/muiTheme";
 import Paper from "@material-ui/core/Paper";
 import {Link} from "react-router-dom";
+import SvgIcon from '@material-ui/core/SvgIcon';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -45,16 +47,12 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: "65px",
         backgroundRepeat: 'no-repeat',
         boxShadow: 'none',
-        maxWidth: '80%',
-        maxHeight: '80%',
     },
 
     buttonTraube: {
         marginLeft: '-15px',
         background: 'none',
         boxShadow: 'none',
-        maxWidth: '80%',
-        maxHeight: '80%',
     },
 
     buttonBirne: {
@@ -79,9 +77,29 @@ const useStyles = makeStyles((theme) => ({
         background: 'none',
         boxShadow: 'none',
         marginTop: '-40px',
-    }
+    },
+
+    homeIcon: {
+        marginTop: '-40px',
+        opacity: '80%',
+        marginLeft: '-5px',
+    },
+    backIcon: {
+        marginTop: '-40px',
+        marginLeft: '155px',
+        opacity: '80%',
+    },
 
 }));
+
+    // just for homeIcon
+function HomeIcon(props) {
+    return (
+        <SvgIcon {...props}>
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+        </SvgIcon>
+    );
+}
 
 export default function FruitPage() {
     const classes = useStyles();
@@ -94,11 +112,12 @@ export default function FruitPage() {
                 <Grid item xs={12}>
                     <Paper className={classes.Headline}>OBST</Paper>
                 </Grid>
-                <Grid item xs={12}>
+{/*          // Subhead
+               <Grid item xs={12}>
                     <Paper className={classes.SubHeadline}>
                         -is healthy as fuck-
                     </Paper>
-                </Grid>
+                </Grid>*/}
             </Grid>
 
 
@@ -145,6 +164,28 @@ export default function FruitPage() {
                     <Grid item xs={6}>
                         <Link to="/">
                             <img src="images/erdbeere.png" alt="erdbeere-logo" className={classes.buttonErdbeere}/>
+                        </Link>
+                    </Grid>
+
+                    {/*back icon*/}
+                    <Grid item xs={6}>
+                        <Link to="/">
+                            <div className={classes.backIcon}>
+                                <ArrowBackIosIcon fontSize="large"
+                                                  color="primary"
+                                />
+                            </div>
+                        </Link>
+                    </Grid>
+
+                    {/*home icon*/}
+                    <Grid item xs={6}>
+                        <Link to="/">
+                            <div className={classes.homeIcon}>
+                                <HomeIcon fontSize="large"
+                                          color="primary"
+                                />
+                            </div>
                         </Link>
                     </Grid>
 

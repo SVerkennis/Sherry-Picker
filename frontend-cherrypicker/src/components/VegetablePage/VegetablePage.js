@@ -45,16 +45,12 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: "65px",
         backgroundRepeat: 'no-repeat',
         boxShadow: 'none',
-        maxWidth: '80%',
-        maxHeight: '80%',
     },
 
     buttonTomate: {
         marginLeft: '-15px',
         background: 'none',
         boxShadow: 'none',
-        maxWidth: '80%',
-        maxHeight: '80%',
     },
 
     buttonBrokkoli: {
@@ -94,25 +90,11 @@ export default function VetetablePage() {
                 <Grid item xs={12}>
                     <Paper className={classes.Headline}>Gemüse</Paper>
                 </Grid>
-                <Grid item xs={12}>
+ {/*               <Grid item xs={12}>
                     <Paper className={classes.SubHeadline}>
                         -is healthy as fuck-
                     </Paper>
-                </Grid>
-
-                {/*                fruit buttons
-                <Grid item xs={6} container spacing={1}>
-                    <Link to="/">
-                        <img src="images/apfel.png" alt="apfel-logo" className={classes.buttonOne}/>
-                    </Link>
-                </Grid>
-
-                <Grid item xs={6} container spacing={1}>
-                    <Link to="/">
-                        <img src="images/traube.png" alt="traube-logo" className={classes.buttonTwo}/>
-                    </Link>
                 </Grid>*/}
-
             </Grid>
 
             {/*NEW buttons*/}
