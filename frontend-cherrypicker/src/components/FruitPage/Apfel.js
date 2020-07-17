@@ -1,5 +1,5 @@
 import React from "react";
-import {makeStyles, fade} from "@material-ui/core/styles";
+import {makeStyles} from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import myTheme from "../../styling/muiTheme";
@@ -63,6 +63,31 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: '40px',
         background: 'none',
         boxShadow: 'none',
+        marginTop: '-10px',
+    },
+
+    // name and adress output
+    nameOutput: {
+        background: 'none',
+        boxShadow: 'none',
+        textAlign: 'right',
+        marginTop: '-45px',
+        marginRight: '100px',
+        color: myTheme.palette.secondary.contrastText,
+        fontFamily: 'Lato-Bold, sans-serif',
+        fontSize: '15px',
+    },
+
+    adressOutput: {
+        color: myTheme.palette.secondary.contrastText,
+        textAlign: 'right',
+        background: 'none',
+        boxShadow: 'none',
+        marginTop: '5px',
+        marginRight: '100px',
+        fontSize: '14px',
+        fontFamily: 'Lato-Regular, sans-serif',
+        lineHeight: '22px',
     }
 
 }));
@@ -103,6 +128,18 @@ export default function Apfel() {
                 <Grid item xs={12}>
                     <Paper className={classes.mapsImage}>
                         <img src="images/mapsImage.png" alt="mapsImage-logo"/>
+                    </Paper>
+                </Grid>
+
+                {/* Adressen Aussgabe */}
+                <Grid item xs={12}>
+                    <Paper className={classes.nameOutput}>
+                        Paula Hildemann
+                    </Paper>
+                    <Paper className={classes.adressOutput}>
+                        0208 34 4389 43 <br/>
+                        Kreuzstraße 14b <br/>
+                        Mülheim an der Ruhr <br/>
                     </Paper>
                 </Grid>
 
