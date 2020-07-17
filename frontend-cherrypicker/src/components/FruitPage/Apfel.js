@@ -8,7 +8,6 @@ import Toolbar from "@material-ui/core/Toolbar";
 import InputBase from "@material-ui/core/InputBase";
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import Divider from '@material-ui/core/Divider';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
@@ -134,10 +133,10 @@ export default function Apfel() {
                     <List className={classes.profil}>
                         <ListItem alignItems="flex-start">
                             <ListItemAvatar>
-                                <Avatar alt="Paula Hildemann" src="/static/images/avatar/1.jpg" />
+                                <Avatar alt="Paul Hildemann" src="images/paul.png" />
                             </ListItemAvatar>
                             <ListItemText
-                                primary="Paula Hildemann"
+                                primary="Paul Hildemann"
                                 secondary={
                                     <React.Fragment>
                                         {' 0208 34 4389 43 '}
@@ -150,17 +149,16 @@ export default function Apfel() {
                             />
                         </ListItem>
                     </List>
-
                     <List className={classes.profilTamai}>
                         <ListItem alignItems="flex-start">
                             <ListItemAvatar>
-                                <Avatar alt="Tamai Donan" src="/static/images/avatar/2.jpg" />
+                                <Avatar alt="Tamai Donan" src="images/tamai.png" />
                             </ListItemAvatar>
                             <ListItemText
                                 primary="Tamai Donan"
                                 secondary={
                                     <React.Fragment>
-                                       {' 0208 34 4389 43 '}
+                                       {' 0208 16 8429 29 '}
    {/*                                  <br/>
                                         {' Kreuzstraße 14 '}
                                         <br/>
@@ -169,7 +167,9 @@ export default function Apfel() {
                                 } />
                         </ListItem>
                     </List>
+
                 </Grid>
+
 
 
             </Grid>
