@@ -6,6 +6,8 @@ import Paper from "@material-ui/core/Paper";
 // import Button from '@material-ui/core/Button';
 import {Link}  from "react-router-dom";
 import TextField from '@material-ui/core/TextField';
+import MenuIcon from "@material-ui/icons/Menu";
+import {Menu, MenuItem} from "@material-ui/core";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -25,7 +27,9 @@ const useStyles = makeStyles((theme) => ({
         letterSpacing: '1.6pt',
         textAlign: 'left',
         marginLeft: '2.8em',
+
         marginTop: '130px',
+
         background: 'none',
         boxShadow: 'none',
     },
@@ -115,7 +119,8 @@ const useStyles = makeStyles((theme) => ({
         color: myTheme.palette.secondary.contrastText,
         fontFamily: 'Lato-Regular, sans-serif',
         textDecoration: 'none',
-    }
+    },
+
 
 
 }));
@@ -123,11 +128,13 @@ const useStyles = makeStyles((theme) => ({
 export default function ShapeContent() {
     const classes = useStyles();
 
+
     return (
 
 
         <div className={classes.root}>
             <Grid container spacing={3}>
+
                 <Grid item xs={12}>
                     <Paper className={classes.Headline}>GEMEINSAM<br/>HABEN WIR MEHR!</Paper>
                 </Grid>

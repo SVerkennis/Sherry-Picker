@@ -17,43 +17,44 @@ const useStyles = makeStyles((theme) => ({
 
     headerStuff: {
         flexGrow: 1,
+
+        // HIER WIEDER ÄNDERN
+        marginBottom: '-60px',
     },
     paper: {
         padding: theme.spacing(2),
         textAlign: 'center',
         color: theme.palette.text.secondary,
     },
+
  /*   BurgerButton: {
         marginLeft: '1.5em',
         marginTop: '2rem',
     },*/
+
     CherryLogo: {
         size: '200%',
-        marginTop: '1.5rem',
+        marginTop: '3.3rem',
         marginLeft: '-1.6em',
+       // marginBottom: '2rem',
     },
     searchIcon: {
-        marginTop: '2rem',
+        marginTop: '1.4rem',
         marginLeft: '2.8em',
     },
 
     // all burger icon content
     buttonMenu: {
-        marginLeft: '-1.7em',
-        marginTop: '1.6rem',
-        display: "flex",
-        justifyContent: "center",
+        marginLeft: '1.8em',
+        marginTop: '1.4rem',
     },
     backgroundColor: {
         backgroundColor: 'white',
     },
-    basicTypoButton: {
-        fontFamily: "Open Sans",
-        fontWeight: "bold",
-    },
     underlineText: {
         textDecoration: 'none',
         color: myTheme.palette.secondary.main,
+        fontFamily: 'Lato-Regular, sans-serif',
     },
 
 }));
@@ -84,7 +85,7 @@ export default function ProminentAppBar() {
                 <Grid item xs={4} sm={3}>
 {/*                   <MenuIcon className={classes.BurgerButton}/>*/}
                     <div className={classes.buttonMenu}>
-                        <MenuIcon className={classes.basicTypoButton} variant={"contained"} aria-controls="simple-menu" aria-haspopup="true"
+                        <MenuIcon variant={"contained"} aria-controls="simple-menu" aria-haspopup="true"
                                   onClick={handleClick}>
                         </MenuIcon>
                         <Menu
@@ -95,16 +96,16 @@ export default function ProminentAppBar() {
                             onClose={handleClose}
                         >
                             <MenuItem onClick={handleClose} className={classes.backgroundColor}>
-                                <Link to={"/fruits"}  className={classes.underlineText}>Obst</Link>
+                                <Link to={"/fruits"} className={classes.underlineText}>Obst</Link>
                             </MenuItem>
                             <MenuItem onClick={handleClose} className={classes.backgroundColor}>
-                                <Link to={"/vegetables"}  className={classes.underlineText}>Gemüse</Link>
+                                <Link to={"/vegetables"} className={classes.underlineText}>Gemüse</Link>
                             </MenuItem>
                             <MenuItem onClick={handleClose} className={classes.backgroundColor}>
-                                <Link to={"/register"}  className={classes.underlineText}>Registrieren</Link>
+                                <Link to={"/register"} className={classes.underlineText}>Registrieren</Link>
                             </MenuItem>
                             <MenuItem onClick={handleClose} className={classes.backgroundColor}>
-                                <Link to={"/"} c className={classes.underlineText}>Home</Link>
+                                <Link to={"/"} className={classes.underlineText}>Home</Link>
                             </MenuItem>
                         </Menu>
                     </div>
