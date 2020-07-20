@@ -7,9 +7,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import {Box} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles((theme) => ({
-    root: {
+/*    root: {
         flexGrow: 1,
     },
     menuButton: {
@@ -34,7 +36,31 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         maxWidth: '100%',
         maxHeight: '100%',
+    },*/
+
+
+    headerStuff: {
+        flexGrow: 1,
     },
+    paper: {
+        padding: theme.spacing(2),
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
+    },
+    BurgerButton: {
+        marginLeft: '1.5em',
+        marginTop: '2rem',
+    },
+    CherryLogo: {
+        size: '200%',
+        marginTop: '1.5rem',
+        marginLeft: '-1.6em',
+    },
+    searchIcon: {
+        marginTop: '2rem',
+        marginLeft: '2.8em',
+    }
+
 }));
 
 export default function ProminentAppBar() {
@@ -42,7 +68,29 @@ export default function ProminentAppBar() {
 
     return (
 
-        <Box
+        <div className={classes.headerStuff}>
+            <Grid container spacing={0}>
+
+                <Grid item xs={4} sm={3}>
+                        <MenuIcon
+                            className={classes.BurgerButton}
+
+                        />
+                </Grid>
+
+                <Grid item xs={4} sm={3}>
+                    <img src="./images/NewLogo.png" alt="" className={classes.CherryLogo}/>
+                </Grid>
+
+                <Grid item xs={4} sm={3}>
+                        <SearchIcon className={classes.searchIcon}/>
+                </Grid>
+
+            </Grid>
+        </div>
+
+
+/*        <div
             boxShadow={0}
             bgcolor="background.paper"
             m={0}
@@ -58,7 +106,7 @@ export default function ProminentAppBar() {
                         aria-label="open drawer">
                         <MenuIcon />
 
-                        {/*cherrypicker logo*/}
+                        {/!*cherrypicker logo*!/}
                         <img src="./images/NewLogo.png" alt="" className={classes.logo}/>
 
                     </IconButton>
@@ -69,6 +117,7 @@ export default function ProminentAppBar() {
                     </IconButton>
                 </Toolbar>
             </AppBar>
-        </Box>
+        </div>*/
+
     );
 }

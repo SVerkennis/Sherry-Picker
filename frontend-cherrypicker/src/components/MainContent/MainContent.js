@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundPosition: 'center',
         minHeight: '100vh',
         minWidth: '70vw',
-        marginTop: "35px",
+        marginTop: "-45px",
     }
 
 }));
