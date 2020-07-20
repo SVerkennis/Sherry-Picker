@@ -3,7 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import {makeStyles} from "@material-ui/core/styles";
 import myTheme from "../../styling/muiTheme";
 import Paper from "@material-ui/core/Paper";
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 import {Link}  from "react-router-dom";
 import TextField from '@material-ui/core/TextField';
 
@@ -111,6 +111,12 @@ const useStyles = makeStyles((theme) => ({
         },
     },
 
+    registerClick: {
+        color: myTheme.palette.secondary.contrastText,
+        fontFamily: 'Lato-Regular, sans-serif',
+        textDecoration: 'none',
+    }
+
 
 }));
 
@@ -173,16 +179,19 @@ export default function ShapeContent() {
                 {/*login text*/}
                 <Grid item xs={12}>
                     <Paper className={classes.loginText}>
-                        Log dich jetzt ein!
+                        Log dich jetzt ein.
                         <br/>
-                        Oder registrier dich hier!
+                        Oder registrier dich
+                        <Link to="/register" className={classes.registerClick}>
+                          <nbsp/> <b>hier!</b>
+                        </Link>
+
                     </Paper>
                 </Grid>
 
                 {/*login textfields!!*/}
                 <Grid item xs={12}>
                     <form className={classes.loginForm} noValidate autoComplete="off">
-
                         <div>
                             <TextField
                                 id="outlined-required"
@@ -204,6 +213,7 @@ export default function ShapeContent() {
                         </div>
                     </form>
                 </Grid>
+
 
 
             </Grid>

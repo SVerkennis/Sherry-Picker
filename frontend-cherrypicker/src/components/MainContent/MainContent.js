@@ -6,6 +6,7 @@ import {Route, Switch} from "react-router-dom";
 import FruitPage from "../FruitPage/FruitPage";
 import Apfel from "../FruitPage/Apfel";
 import VegetablePage from "../VegetablePage/VegetablePage";
+import RegisterPage from "../RegisterPage/RegisterPage";
 
 const useStyles = makeStyles((theme) => ({
 
@@ -43,6 +44,10 @@ export default function MainContent() {
 
                 <Route path="/vegetables" exact>
                     <VegetablePage/>
+                </Route>
+
+                <Route path="/register" exact>
+                    <RegisterPage/>
                 </Route>
 
                 <Route path="/">
