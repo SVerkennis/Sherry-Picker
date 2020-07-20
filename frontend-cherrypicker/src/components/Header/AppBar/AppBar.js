@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
 
         // HIER WIEDER ÄNDERN
-        marginBottom: '-60px',
+        marginBottom: '-55px',
     },
     paper: {
         padding: theme.spacing(2),
@@ -33,20 +33,20 @@ const useStyles = makeStyles((theme) => ({
     },*/
 
     CherryLogo: {
-        size: '200%',
-        marginTop: '3.3rem',
-        marginLeft: '-1.6em',
+        height: '65%',
+        marginTop: '2.5rem',
+        marginLeft: '-2.5em',
        // marginBottom: '2rem',
     },
     searchIcon: {
-        marginTop: '1.4rem',
+        marginTop: '1rem',
         marginLeft: '2.8em',
     },
 
     // all burger icon content
     buttonMenu: {
         marginLeft: '1.8em',
-        marginTop: '1.4rem',
+        marginTop: '1rem',
     },
     backgroundColor: {
         backgroundColor: 'white',
@@ -96,6 +96,9 @@ export default function ProminentAppBar() {
                             onClose={handleClose}
                         >
                             <MenuItem onClick={handleClose} className={classes.backgroundColor}>
+                                <Link to={"/"} className={classes.underlineText}>Home</Link>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose} className={classes.backgroundColor}>
                                 <Link to={"/fruits"} className={classes.underlineText}>Obst</Link>
                             </MenuItem>
                             <MenuItem onClick={handleClose} className={classes.backgroundColor}>
@@ -103,9 +106,6 @@ export default function ProminentAppBar() {
                             </MenuItem>
                             <MenuItem onClick={handleClose} className={classes.backgroundColor}>
                                 <Link to={"/register"} className={classes.underlineText}>Registrieren</Link>
-                            </MenuItem>
-                            <MenuItem onClick={handleClose} className={classes.backgroundColor}>
-                                <Link to={"/"} className={classes.underlineText}>Home</Link>
                             </MenuItem>
                         </Menu>
                     </div>

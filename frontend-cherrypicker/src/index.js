@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import {MuiThemeProvider} from "@material-ui/core";
 import myTheme from "./styling/muiTheme";
 
+
 ReactDOM.render(
   <React.StrictMode>
       <MuiThemeProvider theme={myTheme}>

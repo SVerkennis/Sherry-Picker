@@ -27,9 +27,7 @@ const useStyles = makeStyles((theme) => ({
         letterSpacing: '1.6pt',
         textAlign: 'left',
         marginLeft: '2.8em',
-
         marginTop: '130px',
-
         background: 'none',
         boxShadow: 'none',
     },
@@ -214,6 +212,7 @@ export default function ShapeContent() {
                                 label="Passwort"
                                 autoComplete="current-password"
                                 variant="outlined"
+                                type="password"
                                 placeholder="dein Passwort"
                                 size="small"
                             />
