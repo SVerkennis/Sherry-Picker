@@ -6,6 +6,7 @@ import Paper from "@material-ui/core/Paper";
 import {Link}  from "react-router-dom";
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import SvgIcon from "@material-ui/core/SvgIcon";
+import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -24,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
         letterSpacing: '1.6pt',
         textAlign: 'left',
         marginLeft: '130px',
-        marginTop: '120px',
+        marginTop: '10px',
         background: 'none',
         boxShadow: 'none',
     },
@@ -95,15 +96,16 @@ export default function VetetablePage() {
 
 
         <div className={classes.root}>
+
+            <Typography
+                component="div"
+                text="Hello"
+                style={{ backgroundColor: 'none', height: '5vh', marginTop: '5rem', }} />
+
             <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <Paper className={classes.Headline}>Gemüse</Paper>
                 </Grid>
- {/*               <Grid item xs={12}>
-                    <Paper className={classes.SubHeadline}>
-                        -is healthy as fuck-
-                    </Paper>
-                </Grid>*/}
             </Grid>
 
             {/*NEW buttons*/}

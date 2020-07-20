@@ -14,6 +14,7 @@ import Avatar from '@material-ui/core/Avatar';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import SvgIcon from "@material-ui/core/SvgIcon";
 import {Link} from "react-router-dom";
+import Typography from "@material-ui/core/Typography";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -33,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
         letterSpacing: '1.6pt',
         textAlign: 'left',
         marginLeft: '140px',
-        marginTop: '120px',
+        marginTop: '10px',
         background: 'none',
         boxShadow: 'none',
     },
@@ -123,6 +124,12 @@ export default function Apfel() {
 
             // Headline und infoText
         <div className={classes.root}>
+
+            <Typography
+                component="div"
+                text="Hello"
+                style={{ backgroundColor: 'none', height: '5vh', marginTop: '5rem', }} />
+
             <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <Paper className={classes.Headline}>APFEL</Paper>

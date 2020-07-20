@@ -8,6 +8,8 @@ import {Link}  from "react-router-dom";
 import TextField from '@material-ui/core/TextField';
 import MenuIcon from "@material-ui/icons/Menu";
 import {Menu, MenuItem} from "@material-ui/core";
+import Typography from "@material-ui/core/Typography";
+import Container from "@material-ui/core/Container";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -27,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
         letterSpacing: '1.6pt',
         textAlign: 'left',
         marginLeft: '2.8em',
-        marginTop: '130px',
+        marginTop: '10px',
         background: 'none',
         boxShadow: 'none',
     },
@@ -119,8 +121,6 @@ const useStyles = makeStyles((theme) => ({
         textDecoration: 'none',
     },
 
-
-
 }));
 
 export default function ShapeContent() {
@@ -131,6 +131,12 @@ export default function ShapeContent() {
 
 
         <div className={classes.root}>
+
+            <Typography
+                component="div"
+                text="Hello"
+                style={{ backgroundColor: 'none', height: '5vh', marginTop: '5rem', }} />
+
             <Grid container spacing={3}>
 
                 <Grid item xs={12}>

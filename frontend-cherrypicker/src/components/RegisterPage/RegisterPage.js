@@ -22,11 +22,11 @@ const useStyles = makeStyles((theme) => ({
     },
     Headline: {
         color: myTheme.palette.primary.contrastText,
-        fontSize: '20px',
+        fontSize: '24px',
         fontFamily: 'Lato-Black, sans-serif',
         letterSpacing: '1.6pt',
         textAlign: 'left',
-        marginLeft: '2em',
+        marginLeft: '1.3em',
         marginTop: '0.1rem',
         background: 'none',
         boxShadow: 'none',
@@ -37,8 +37,8 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '22px',
         fontSize: '15px',
         textAlign: 'left',
-        marginLeft: '0.6em',
-        marginTop: '0.1rem',
+        marginLeft: '1.5em',
+        marginTop: '0.2rem',
         marginBottom: '10px',
         background: 'none',
         boxShadow: 'none',
@@ -56,7 +56,7 @@ export default function RegisterPage() {
                     <Typography
                         component="div"
                         text="Hello"
-                        style={{ backgroundColor: 'yellow', height: '5vh', marginTop: '5rem', }} />
+                        style={{ backgroundColor: 'none', height: '5vh', marginTop: '5rem', }} />
                     <div>
                     <div className={classes.root}>
                         <Grid container spacing={3}>
@@ -68,7 +68,7 @@ export default function RegisterPage() {
 
                                 <Grid item xs={12}>
                                     <Paper className={classes.SubHeadline}>
-                                        Und danach kannst du sofort loslegen.
+                                        Danach kann es sofort los gehen.
                                     </Paper>
                                 </Grid>
 
@@ -77,6 +77,7 @@ export default function RegisterPage() {
                                     id="outlined-required"
                                     label="Wunsch Username"
                                     variant="outlined"
+                                    type="search"
                                     size="small"
                                 />
                             </Grid>
@@ -105,8 +106,9 @@ export default function RegisterPage() {
                             <Grid item xs={12}>
                                 <TextField
                                     id="outlined-required"
-                                    label="Dein Name + Nachname"
+                                    label="Dein Name, Nachname"
                                     variant="outlined"
+                                    type="search"
                                     size="small"
                                 />
                             </Grid>
@@ -117,6 +119,7 @@ export default function RegisterPage() {
                                     label="Adresse"
                                     variant="outlined"
                                     placeholder="Straße Nr. Plz. Stadt"
+                                    type="search"
                                     size="small"
                                 />
                             </Grid>
@@ -126,13 +129,11 @@ export default function RegisterPage() {
                                     id="outlined-number"
                                     label="Dein Alter"
                                     type="number"
-                                    InputLabelProps={{
-                                        shrink: true
-                                    }}
                                     variant="outlined"
                                     size="small"
                                 />
                             </Grid>
+
                             </form>
                         </Grid>
                     </div>
