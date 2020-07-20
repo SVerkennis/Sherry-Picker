@@ -6,6 +6,8 @@ import Grid from '@material-ui/core/Grid';
 import TextField from "@material-ui/core/TextField";
 import Paper from "@material-ui/core/Paper";
 import myTheme from "../../styling/muiTheme";
+import Icon from '@material-ui/core/Icon';
+import Button from '@material-ui/core/Button';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -43,11 +45,17 @@ const useStyles = makeStyles((theme) => ({
         background: 'none',
         boxShadow: 'none',
     },
+    sendButton: {
+        // margin: theme.spacing(1),
+        marginTop: '1.3rem',
+        marginLeft: '9.3em',
+        color: myTheme.palette.primary.main,
+        backgroundColor: myTheme.palette.primary.light
+    },
 }));
 
 export default function RegisterPage() {
     const classes = useStyles();
-
 
 
         return (
@@ -136,6 +144,18 @@ export default function RegisterPage() {
 
                             </form>
                         </Grid>
+
+                        <Grid item xs={12}>
+                            <Button
+                                variant="contained"
+                                color= "tertiary"
+                                className={classes.sendButton}
+                                endIcon={<Icon>send</Icon>}
+                            >
+                                senden
+                            </Button>
+                        </Grid>
+
                     </div>
                     </div>
 
