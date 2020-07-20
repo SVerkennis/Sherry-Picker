@@ -1,43 +1,19 @@
 import React from "react";
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
+// import AppBar from '@material-ui/core/AppBar';
+// import Toolbar from '@material-ui/core/Toolbar';
+// import IconButton from '@material-ui/core/IconButton';
+// import Typography from '@material-ui/core/Typography';
+// import {Box} from '@material-ui/core';
+// import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import {Box} from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
+import {Menu, MenuItem} from "@material-ui/core";
+import {Link} from "react-router-dom";
+import myTheme from "../../../styling/muiTheme";
 
 const useStyles = makeStyles((theme) => ({
-/*    root: {
-        flexGrow: 1,
-    },
-    menuButton: {
-        marginTop: '5px',
-        marginLeft: '5px',
-        marginRight: theme.spacing(1),
-    },
-    searchButton: {
-        marginTop: '25px',
-    },
-    toolbar: {
-        minHeight: 80,
-        alignItems: 'flex-start',
-        paddingTop: theme.spacing(1),
-    },
-    title: {
-        flexGrow: 1,
-        alignSelf: 'flex-end',
-    },
-    logo: {
-        marginLeft: '1.8em',
-        textAlign: 'center',
-        maxWidth: '100%',
-        maxHeight: '100%',
-    },*/
-
 
     headerStuff: {
         flexGrow: 1,
@@ -47,10 +23,10 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         color: theme.palette.text.secondary,
     },
-    BurgerButton: {
+ /*   BurgerButton: {
         marginLeft: '1.5em',
         marginTop: '2rem',
-    },
+    },*/
     CherryLogo: {
         size: '200%',
         marginTop: '1.5rem',
@@ -59,29 +35,88 @@ const useStyles = makeStyles((theme) => ({
     searchIcon: {
         marginTop: '2rem',
         marginLeft: '2.8em',
-    }
+    },
+
+    // all burger icon content
+    buttonMenu: {
+        marginLeft: '-1.7em',
+        marginTop: '1.6rem',
+        display: "flex",
+        justifyContent: "center",
+    },
+    backgroundColor: {
+        backgroundColor: 'white',
+    },
+    basicTypoButton: {
+        fontFamily: "Open Sans",
+        fontWeight: "bold",
+    },
+    underlineText: {
+        textDecoration: 'none',
+        color: myTheme.palette.secondary.main,
+    },
 
 }));
+
+
 
 export default function ProminentAppBar() {
     const classes = useStyles();
 
-    return (
+    const [anchorEl, setAnchorEl] = React.useState(null);
+
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+        return (
 
         <div className={classes.headerStuff}>
+
             <Grid container spacing={0}>
 
-                <Grid item xs={4} sm={3}>
-                        <MenuIcon
-                            className={classes.BurgerButton}
 
-                        />
+                {/*burger icon*/}
+                <Grid item xs={4} sm={3}>
+{/*                   <MenuIcon className={classes.BurgerButton}/>*/}
+                    <div className={classes.buttonMenu}>
+                        <MenuIcon className={classes.basicTypoButton} variant={"contained"} aria-controls="simple-menu" aria-haspopup="true"
+                                  onClick={handleClick}>
+                        </MenuIcon>
+                        <Menu
+                            id="simple-menu"
+                            anchorEl={anchorEl}
+                            keepMounted
+                            open={Boolean(anchorEl)}
+                            onClose={handleClose}
+                        >
+                            <MenuItem onClick={handleClose} className={classes.backgroundColor}>
+                                <Link to={"/fruits"}  className={classes.underlineText}>Obst</Link>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose} className={classes.backgroundColor}>
+                                <Link to={"/vegetables"}  className={classes.underlineText}>Gemüse</Link>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose} className={classes.backgroundColor}>
+                                <Link to={"/register"}  className={classes.underlineText}>Registrieren</Link>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose} className={classes.backgroundColor}>
+                                <Link to={"/"} c className={classes.underlineText}>Home</Link>
+                            </MenuItem>
+                        </Menu>
+                    </div>
                 </Grid>
 
+
+                {/*logo img*/}
                 <Grid item xs={4} sm={3}>
                     <img src="./images/NewLogo.png" alt="" className={classes.CherryLogo}/>
                 </Grid>
 
+                {/*search icon*/}
                 <Grid item xs={4} sm={3}>
                         <SearchIcon className={classes.searchIcon}/>
                 </Grid>
@@ -90,34 +125,6 @@ export default function ProminentAppBar() {
         </div>
 
 
-/*        <div
-            boxShadow={0}
-            bgcolor="background.paper"
-            m={0}
-            p={0}
-            style={{ width: '0', height: '0' }}
-            className={classes.root}>
-            <AppBar position="static">
-                <Toolbar className={classes.toolbar}>
-                    <IconButton
-                        edge="start"
-                        className={classes.menuButton}
-                        color="secondary"
-                        aria-label="open drawer">
-                        <MenuIcon />
-
-                        {/!*cherrypicker logo*!/}
-                        <img src="./images/NewLogo.png" alt="" className={classes.logo}/>
-
-                    </IconButton>
-                    <Typography className={classes.title} variant="h5" noWrap>
-                    </Typography>
-                    <IconButton className={classes.searchButton} aria-label="search" color="secondary">
-                        <SearchIcon />
-                    </IconButton>
-                </Toolbar>
-            </AppBar>
-        </div>*/
 
     );
 }

@@ -1,9 +1,22 @@
 import React from "react";
+import { makeStyles } from '@material-ui/core/styles';
 
-export default function RegisterPage() {
 
-    return(
-        <div/>
-    );
+const useStyles = makeStyles((theme) => ({
+
+
+}));
+
+export default function RegisterPage({colorStyle}) {
+    const classes = useStyles();
+
+
+
+
+        return (
+
+            <div>
+            </div>
+        );
 
 }
