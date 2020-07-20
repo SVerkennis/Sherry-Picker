@@ -11,6 +11,9 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import SvgIcon from "@material-ui/core/SvgIcon";
+import {Link} from "react-router-dom";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -53,6 +56,7 @@ const useStyles = makeStyles((theme) => ({
     grow: {
         flexGrow: 1,
     },
+
     appBar: {
         marginRight: '90px',
         marginTop: '265px',
@@ -60,10 +64,12 @@ const useStyles = makeStyles((theme) => ({
         maxHeight: '30px',
         borderRadius: '14px',
     },
+
     inlineText: {
         fontSize: '14px',
-        paddingBottom: '20px',
+        paddingBottom: '25px',
     },
+
     mapsImage: {
         marginLeft: '40px',
         background: 'none',
@@ -79,6 +85,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '-70px',
         marginLeft: '70px',
     },
+
     profilTamai: {
         color: myTheme.palette.secondary.contrastText,
         background: 'none',
@@ -87,7 +94,27 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: '70px',
     },
 
+    homeIcon: {
+        marginTop: '-30px',
+        opacity: '100%',
+        marginLeft: '-5px',
+    },
+    backIcon: {
+        marginTop: '-30px',
+        marginLeft: '155px',
+        opacity: '100%',
+    },
+
 }));
+
+// just for homeIcon
+function HomeIcon(props) {
+    return (
+        <SvgIcon {...props}>
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+        </SvgIcon>
+    );
+}
 
 export default function Apfel() {
     const classes = useStyles();
@@ -149,7 +176,7 @@ export default function Apfel() {
                             />
                         </ListItem>
                     </List>
-                    <List className={classes.profilTamai}>
+                    {/*<List className={classes.profilTamai}>
                         <ListItem alignItems="flex-start">
                             <ListItemAvatar>
                                 <Avatar alt="Tamai Donan" src="images/tamai.png" />
@@ -159,18 +186,34 @@ export default function Apfel() {
                                 secondary={
                                     <React.Fragment>
                                        {' 0208 16 8429 29 '}
-   {/*                                  <br/>
+                                     <br/>
                                         {' Kreuzstraße 14 '}
                                         <br/>
-                                        {' Mülheim an der Ruhr '}*/}
+                                        {' Mülheim an der Ruhr '}
                                     </React.Fragment>
                                 } />
                         </ListItem>
-                    </List>
-
+                    </List>*/}
                 </Grid>
 
-
+                <Grid item xs={6}>
+                    <Link to="/fruits">
+                        <div className={classes.backIcon}>
+                            <ArrowBackIosIcon fontSize="large"
+                                              color="primary"
+                            />
+                        </div>
+                    </Link>
+                </Grid>
+                    <Grid item xs={6}>
+                        <Link to="/">
+                            <div className={classes.homeIcon}>
+                                <HomeIcon fontSize="large"
+                                          color="primary"
+                                />
+                            </div>
+                        </Link>
+                    </Grid>
 
             </Grid>
         </div>

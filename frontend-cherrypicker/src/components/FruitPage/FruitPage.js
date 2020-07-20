@@ -79,27 +79,14 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '-40px',
     },
 
-    homeIcon: {
-        marginTop: '-40px',
-        opacity: '80%',
-        marginLeft: '-5px',
-    },
     backIcon: {
         marginTop: '-40px',
-        marginLeft: '155px',
-        opacity: '80%',
+        marginLeft: '180px',
+        opacity: '100%',
     },
 
 }));
 
-    // just for homeIcon
-function HomeIcon(props) {
-    return (
-        <SvgIcon {...props}>
-            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-        </SvgIcon>
-    );
-}
 
 export default function FruitPage() {
     const classes = useStyles();
@@ -168,7 +155,7 @@ export default function FruitPage() {
                     </Grid>
 
                     {/*back icon*/}
-                    <Grid item xs={6}>
+                    <Grid item xs={12}>
                         <Link to="/">
                             <div className={classes.backIcon}>
                                 <ArrowBackIosIcon fontSize="large"
@@ -177,18 +164,6 @@ export default function FruitPage() {
                             </div>
                         </Link>
                     </Grid>
-
-                    {/*home icon*/}
-                    <Grid item xs={6}>
-                        <Link to="/">
-                            <div className={classes.homeIcon}>
-                                <HomeIcon fontSize="large"
-                                          color="primary"
-                                />
-                            </div>
-                        </Link>
-                    </Grid>
-
                 </Grid>
             </div>
 

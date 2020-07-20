@@ -5,6 +5,8 @@ import myTheme from "../../styling/muiTheme";
 import Paper from "@material-ui/core/Paper";
 import Button from '@material-ui/core/Button';
 import {Link}  from "react-router-dom";
+import TextField from '@material-ui/core/TextField';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -22,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Lato-Black, sans-serif',
         letterSpacing: '1.6pt',
         textAlign: 'left',
-        marginLeft: '64px',
+        marginLeft: '2.8em',
         marginTop: '130px',
         background: 'none',
         boxShadow: 'none',
@@ -34,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '22px',
         fontSize: '15px',
         textAlign: 'left',
-        marginLeft: '64px',
+        marginLeft: '4.5em',
         marginRight: '55px',
         marginTop: '-10px',
         marginBottom: '-10px',
@@ -43,22 +45,20 @@ const useStyles = makeStyles((theme) => ({
     },
 
     buttonOne: {
-        marginLeft: "55px",
+        marginLeft: "3.5em",
         backgroundRepeat: 'no-repeat',
         boxShadow: 'none',
         maxWidth: '80%',
-        maxHeight: '80%',
     },
 
     buttonTwo: {
-        marginRight: "50px",
+        marginRight: "3.5em",
         background: 'none',
         boxShadow: 'none',
         maxWidth: '80%',
-        maxHeight: '80%',
     },
 
-    registerText: {
+/*    registerText: {
         marginLeft: '64px',
         marginRight: '80px',
         marginTop: '20px',
@@ -86,7 +86,31 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: '35px',
         opacity: '70%',
         marginTop: '-5px',
-    }
+    },*/
+
+    loginText: {
+        color: myTheme.palette.secondary.contrastText,
+        fontFamily: 'Lato-Regular, sans-serif',
+        lineHeight: '22px',
+        fontSize: '15px',
+        textAlign: 'left',
+        marginLeft: '7em',
+        marginRight: '55px',
+        marginTop: '-10px',
+        marginBottom: '-10px',
+        background: 'none',
+        boxShadow: 'none',
+    },
+
+    loginForm: {
+        marginLeft: '6em',
+        marginTop: '-5px',
+        '& .MuiTextField-root': {
+            margin: theme.spacing(0.5),
+            width: '17ch',
+        },
+    },
+
 
 }));
 
@@ -103,8 +127,8 @@ export default function ShapeContent() {
                 </Grid>
                 <Grid item xs={12}>
                     <Paper className={classes.SubHeadline}>
-                        Teilt euer überschüssiges, selbstangebautest Obst und Gemüse ganz
-                        einfach mit euren Nachbarn oder zukünftign Freunden.
+                        Teilt euer überschüssiges und selbstangebautest Obst und Gemüse ganz
+                        einfach mit Anderen.
                     </Paper>
                 </Grid>
 
@@ -123,26 +147,66 @@ export default function ShapeContent() {
             </Grid>
 
             {/*registertext and button and login*/}
-            <Grid container spacing={3}>
+{/*            <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <Paper className={classes.registerText}>Werde Teil der Community <br/>& registrier dich hier!</Paper>
                 </Grid>
                 <Grid item xs={6}>
-                    <Paper className={classes.registerButton}>
+                    <Paper className={classes.registerButton}>*/}
+
                         {/*registerButton*/}
-                        <Button variant="contained" color="primary" disableElevation>
+{/*                        <Button variant="contained" color="primary" disableElevation>
                             registrieren
                         </Button>
                     </Paper>
-                </Grid>
+                </Grid>*/}
 
                 {/*login option*/}
-                <Grid item xs={6}>
+ {/*               <Grid item xs={6}>
                     <Paper className={classes.login}>or login</Paper>
                 </Grid>
+            </Grid>*/}
+
+            {/*login!!*/}
+            <Grid container spacing={3}>
+
+                {/*login text*/}
+                <Grid item xs={12}>
+                    <Paper className={classes.loginText}>
+                        Log dich jetzt ein!
+                        <br/>
+                        Oder registrier dich hier!
+                    </Paper>
+                </Grid>
+
+                {/*login textfields!!*/}
+                <Grid item xs={12}>
+                    <form className={classes.loginForm} noValidate autoComplete="off">
+
+                        <div>
+                            <TextField
+                                id="outlined-required"
+                                label="Username"
+                                // defaultValue="Username"
+                                variant="outlined"
+                                placeholder="dein Username"
+                                size="small"
+                            />
+
+                            <TextField
+                                id="outlined-password-input"
+                                label="Passwort"
+                                autoComplete="current-password"
+                                variant="outlined"
+                                placeholder="dein Passwort"
+                                size="small"
+                            />
+                        </div>
+                    </form>
+                </Grid>
+
+
             </Grid>
-
-
         </div>
     );
 }
