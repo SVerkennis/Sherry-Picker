@@ -29,9 +29,9 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '24px',
         fontFamily: 'Lato-Black, sans-serif',
         letterSpacing: '1.6pt',
-        textAlign: 'left',
-        marginLeft: '2.8em',
-        marginTop: '10px',
+        //textAlign: 'center',
+        marginTop: '3rem',
+        marginLeft: '1.5em',
         background: 'none',
         boxShadow: 'none',
     },
@@ -39,77 +39,48 @@ const useStyles = makeStyles((theme) => ({
     SubHeadline: {
         color: myTheme.palette.secondary.contrastText,
         fontFamily: 'Lato-Regular, sans-serif',
-        lineHeight: '22px',
+        lineHeight: '1.3rem',
         fontSize: '15px',
         textAlign: 'left',
-        marginLeft: '4.5em',
-        marginRight: '55px',
-        marginTop: '-10px',
-        marginBottom: '-10px',
+        marginTop: '-0.5rem',
+        marginLeft: '2.4em',
         background: 'none',
         boxShadow: 'none',
     },
-
-    Hashtag: {
-        background: 'none',
-        boxShadow: 'none',
-        color: myTheme.palette.primary.main,
-        fontSize: '30px',
-        fontFamily: 'Lato-Black, sans-serif',
-        letterSpacing: '1.6pt',
-        marginLeft: '2.3em',
-        marginTop: '-10px',
-        opacity: '80%',
-    },
-
-/*    buttonOne: {
-        marginLeft: "3.5em",
-        backgroundRepeat: 'no-repeat',
-        boxShadow: 'none',
-        maxWidth: '80%',
-    },
-
-    buttonTwo: {
-        marginRight: "3.5em",
-        background: 'none',
-        boxShadow: 'none',
-        maxWidth: '80%',
-    },*/
-
-
     loginText: {
         color: myTheme.palette.secondary.contrastText,
         fontFamily: 'Lato-Regular, sans-serif',
-        lineHeight: '22px',
+        lineHeight: '1.4rem',
         fontSize: '15px',
         textAlign: 'left',
-        marginLeft: '7em',
-        marginRight: '55px',
-        marginTop: '20px',
-        marginBottom: '-10px',
+        marginLeft: '5em',
+        marginTop: '1rem',
+        marginBottom: '-0.5rem',
         background: 'none',
         boxShadow: 'none',
     },
-
     loginForm: {
-        marginLeft: '6em',
-        marginTop: '-5px',
+        marginLeft: '4.3em',
+        marginTop: '-0.4rem',
         '& .MuiTextField-root': {
             margin: theme.spacing(0.5),
             width: '17ch',
         },
+
+    backgroundField: {
+        backgroundColor: 'white',
     },
 
+    },
     registerClick: {
         color: myTheme.palette.secondary.contrastText,
         fontFamily: 'Lato-Regular, sans-serif',
         textDecoration: 'none',
     },
-
     sendButton: {
         // margin: theme.spacing(1),
         marginTop: '-1rem',
-        marginLeft: '7.2em',
+        marginLeft: '5.2em',
         color: myTheme.palette.primary.main,
         backgroundColor: myTheme.palette.primary.light,
         width: '22ch',
@@ -119,8 +90,9 @@ const useStyles = makeStyles((theme) => ({
     },
     shareCircle: {
         width: '50%',
-        marginLeft: '12em',
-        marginTop: '-2.5rem',
+        position: 'absolute',
+        bottom: '-1.6rem',
+        right: '0',
     },
 
 }));
@@ -134,49 +106,28 @@ export default function ShapeContent() {
 
         <div className={classes.root}>
 
-            <Typography
-                component="div"
-                text="Hello"
-                style={{ backgroundColor: 'none', height: '5vh', marginTop: '5rem', }} />
+
+                <img src="images/shareCircle.png"
+                     alt="share-logo"
+                     className={classes.shareCircle}/>
 
 
             <Grid container spacing={3}>
 
                 <Grid item xs={12}>
-                    <Paper className={classes.Headline}>GEMEINSAM<br/>HABEN WIR MEHR!</Paper>
-                </Grid>
-
-{/*                <Grid item xs={12}>
-                    <Paper className={classes.Hashtag}>#TEILEN</Paper>
-                </Grid>*/}
-
-
-                <Grid item xs={12}>
-                    <Paper className={classes.SubHeadline}>
-
-                        Teilt euer überschüssiges und selbstangebautest Obst und Gemüse ganz
-                        einfach mit Anderen.
+                    <Paper className={classes.Headline}>
+                        GEMEINSAM <br/> HABEN WIR MEHR!
                     </Paper>
                 </Grid>
 
-
-
-                 {/*fruits and vegetables button*/}
- {/*               <Grid item xs={6} container spacing={1}>
-                    <Link to="/fruits">
-                    <img src="images/obst.png" alt="obst-logo" className={classes.buttonOne}/>
-                    </Link>
+                <Grid item xs={12}>
+                    <Paper className={classes.SubHeadline}>
+                        Teilt euer überschüssiges und selbstangebautest Obst und Gemüse <br/>
+                        ganz einfach mit Anderen.
+                    </Paper>
                 </Grid>
 
-                <Grid item xs={6} container spacing={1}>
-                    <Link to="/vegetables">
-                    <img src="images/gemuese.png" alt="gemuese-logo" className={classes.buttonTwo}/>
-                    </Link>
-                </Grid>*/}
-
             </Grid>
-
-
 
             {/*login!!*/}
             <Grid container spacing={3}>
@@ -199,6 +150,7 @@ export default function ShapeContent() {
                     <form className={classes.loginForm} noValidate autoComplete="off">
                         <div>
                             <TextField
+                                className={classes.backgroundField}
                                 id="outlined-required"
                                 label="Username"
                                 // defaultValue="Username"
@@ -208,6 +160,7 @@ export default function ShapeContent() {
                             />
 
                             <TextField
+                                className={classes.backgroundField}
                                 id="outlined-password-input"
                                 label="Passwort"
                                 autoComplete="current-password"
@@ -229,16 +182,12 @@ export default function ShapeContent() {
                             size="medium"
                             className={classes.sendButton}
                         >
-                            senden
+                            login
                         </Button>
                     </Link>
                 </Grid>
 
-                <Grid item xs={12} container>
-                    <Link to="/fruits">
-                        <img src="images/shareCircle.png" alt="share-logo" className={classes.shareCircle}/>
-                    </Link>
-                </Grid>
+
 
             </Grid>
         </div>

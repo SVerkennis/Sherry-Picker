@@ -11,16 +11,20 @@ import LandingPage from "../LandingPage/LandingPage";
 
 const useStyles = makeStyles((theme) => ({
 
-    shapeContainer: {
+    shapeThing: {
         backgroundRepeat: 'no-repeat',
-        backgroundImage: 'url("images/backgroundShape.png")',
-        // backgroundPosition: 'top 4.2rem left 2em',
-        backgroundPosition: 'center',
-        minHeight: '100vh',
-      //  minWidth: '70vw',
-     //   marginLeft: '0.2em'
-
+      //  backgroundImage: 'url("images/backgroundShape.png")',
+      //  backgroundPosition: 'center',
+     //   backgroundSize: 'cover',
+        backgroundColor: '#5CDB95',
+        marginLeft: '1.5em',
+        marginRight: '1.5em',
+        marginTop: '4.5rem',
+        borderRadius: '22px',
+        paddingBottom: '7.5rem',
+     //   clipPath: 'polygon(49%)',
     },
+
 
 }));
 
@@ -30,11 +34,22 @@ export default function MainContent() {
     return (
 
 <>
-
+        <div className={classes.shapeThing}>
         <Grid
-            container
-            className={classes.shapeContainer}
+             container
+             className={classes.shapeContainer}
         >
+
+
+  {/*      <Grid item xs>
+            <Paper className={classes.kasten}/>
+        </Grid>
+
+        <Grid item xs>
+            <Paper className={classes.kreis}/>
+        </Grid>*/}
+
+
 
 
             <Switch>
@@ -64,6 +79,8 @@ export default function MainContent() {
             </Switch>
 
         </Grid>
+
+</div>
     </>
     );
 }

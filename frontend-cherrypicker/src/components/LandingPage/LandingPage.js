@@ -22,9 +22,9 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '24px',
         fontFamily: 'Lato-Black, sans-serif',
         letterSpacing: '1.6pt',
-        textAlign: 'left',
-        marginLeft: '2.8em',
-        marginTop: '10px',
+        textAlign: 'center',
+        marginTop: '3rem',
+     //   marginLeft: '1.5em',
         background: 'none',
         boxShadow: 'none',
     },
@@ -68,11 +68,14 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: 'none',
         maxWidth: '80%',
     },
-
     shareCircle: {
         width: '50%',
-        marginLeft: '12em',
-        marginTop: '2.5rem',
+        position: 'absolute',
+        bottom: '-1.6rem',
+        right: '0',
+    },
+    gesundBox: {
+        paddingBottom: '6rem',
     }
 
 }));
@@ -87,10 +90,10 @@ export default function LandingPage() {
 
         <div className={classes.root}>
 
-            <Typography
-                component="div"
-                text="Hello"
-                style={{ backgroundColor: 'none', height: '5vh', marginTop: '5rem', }} />
+                <img src="images/shareCircleGesund.png"
+                     alt="share-logo"
+                     className={classes.shareCircle}/>
+
 
             <Grid container spacing={3}>
 
@@ -111,7 +114,9 @@ export default function LandingPage() {
 
 
                 {/*fruits and vegetables button*/}
-                <Grid item xs={6} container spacing={1}>
+                <Grid item xs={6} container spacing={1}
+                className={classes.gesundBox}>
+
                     <Link to="/fruits">
                         <img src="images/obst.png" alt="obst-logo" className={classes.buttonOne}/>
                     </Link>
@@ -123,12 +128,10 @@ export default function LandingPage() {
                     </Link>
                 </Grid>
 
-
-                <Grid item xs={12} container>
-                    <Link to="/fruits">
-                        <img src="images/shareCircleGesund.png" alt="share-logo" className={classes.shareCircle}/>
-                    </Link>
-                </Grid>
+                <Typography
+                    component="div"
+                    text="Hello"
+                    style={{ backgroundColor: 'none', height: '10vh', marginTop: '10.5rem', }} />
 
             </Grid>
 
