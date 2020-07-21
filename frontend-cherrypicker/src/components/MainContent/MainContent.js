@@ -40,14 +40,6 @@ export default function MainContent() {
              className={classes.shapeContainer}
         >
 
-  {/*      <Grid item xs>
-            <Paper className={classes.kasten}/>
-        </Grid>
-
-        <Grid item xs>
-            <Paper className={classes.kreis}/>
-        </Grid>*/}
-
             <Switch>
                 <Route path="/fruits" exact>
                     <FruitPage/>

@@ -69,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: '90%',
     },
     shareCircle: {
-        width: '50%',
+        maxWidth: '50%',
         position: 'absolute',
         bottom: '-1.6rem',
         right: '0',
