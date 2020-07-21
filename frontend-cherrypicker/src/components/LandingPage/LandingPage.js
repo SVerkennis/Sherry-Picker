@@ -62,7 +62,6 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: 'none',
         maxWidth: '90%',
     },
-
     buttonTwo: {
         marginRight: "3.5em",
         background: 'none',
@@ -129,7 +128,7 @@ export default function LandingPage() {
                 <Typography
                     component="div"
                     text="Hello"
-                    style={{ backgroundColor: 'none', height: '10vh', marginTop: '8.4rem', }} />
+                    style={{ backgroundColor: 'none', height: '10vh', marginTop: '9.7rem', }} />
 
             </Grid>
 
