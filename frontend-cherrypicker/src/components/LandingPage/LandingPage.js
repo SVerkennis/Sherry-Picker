@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
         letterSpacing: '1.6pt',
         textAlign: 'center',
         marginTop: '3rem',
+        lineHeight: '2rem',
      //   marginLeft: '1.5em',
         background: 'none',
         boxShadow: 'none',
@@ -35,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '22px',
         fontSize: '15px',
         textAlign: 'left',
-        marginLeft: '4.5em',
+        marginLeft: '3.8em',
         marginRight: '55px',
         marginTop: '-10px',
         marginBottom: '-10px',
@@ -56,17 +57,17 @@ const useStyles = makeStyles((theme) => ({
     },
 
     buttonOne: {
-        marginLeft: "3.5em",
+        marginLeft: "2.8em",
         backgroundRepeat: 'no-repeat',
         boxShadow: 'none',
-        maxWidth: '80%',
+        maxWidth: '90%',
     },
 
     buttonTwo: {
         marginRight: "3.5em",
         background: 'none',
         boxShadow: 'none',
-        maxWidth: '80%',
+        maxWidth: '90%',
     },
     shareCircle: {
         width: '50%',
@@ -74,9 +75,7 @@ const useStyles = makeStyles((theme) => ({
         bottom: '-1.6rem',
         right: '0',
     },
-    gesundBox: {
-        paddingBottom: '6rem',
-    }
+
 
 }));
 
@@ -98,7 +97,7 @@ export default function LandingPage() {
             <Grid container spacing={3}>
 
                 <Grid item xs={12}>
-                    <Paper className={classes.Headline}>WILLKOMMEN!</Paper>
+                    <Paper className={classes.Headline}>HERZLICH <br/>WILLKOMMEN!</Paper>
                 </Grid>
 
 {/*                <Grid item xs={12}>
@@ -114,8 +113,7 @@ export default function LandingPage() {
 
 
                 {/*fruits and vegetables button*/}
-                <Grid item xs={6} container spacing={1}
-                className={classes.gesundBox}>
+                <Grid item xs={6} container spacing={1}>
 
                     <Link to="/fruits">
                         <img src="images/obst.png" alt="obst-logo" className={classes.buttonOne}/>
@@ -131,7 +129,7 @@ export default function LandingPage() {
                 <Typography
                     component="div"
                     text="Hello"
-                    style={{ backgroundColor: 'none', height: '10vh', marginTop: '10.5rem', }} />
+                    style={{ backgroundColor: 'none', height: '10vh', marginTop: '8.4rem', }} />
 
             </Grid>
 
