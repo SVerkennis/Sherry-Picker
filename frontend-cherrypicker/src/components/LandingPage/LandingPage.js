@@ -128,11 +128,9 @@ export default function LandingPage() {
                 <Typography
                     component="div"
                     text="Hello"
-                    style={{ backgroundColor: 'none', height: '10vh', marginTop: '9.7rem', }} />
+                    style={{ backgroundColor: 'none', height: '10vh', marginTop: '17.1rem', }} />
 
             </Grid>
-
-
         </div>
     )
 }

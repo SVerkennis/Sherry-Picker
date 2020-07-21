@@ -25,9 +25,9 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '30px',
         fontFamily: 'Lato-Black, sans-serif',
         letterSpacing: '1.6pt',
-        textAlign: 'left',
-        marginLeft: '130px',
-        marginTop: '10px',
+        textAlign: 'center',
+        marginTop: '3rem',
+        lineHeight: '2rem',
         background: 'none',
         boxShadow: 'none',
     },
@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     buttonMoehre: {
-        marginLeft: "65px",
+        marginLeft: "3em",
         backgroundRepeat: 'no-repeat',
         boxShadow: 'none',
     },
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     buttonBrokkoli: {
-        marginLeft: '65px',
+        marginLeft: "3em",
         marginTop: '-40px',
     },
 
@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     buttonPaprika: {
-        marginLeft: '65px',
+        marginLeft: "3em",
         marginTop: '-40px',
     },
 
@@ -83,9 +83,9 @@ const useStyles = makeStyles((theme) => ({
     },
 
     backIcon: {
-        marginTop: '-40px',
-        marginLeft: '180px',
-        opacity: '100%',
+        marginTop: '-2.5em',
+        marginLeft: '10em',
+        opacity: '80%',
     },
 
 }));
@@ -98,11 +98,6 @@ export default function VetetablePage() {
 
 
         <div className={classes.root}>
-
-            <Typography
-                component="div"
-                text="Hello"
-                style={{ backgroundColor: 'none', height: '5vh', marginTop: '5rem', }} />
 
             <Grid container spacing={3}>
                 <Grid item xs={12}>

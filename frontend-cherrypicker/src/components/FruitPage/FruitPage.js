@@ -23,14 +23,15 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '30px',
         fontFamily: 'Lato-Black, sans-serif',
         letterSpacing: '1.6pt',
-        textAlign: 'left',
-        marginLeft: '145px',
-        marginTop: '10px',
+        textAlign: 'center',
+        marginTop: '3rem',
+        lineHeight: '2rem',
+        //   marginLeft: '1.5em',
         background: 'none',
         boxShadow: 'none',
     },
 
-    SubHeadline: {
+/*    SubHeadline: {
         color: myTheme.palette.secondary.contrastText,
         fontFamily: 'Lato-Regular, sans-serif',
         lineHeight: '22px',
@@ -42,10 +43,10 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: '-10px',
         background: 'none',
         boxShadow: 'none',
-    },
+    },*/
 
     buttonApfel: {
-        marginLeft: "65px",
+        marginLeft: "3em",
         backgroundRepeat: 'no-repeat',
         boxShadow: 'none',
     },
@@ -57,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     buttonBirne: {
-        marginLeft: '65px',
+        marginLeft: "3em",
         marginTop: '-40px',
     },
 
@@ -69,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     buttonWassermelone: {
-        marginLeft: '65px',
+        marginLeft: "3em",
         marginTop: '-40px',
     },
 
@@ -81,9 +82,9 @@ const useStyles = makeStyles((theme) => ({
     },
 
     backIcon: {
-        marginTop: '-40px',
-        marginLeft: '180px',
-        opacity: '100%',
+        marginTop: '-2.5em',
+        marginLeft: '10em',
+        opacity: '80%',
     },
 
 }));
@@ -97,15 +98,11 @@ export default function FruitPage() {
         // Überschriften
         <div className={classes.root}>
 
-            <Typography
-                component="div"
-                text="Hello"
-                style={{ backgroundColor: 'none', height: '5vh', marginTop: '5rem', }} />
-
             <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <Paper className={classes.Headline}>OBST</Paper>
                 </Grid>
+
 {/*          // Subhead
                <Grid item xs={12}>
                     <Paper className={classes.SubHeadline}>
@@ -171,8 +168,11 @@ export default function FruitPage() {
                             </div>
                         </Link>
                     </Grid>
+
+
                 </Grid>
             </div>
+
 
 
         </div>

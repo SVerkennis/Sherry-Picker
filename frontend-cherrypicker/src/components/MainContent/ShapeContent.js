@@ -187,7 +187,10 @@ export default function ShapeContent() {
                     </Link>
                 </Grid>
 
-
+                <Typography
+                    component="div"
+                    text="Hello"
+                    style={{ backgroundColor: 'none', height: '10vh', marginTop: '6rem', }} />
 
             </Grid>
         </div>

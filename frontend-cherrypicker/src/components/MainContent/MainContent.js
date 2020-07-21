@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
         marginRight: '1.5em',
         marginTop: '2rem',
         borderRadius: '22px',
-        paddingBottom: '7.5rem',
+      //  paddingBottom: '7.5rem',
      //   clipPath: 'polygon(49%)',
     },
 
@@ -40,7 +40,6 @@ export default function MainContent() {
              className={classes.shapeContainer}
         >
 
-
   {/*      <Grid item xs>
             <Paper className={classes.kasten}/>
         </Grid>
@@ -48,9 +47,6 @@ export default function MainContent() {
         <Grid item xs>
             <Paper className={classes.kreis}/>
         </Grid>*/}
-
-
-
 
             <Switch>
                 <Route path="/fruits" exact>
