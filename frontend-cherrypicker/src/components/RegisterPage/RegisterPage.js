@@ -8,6 +8,7 @@ import Paper from "@material-ui/core/Paper";
 import myTheme from "../../styling/muiTheme";
 // import Icon from '@material-ui/core/Icon';
 import Button from '@material-ui/core/Button';
+import {Link} from "react-router-dom";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -53,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: myTheme.palette.primary.light,
         width: '32ch',
     },
+
 }));
 
 export default function RegisterPage() {
@@ -155,6 +157,7 @@ export default function RegisterPage() {
                                 senden
                             </Button>
                         </Grid>
+
 
                     </div>
                     </div>

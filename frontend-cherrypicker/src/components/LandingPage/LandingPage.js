@@ -69,6 +69,12 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: '80%',
     },
 
+    shareCircle: {
+        width: '50%',
+        marginLeft: '12em',
+        marginTop: '2.5rem',
+    }
+
 }));
 
 
@@ -89,17 +95,17 @@ export default function LandingPage() {
             <Grid container spacing={3}>
 
                 <Grid item xs={12}>
-                    <Paper className={classes.Headline}>GEMEINSAM<br/>HABEN WIR MEHR!</Paper>
+                    <Paper className={classes.Headline}>WILLKOMMEN!</Paper>
                 </Grid>
 
-                <Grid item xs={12}>
+{/*                <Grid item xs={12}>
                     <Paper className={classes.Hashtag}>#GESUND</Paper>
-                </Grid>
+                </Grid>*/}
 
                 <Grid item xs={12}>
                     <Paper className={classes.SubHeadline}>
-                        Teilt euer überschüssiges und selbstangebautest Obst und Gemüse ganz
-                        einfach mit Anderen.
+                        Du bist nun Teil der Sharing Commuity!
+                        Wir freuen uns, dass du mit uns teilst und rettest.
                     </Paper>
                 </Grid>
 
@@ -116,6 +122,14 @@ export default function LandingPage() {
                         <img src="images/gemuese.png" alt="gemuese-logo" className={classes.buttonTwo}/>
                     </Link>
                 </Grid>
+
+
+                <Grid item xs={12} container>
+                    <Link to="/fruits">
+                        <img src="images/shareCircleGesund.png" alt="share-logo" className={classes.shareCircle}/>
+                    </Link>
+                </Grid>
+
             </Grid>
 
 
