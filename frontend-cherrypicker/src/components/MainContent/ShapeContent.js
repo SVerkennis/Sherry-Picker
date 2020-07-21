@@ -117,6 +117,11 @@ const useStyles = makeStyles((theme) => ({
     clickButton: {
         textDecoration: 'none',
     },
+    shareCircle: {
+        width: '50%',
+        marginLeft: '12em',
+        marginTop: '-2.5rem',
+    }
 
 
 }));
@@ -135,19 +140,21 @@ export default function ShapeContent() {
                 text="Hello"
                 style={{ backgroundColor: 'none', height: '5vh', marginTop: '5rem', }} />
 
+
             <Grid container spacing={3}>
 
                 <Grid item xs={12}>
                     <Paper className={classes.Headline}>GEMEINSAM<br/>HABEN WIR MEHR!</Paper>
                 </Grid>
 
-                <Grid item xs={12}>
+{/*                <Grid item xs={12}>
                     <Paper className={classes.Hashtag}>#TEILEN</Paper>
-                </Grid>
+                </Grid>*/}
+
 
                 <Grid item xs={12}>
                     <Paper className={classes.SubHeadline}>
-                        Werde Teil einer neuen Sharing Community!
+
                         Teilt euer überschüssiges und selbstangebautest Obst und Gemüse ganz
                         einfach mit Anderen.
                     </Paper>
@@ -228,6 +235,11 @@ export default function ShapeContent() {
                     </Link>
                 </Grid>
 
+                <Grid item xs={12} container>
+                    <Link to="/fruits">
+                        <img src="images/shareCircle.png" alt="share-logo" className={classes.shareCircle}/>
+                    </Link>
+                </Grid>
 
             </Grid>
         </div>

@@ -14,14 +14,13 @@ const useStyles = makeStyles((theme) => ({
     shapeContainer: {
         backgroundRepeat: 'no-repeat',
         backgroundImage: 'url("images/backgroundShape.png")',
+        // backgroundPosition: 'top 4.2rem left 2em',
         backgroundPosition: 'center',
         minHeight: '100vh',
-        minWidth: '70vw',
-        marginLeft: '0.2em'
+      //  minWidth: '70vw',
+     //   marginLeft: '0.2em'
 
-     // ODER HIER ÄNDERN
-    //  marginTop: "-45px",
-    }
+    },
 
 }));
 
@@ -32,11 +31,12 @@ export default function MainContent() {
 
 <>
 
-
         <Grid
             container
             className={classes.shapeContainer}
         >
+
+
             <Switch>
                 <Route path="/fruits" exact>
                     <FruitPage/>
