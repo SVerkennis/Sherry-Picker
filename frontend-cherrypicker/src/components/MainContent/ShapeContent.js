@@ -6,10 +6,12 @@ import Paper from "@material-ui/core/Paper";
 // import Button from '@material-ui/core/Button';
 import {Link}  from "react-router-dom";
 import TextField from '@material-ui/core/TextField';
-import MenuIcon from "@material-ui/icons/Menu";
-import {Menu, MenuItem} from "@material-ui/core";
+// import MenuIcon from "@material-ui/icons/Menu";
+// import {Menu, MenuItem} from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
-import Container from "@material-ui/core/Container";
+// import Container from "@material-ui/core/Container";
+import Button from "@material-ui/core/Button";
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -48,7 +50,19 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: 'none',
     },
 
-    buttonOne: {
+    Hashtag: {
+        background: 'none',
+        boxShadow: 'none',
+        color: myTheme.palette.primary.main,
+        fontSize: '30px',
+        fontFamily: 'Lato-Black, sans-serif',
+        letterSpacing: '1.6pt',
+        marginLeft: '2.3em',
+        marginTop: '-10px',
+        opacity: '80%',
+    },
+
+/*    buttonOne: {
         marginLeft: "3.5em",
         backgroundRepeat: 'no-repeat',
         boxShadow: 'none',
@@ -60,37 +74,8 @@ const useStyles = makeStyles((theme) => ({
         background: 'none',
         boxShadow: 'none',
         maxWidth: '80%',
-    },
-
-/*    registerText: {
-        marginLeft: '64px',
-        marginRight: '80px',
-        marginTop: '20px',
-        background: 'none',
-        boxShadow: 'none',
-        color: myTheme.palette.secondary.contrastText,
-        fontFamily: 'Lato-Regular, sans-serif',
-        lineHeight: '22px',
-        fontSize: '15px',
-    },
-
-    registerButton: {
-        background: 'none',
-        boxShadow: 'none',
-        marginLeft: '64px',
-        color: myTheme.palette.secondary.contrastText,
-        fontFamily: 'Lato-Bolditalic, sans-serif',
-        marginTop: '-12px',
-    },
-
-    login: {
-        background: 'none',
-        boxShadow: 'none',
-        fontSize: '18px',
-        marginLeft: '35px',
-        opacity: '70%',
-        marginTop: '-5px',
     },*/
+
 
     loginText: {
         color: myTheme.palette.secondary.contrastText,
@@ -100,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'left',
         marginLeft: '7em',
         marginRight: '55px',
-        marginTop: '-10px',
+        marginTop: '20px',
         marginBottom: '-10px',
         background: 'none',
         boxShadow: 'none',
@@ -120,6 +105,19 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Lato-Regular, sans-serif',
         textDecoration: 'none',
     },
+
+    sendButton: {
+        // margin: theme.spacing(1),
+        marginTop: '-1rem',
+        marginLeft: '7.2em',
+        color: myTheme.palette.primary.main,
+        backgroundColor: myTheme.palette.primary.light,
+        width: '22ch',
+    },
+    clickButton: {
+        textDecoration: 'none',
+    },
+
 
 }));
 
@@ -142,15 +140,23 @@ export default function ShapeContent() {
                 <Grid item xs={12}>
                     <Paper className={classes.Headline}>GEMEINSAM<br/>HABEN WIR MEHR!</Paper>
                 </Grid>
+
+                <Grid item xs={12}>
+                    <Paper className={classes.Hashtag}>#TEILEN</Paper>
+                </Grid>
+
                 <Grid item xs={12}>
                     <Paper className={classes.SubHeadline}>
+                        Werde Teil einer neuen Sharing Community!
                         Teilt euer überschüssiges und selbstangebautest Obst und Gemüse ganz
                         einfach mit Anderen.
                     </Paper>
                 </Grid>
 
+
+
                  {/*fruits and vegetables button*/}
-                <Grid item xs={6} container spacing={1}>
+ {/*               <Grid item xs={6} container spacing={1}>
                     <Link to="/fruits">
                     <img src="images/obst.png" alt="obst-logo" className={classes.buttonOne}/>
                     </Link>
@@ -160,29 +166,11 @@ export default function ShapeContent() {
                     <Link to="/vegetables">
                     <img src="images/gemuese.png" alt="gemuese-logo" className={classes.buttonTwo}/>
                     </Link>
-                </Grid>
-            </Grid>
-
-            {/*registertext and button and login*/}
-{/*            <Grid container spacing={3}>
-                <Grid item xs={12}>
-                    <Paper className={classes.registerText}>Werde Teil der Community <br/>& registrier dich hier!</Paper>
-                </Grid>
-                <Grid item xs={6}>
-                    <Paper className={classes.registerButton}>*/}
-
-                        {/*registerButton*/}
-{/*                        <Button variant="contained" color="primary" disableElevation>
-                            registrieren
-                        </Button>
-                    </Paper>
                 </Grid>*/}
 
-                {/*login option*/}
- {/*               <Grid item xs={6}>
-                    <Paper className={classes.login}>or login</Paper>
-                </Grid>
-            </Grid>*/}
+            </Grid>
+
+
 
             {/*login!!*/}
             <Grid container spacing={3}>
@@ -226,6 +214,19 @@ export default function ShapeContent() {
                     </form>
                 </Grid>
 
+                {/*send login!!*/}
+                <Grid item xs={12}>
+                    <Link to="/landing" className={classes.clickButton}>
+                        <Button
+                            variant="contained"
+                            color= "tertiary"
+                            size="medium"
+                            className={classes.sendButton}
+                        >
+                            senden
+                        </Button>
+                    </Link>
+                </Grid>
 
 
             </Grid>

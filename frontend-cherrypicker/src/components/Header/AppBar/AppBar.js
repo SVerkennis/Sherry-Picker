@@ -96,7 +96,7 @@ export default function ProminentAppBar() {
                             onClose={handleClose}
                         >
                             <MenuItem onClick={handleClose} className={classes.backgroundColor}>
-                                <Link to={"/"} className={classes.underlineText}>Home</Link>
+                                <Link to={"/landing"} className={classes.underlineText}>Home</Link>
                             </MenuItem>
                             <MenuItem onClick={handleClose} className={classes.backgroundColor}>
                                 <Link to={"/fruits"} className={classes.underlineText}>Obst</Link>

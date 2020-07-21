@@ -7,6 +7,7 @@ import FruitPage from "../FruitPage/FruitPage";
 import Apfel from "../FruitPage/Apfel";
 import VegetablePage from "../VegetablePage/VegetablePage";
 import RegisterPage from "../RegisterPage/RegisterPage";
+import LandingPage from "../LandingPage/LandingPage";
 
 const useStyles = makeStyles((theme) => ({
 
@@ -51,6 +52,10 @@ export default function MainContent() {
 
                 <Route path="/register" exact>
                     <RegisterPage/>
+                </Route>
+
+                <Route path="/landing" exact>
+                    <LandingPage/>
                 </Route>
 
                 <Route path="/">
