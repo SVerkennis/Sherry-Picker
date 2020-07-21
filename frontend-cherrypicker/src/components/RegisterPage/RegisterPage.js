@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import TextField from "@material-ui/core/TextField";
 import Paper from "@material-ui/core/Paper";
 import myTheme from "../../styling/muiTheme";
-import Icon from '@material-ui/core/Icon';
+// import Icon from '@material-ui/core/Icon';
 import Button from '@material-ui/core/Button';
 
 
@@ -48,9 +48,10 @@ const useStyles = makeStyles((theme) => ({
     sendButton: {
         // margin: theme.spacing(1),
         marginTop: '1.3rem',
-        marginLeft: '9.3em',
+        marginLeft: '-0.1em',
         color: myTheme.palette.primary.main,
-        backgroundColor: myTheme.palette.primary.light
+        backgroundColor: myTheme.palette.primary.light,
+        width: '32ch',
     },
 }));
 
@@ -150,7 +151,6 @@ export default function RegisterPage() {
                                 variant="contained"
                                 color= "tertiary"
                                 className={classes.sendButton}
-                                endIcon={<Icon>send</Icon>}
                             >
                                 senden
                             </Button>
