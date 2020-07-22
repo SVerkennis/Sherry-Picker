@@ -14,7 +14,7 @@ import {Link} from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        marginLeft: '3em',
+        marginLeft: '1.5em',
         marginTop: '2rem',
     },
     inputText: {
@@ -28,9 +28,9 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '24px',
         fontFamily: 'Lato-Black, sans-serif',
         letterSpacing: '1.6pt',
-        textAlign: 'left',
-        marginLeft: '1.3em',
-        marginTop: '0.1rem',
+        //textAlign: 'left',
+        marginTop: '2rem',
+        marginLeft: '0.3em',
         background: 'none',
         boxShadow: 'none',
     },
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '22px',
         fontSize: '15px',
         textAlign: 'left',
-        marginLeft: '1.5em',
+        marginLeft: '0.3em',
         marginTop: '0.2rem',
         marginBottom: '10px',
         background: 'none',
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     sendButton: {
         // margin: theme.spacing(1),
         marginTop: '1.3rem',
-        marginLeft: '-0.1em',
+        //marginLeft: '0.3em',
         color: myTheme.palette.primary.main,
         backgroundColor: myTheme.palette.primary.light,
         width: '32ch',
@@ -64,10 +64,7 @@ export default function RegisterPage() {
         return (
 
                 <Container maxWidth="sm">
-                    <Typography
-                        component="div"
-                        text="Hello"
-                        style={{ backgroundColor: 'none', height: '5vh', marginTop: '5rem', }} />
+
                     <div>
                     <div className={classes.root}>
                         <Grid container spacing={3}>
@@ -79,7 +76,7 @@ export default function RegisterPage() {
 
                                 <Grid item xs={12}>
                                     <Paper className={classes.SubHeadline}>
-                                        Danach kann es sofort los gehen.
+                                        Danach kann es sofort losgehen.
                                     </Paper>
                                 </Grid>
 
@@ -158,6 +155,10 @@ export default function RegisterPage() {
                             </Button>
                         </Grid>
 
+                        <Typography
+                            component="div"
+                            text="Hello"
+                            style={{ backgroundColor: 'none', height: '2vh', marginTop: '0.7rem', }} />
 
                     </div>
                     </div>
