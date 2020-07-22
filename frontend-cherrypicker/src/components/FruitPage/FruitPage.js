@@ -4,9 +4,7 @@ import {makeStyles} from "@material-ui/core/styles";
 import myTheme from "../../styling/muiTheme";
 import Paper from "@material-ui/core/Paper";
 import {Link} from "react-router-dom";
-// import SvgIcon from '@material-ui/core/SvgIcon';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-// import Typography from "@material-ui/core/Typography";
 import FruitButton from "../FruitButtons/Fruitbutton";
 
 
