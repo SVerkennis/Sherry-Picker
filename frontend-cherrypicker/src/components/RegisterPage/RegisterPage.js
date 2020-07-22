@@ -52,7 +52,13 @@ const useStyles = makeStyles((theme) => ({
         //marginLeft: '0.3em',
         color: myTheme.palette.primary.main,
         backgroundColor: myTheme.palette.primary.light,
-        width: '32ch',
+        width: '31.5ch',
+    },
+    shareCircle: {
+        maxWidth: '50%',
+        position: 'absolute',
+        bottom: '-1.6rem',
+        right: '0',
     },
 
 }));
@@ -64,6 +70,10 @@ export default function RegisterPage() {
         return (
 
                 <Container maxWidth="sm">
+
+                    <img src="images/shareCircleEcofriendly.png"
+                         alt="share-logo"
+                         className={classes.shareCircle}/>
 
                     <div>
                     <div className={classes.root}>
@@ -137,7 +147,7 @@ export default function RegisterPage() {
                                 />
                             </Grid>
 
-                            <Grid item xs={12}>
+{/*                            <Grid item xs={12}>
                                 <TextField
                                     error
                                     color= "tertiary"
@@ -147,7 +157,7 @@ export default function RegisterPage() {
                                     variant="outlined"
                                     size="small"
                                 />
-                            </Grid>
+                            </Grid>*/}
 
                             </form>
                         </Grid>
@@ -165,7 +175,7 @@ export default function RegisterPage() {
                         <Typography
                             component="div"
                             text="Hello"
-                            style={{ backgroundColor: 'none', height: '2vh', marginTop: '0.7rem', }} />
+                            style={{ backgroundColor: 'none', height: '2vh', marginTop: '4.2rem', }} />
 
                     </div>
                     </div>
