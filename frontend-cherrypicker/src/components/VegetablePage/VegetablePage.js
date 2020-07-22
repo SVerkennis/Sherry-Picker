@@ -9,6 +9,8 @@ import SvgIcon from "@material-ui/core/SvgIcon";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Icon from "@material-ui/core/Icon";
+import FruitButton from "../FruitButtons/Fruitbutton";
+import VegetableButton from "../VegetableButtons/VegetableButton";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -109,47 +111,42 @@ export default function VetetablePage() {
             <div className={classes.root}>
                 <Grid container spacing={3}>
 
-                    {/*möhre button*/}
-                    <Grid item xs={6}>
-                        <Link to="/">
-                            <img src="images/moehre.png" alt="moehre-logo" className={classes.buttonMoehre}/>
-                        </Link>
-                    </Grid>
+                    <VegetableButton
+                        buttonName={classes.buttonMoehre}
+                        buttonImage="images/moehre.png" alt="moehre-logo"
+                        buttonLink="/apfel"
+                    />
 
-                    {/*tomate button*/}
-                    <Grid item xs={6}>
-                        <Link to="/">
-                            <img src="images/tomate.png" alt="tomate-logo" className={classes.buttonTomate}/>
-                        </Link>
-                    </Grid>
+                    <VegetableButton
+                        buttonName={classes.buttonTomate}
+                        buttonImage="images/tomate.png" alt="tomate-logo"
+                        buttonLink="/apfel"
+                    />
 
-                    {/*brokkoli button*/}
-                    <Grid item xs={6}>
-                        <Link to="/">
-                            <img src="images/brokkoli.png" alt="brokkoli-logo" className={classes.buttonBrokkoli}/>
-                        </Link>
-                    </Grid>
+                    <VegetableButton
+                        buttonName={classes.buttonBrokkoli}
+                        buttonImage="images/brokkoli.png" alt="brokkoli-logo"
+                        buttonLink="/apfel"
+                    />
 
-                    {/*gurke button*/}
-                    <Grid item xs={6}>
-                        <Link to="/">
-                            <img src="images/gurke.png" alt="gurke-logo" className={classes.buttonGurke}/>
-                        </Link>
-                    </Grid>
+                    <VegetableButton
+                        buttonName={classes.buttonGurke}
+                        buttonImage="images/gurke.png" alt="gurke-logo"
+                        buttonLink="/apfel"
+                    />
 
-                    {/*paprika button*/}
-                    <Grid item xs={6}>
-                        <Link to="/">
-                            <img src="images/paprika.png" alt="paprika-logo" className={classes.buttonPaprika}/>
-                        </Link>
-                    </Grid>
+                    <VegetableButton
+                        buttonName={classes.buttonPaprika}
+                        buttonImage="images/paprika.png" alt="paprika-logo"
+                        buttonLink="/apfel"
+                    />
 
-                    {/*zwiebel button*/}
-                    <Grid item xs={6}>
-                        <Link to="/">
-                            <img src="images/zwiebel.png" alt="zwiebel-logo" className={classes.buttonZwiebel}/>
-                        </Link>
-                    </Grid>
+                    <VegetableButton
+                        buttonName={classes.buttonZwiebel}
+                        buttonImage="images/zwiebel.png" alt="zwiebel-logo"
+                        buttonLink="/apfel"
+                    />
+
 
                     {/*back icon*/}
                     <Grid item xs={12}>
