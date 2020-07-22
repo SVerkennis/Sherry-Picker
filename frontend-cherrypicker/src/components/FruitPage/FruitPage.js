@@ -4,9 +4,11 @@ import {makeStyles} from "@material-ui/core/styles";
 import myTheme from "../../styling/muiTheme";
 import Paper from "@material-ui/core/Paper";
 import {Link} from "react-router-dom";
-import SvgIcon from '@material-ui/core/SvgIcon';
+// import SvgIcon from '@material-ui/core/SvgIcon';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-import Typography from "@material-ui/core/Typography";
+// import Typography from "@material-ui/core/Typography";
+import FruitButton from "../FruitButtons/Fruitbutton";
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -116,47 +118,45 @@ export default function FruitPage() {
             <div className={classes.root}>
                 <Grid container spacing={3}>
 
-                    {/*apfel button*/}
-                    <Grid item xs={6}>
-                        <Link to="/apfel">
-                            <img src="images/apfel.png" alt="apfel-logo" className={classes.buttonApfel}/>
-                        </Link>
-                    </Grid>
+                    <FruitButton
+                    buttonName={classes.buttonApfel}
+                    buttonImage="images/apfel.png" alt="apfel-logo"
+                    buttonLink="/apfel"
+                    />
 
-                    {/*traube button*/}
-                    <Grid item xs={6}>
-                        <Link to="/">
-                            <img src="images/traube.png" alt="traube-logo" className={classes.buttonTraube}/>
-                        </Link>
-                    </Grid>
 
-                    {/*birne button*/}
-                    <Grid item xs={6}>
-                        <Link to="/">
-                            <img src="images/birne.png" alt="birne-logo" className={classes.buttonBirne}/>
-                        </Link>
-                    </Grid>
+                    <FruitButton
+                        buttonName={classes.buttonTraube}
+                        buttonImage="images/traube.png" alt="traube-logo"
+                        buttonLink="/apfel"
+                    />
 
-                    {/*kirsche button*/}
-                    <Grid item xs={6}>
-                        <Link to="/">
-                            <img src="images/kirsche.png" alt="kirsche-logo" className={classes.buttonKirsche}/>
-                        </Link>
-                    </Grid>
 
-                    {/*wassermelone button*/}
-                    <Grid item xs={6}>
-                        <Link to="/">
-                            <img src="images/wassermelone.png" alt="traube-logo" className={classes.buttonWassermelone}/>
-                        </Link>
-                    </Grid>
+                    <FruitButton
+                        buttonName={classes.buttonBirne}
+                        buttonImage="images/birne.png" alt="birne-logo"
+                        buttonLink="/apfel"
+                    />
 
-                    {/*erdbeere button*/}
-                    <Grid item xs={6}>
-                        <Link to="/">
-                            <img src="images/erdbeere.png" alt="erdbeere-logo" className={classes.buttonErdbeere}/>
-                        </Link>
-                    </Grid>
+                    <FruitButton
+                        buttonName={classes.buttonKirsche}
+                        buttonImage="images/kirsche.png" alt="kirsche-logo"
+                        buttonLink="/apfel"
+                    />
+
+                    <FruitButton
+                        buttonName={classes.buttonWassermelone}
+                        buttonImage="images/wassermelone.png" alt="wassermelone-logo"
+                        buttonLink="/apfel"
+                    />
+
+                    <FruitButton
+                        buttonName={classes.buttonErdbeere}
+                        buttonImage="images/erdbeere.png" alt="erdbeere-logo"
+                        buttonLink="/apfel"
+                    />
+
+
 
                     {/*back icon*/}
                     <Grid item xs={12}>
