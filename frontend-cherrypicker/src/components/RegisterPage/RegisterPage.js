@@ -82,6 +82,7 @@ export default function RegisterPage() {
 
                             <Grid item xs={12}>
                                 <TextField
+                                    error
                                     id="outlined-required"
                                     label="Wunsch Username"
                                     variant="outlined"
@@ -92,6 +93,7 @@ export default function RegisterPage() {
 
                             <Grid item xs={12}>
                                 <TextField
+                                    error
                                     id="outlined-required"
                                     label="Deine Email Adresse"
                                     type="search"
@@ -102,6 +104,7 @@ export default function RegisterPage() {
 
                             <Grid item xs={12}>
                                 <TextField
+                                    error
                                     id="outlined-password-input"
                                     label="Password"
                                     type="password"
@@ -113,6 +116,7 @@ export default function RegisterPage() {
 
                             <Grid item xs={12}>
                                 <TextField
+                                    error
                                     id="outlined-required"
                                     label="Dein Name, Nachname"
                                     variant="outlined"
@@ -123,6 +127,7 @@ export default function RegisterPage() {
 
                             <Grid item xs={12}>
                                 <TextField
+                                    error
                                     id="outlined-required"
                                     label="Adresse"
                                     variant="outlined"
@@ -134,6 +139,8 @@ export default function RegisterPage() {
 
                             <Grid item xs={12}>
                                 <TextField
+                                    error
+                                    color= "tertiary"
                                     id="outlined-number"
                                     label="Dein Alter"
                                     type="number"

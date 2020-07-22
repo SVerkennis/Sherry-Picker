@@ -32,9 +32,8 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '30px',
         fontFamily: 'Lato-Black, sans-serif',
         letterSpacing: '1.6pt',
-        textAlign: 'left',
-        marginLeft: '140px',
-        marginTop: '10px',
+        textAlign: 'center',
+        marginTop: '3rem',
         background: 'none',
         boxShadow: 'none',
     },
@@ -44,10 +43,9 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Lato-Regular, sans-serif',
         lineHeight: '22px',
         fontSize: '15px',
-        textAlign: 'left',
-        marginLeft: '80px',
-        marginRight: '70px',
-        marginTop: '-10px',
+        marginLeft: '3em',
+        marginRight: '3em',
+        marginTop: '-0.8rem',
         marginBottom: '-10px',
         background: 'none',
         boxShadow: 'none',
@@ -59,23 +57,23 @@ const useStyles = makeStyles((theme) => ({
     },
 
     appBar: {
-        marginRight: '90px',
-        marginTop: '265px',
-        maxWidth: '220px',
-        maxHeight: '30px',
+        marginRight: '4.3em',
+        marginTop: '17rem',
+        maxWidth: '15em',
+        maxHeight: '1.7rem',
         borderRadius: '14px',
     },
 
     inlineText: {
         fontSize: '14px',
-        paddingBottom: '25px',
+        paddingBottom: '1.6rem',
     },
 
     mapsImage: {
-        marginLeft: '40px',
+        marginLeft: '0.9em',
         background: 'none',
         boxShadow: 'none',
-        marginTop: '-10px',
+        marginTop: '-1rem',
     },
 
     // NEW MUI component
@@ -83,27 +81,27 @@ const useStyles = makeStyles((theme) => ({
         color: myTheme.palette.secondary.contrastText,
         background: 'none',
         boxShadow: 'none',
-        marginTop: '-70px',
-        marginLeft: '70px',
+        marginTop: '-4rem',
+        marginLeft: '3em',
     },
 
     profilTamai: {
         color: myTheme.palette.secondary.contrastText,
         background: 'none',
         boxShadow: 'none',
-        marginTop: '-30px',
-        marginLeft: '70px',
+        marginTop: '-1rem',
+        marginLeft: '3em',
     },
 
-    homeIcon: {
-        marginTop: '-30px',
-        opacity: '100%',
-        marginLeft: '-5px',
-    },
     backIcon: {
-        marginTop: '-30px',
-        marginLeft: '155px',
-        opacity: '100%',
+        marginTop: '-1.9rem',
+        marginLeft: '8.7em',
+        opacity: '90%',
+    },
+    homeIcon: {
+        marginTop: '-1.9rem',
+        opacity: '90%',
+        marginLeft: '0.em',
     },
 
 }));
@@ -124,11 +122,6 @@ export default function Apfel() {
 
             // Headline und infoText
         <div className={classes.root}>
-
-            <Typography
-                component="div"
-                text="Hello"
-                style={{ backgroundColor: 'none', height: '5vh', marginTop: '5rem', }} />
 
             <Grid container spacing={3}>
                 <Grid item xs={12}>
@@ -213,7 +206,7 @@ export default function Apfel() {
                     </Link>
                 </Grid>
                     <Grid item xs={6}>
-                        <Link to="/">
+                        <Link to="/landing">
                             <div className={classes.homeIcon}>
                                 <HomeIcon fontSize="large"
                                           color="primary"
@@ -221,6 +214,11 @@ export default function Apfel() {
                             </div>
                         </Link>
                     </Grid>
+
+                <Typography
+                    component="div"
+                    text="Hello"
+                    style={{ backgroundColor: 'none', height: '5vh', marginTop: '0.5rem', }} />
 
             </Grid>
         </div>

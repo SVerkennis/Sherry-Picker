@@ -19,6 +19,9 @@ const myTheme = createMuiTheme ({
             //for later
             main: 'white',
         },
+        error: {
+            main: '#FFFFFF',
+        }
     },
 
 });

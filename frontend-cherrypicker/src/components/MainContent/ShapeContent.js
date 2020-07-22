@@ -151,6 +151,7 @@ export default function ShapeContent() {
                         <div>
                             <TextField
                                 className={classes.backgroundField}
+                                error
                                 id="outlined-required"
                                 label="Username"
                                 // defaultValue="Username"
@@ -161,6 +162,7 @@ export default function ShapeContent() {
 
                             <TextField
                                 className={classes.backgroundField}
+                                error
                                 id="outlined-password-input"
                                 label="Passwort"
                                 autoComplete="current-password"
