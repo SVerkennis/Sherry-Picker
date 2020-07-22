@@ -146,7 +146,7 @@ export default function VetetablePage() {
 
                     {/*back icon*/}
                     <Grid item xs={12}>
-                        <Link to="/">
+                        <Link to="/landing">
                             <div className={classes.backIcon}>
                                 <ArrowBackIosIcon fontSize="large"
                                                   color="primary"
