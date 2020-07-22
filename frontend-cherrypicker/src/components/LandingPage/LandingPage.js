@@ -5,6 +5,8 @@ import myTheme from "../../styling/muiTheme";
 import Paper from "@material-ui/core/Paper";
 import {Link}  from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
+import FruitVegetableButton from "./FruitVegetableButton";
+import FruitButton from "../FruitButtons/Fruitbutton";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -99,9 +101,6 @@ export default function LandingPage() {
                     <Paper className={classes.Headline}>HERZLICH <br/>WILLKOMMEN!</Paper>
                 </Grid>
 
-{/*                <Grid item xs={12}>
-                    <Paper className={classes.Hashtag}>#GESUND</Paper>
-                </Grid>*/}
 
                 <Grid item xs={12}>
                     <Paper className={classes.SubHeadline}>
@@ -111,19 +110,18 @@ export default function LandingPage() {
                 </Grid>
 
 
-                {/*fruits and vegetables button*/}
-                <Grid item xs={6} container spacing={1}>
+                <FruitVegetableButton
+                    buttonName={classes.buttonOne}
+                    buttonImage="images/obst.png" alt="obst-logo"
+                    buttonLink="/fruits"
+                />
 
-                    <Link to="/fruits">
-                        <img src="images/obst.png" alt="obst-logo" className={classes.buttonOne}/>
-                    </Link>
-                </Grid>
+                <FruitVegetableButton
+                    buttonName={classes.buttonTwo}
+                    buttonImage="images/gemuese.png" alt="gemuese-logo"
+                    buttonLink="/vegetables"
+                />
 
-                <Grid item xs={6} container spacing={1}>
-                    <Link to="/vegetables">
-                        <img src="images/gemuese.png" alt="gemuese-logo" className={classes.buttonTwo}/>
-                    </Link>
-                </Grid>
 
                 <Typography
                     component="div"
