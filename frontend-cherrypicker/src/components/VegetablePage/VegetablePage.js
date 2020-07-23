@@ -6,6 +6,7 @@ import Paper from "@material-ui/core/Paper";
 import {Link}  from "react-router-dom";
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import VegetableButton from "../VegetableButtons/VegetableButton";
+import Typography from "@material-ui/core/Typography";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -20,12 +21,11 @@ const useStyles = makeStyles((theme) => ({
 
     Headline: {
         color: myTheme.palette.primary.contrastText,
-        fontSize: '30px',
-        fontFamily: 'Lato-Black, sans-serif',
-        letterSpacing: '1.6pt',
+        fontFamily: 'Raleway, sans-serif',
+        letterSpacing: '2pt',
+        fontSize: '36px',
         textAlign: 'center',
-        marginTop: '3rem',
-        lineHeight: '2rem',
+        marginTop: '2rem',
         background: 'none',
         boxShadow: 'none',
     },
@@ -99,7 +99,7 @@ export default function VetetablePage() {
 
             <Grid container spacing={3}>
                 <Grid item xs={12}>
-                    <Paper className={classes.Headline}>Gemüse</Paper>
+                    <Paper className={classes.Headline}>GEMÜSE</Paper>
                 </Grid>
             </Grid>
 
@@ -155,6 +155,9 @@ export default function VetetablePage() {
                         </Link>
                     </Grid>
 
+                    <Typography
+                        component="div"
+                        style={{ backgroundColor: 'none', height: '5vh', marginTop: '0.2rem', }} />
 
                 </Grid>
             </div>

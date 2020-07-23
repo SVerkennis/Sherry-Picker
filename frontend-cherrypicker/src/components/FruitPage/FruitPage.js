@@ -6,6 +6,7 @@ import Paper from "@material-ui/core/Paper";
 import {Link} from "react-router-dom";
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import FruitButton from "../FruitButtons/Fruitbutton";
+import Typography from "@material-ui/core/Typography";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -20,12 +21,11 @@ const useStyles = makeStyles((theme) => ({
 
     Headline: {
         color: myTheme.palette.primary.contrastText,
-        fontSize: '30px',
-        fontFamily: 'Lato-Black, sans-serif',
-        letterSpacing: '1.6pt',
+        fontFamily: 'Raleway, sans-serif',
+        letterSpacing: '2pt',
+        fontSize: '36px',
         textAlign: 'center',
-        marginTop: '3rem',
-        lineHeight: '2rem',
+        marginTop: '2rem',
         //   marginLeft: '1.5em',
         background: 'none',
         boxShadow: 'none',
@@ -167,6 +167,9 @@ export default function FruitPage() {
                         </Link>
                     </Grid>
 
+                    <Typography
+                        component="div"
+                        style={{ backgroundColor: 'none', height: '5vh', marginTop: '0.2rem', }} />
 
                 </Grid>
             </div>

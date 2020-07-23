@@ -26,12 +26,12 @@ const useStyles = makeStyles((theme) => ({
     },
     Headline: {
         color: myTheme.palette.primary.contrastText,
-        fontSize: '24px',
-        fontFamily: 'Lato-Black, sans-serif',
-        letterSpacing: '1.6pt',
-        //textAlign: 'left',
-        marginTop: '2rem',
-        marginLeft: '0.3em',
+        fontFamily: 'Raleway, sans-serif',
+        letterSpacing: '1pt',
+        fontSize: '35px',
+        //marginRight: '1em',
+        textAlign: 'center',
+        marginTop: '1rem',
         background: 'none',
         boxShadow: 'none',
     },
@@ -41,9 +41,9 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '22px',
         fontSize: '15px',
         textAlign: 'left',
-        marginLeft: '0.3em',
+        marginLeft: '0.5em',
         marginTop: '0.2rem',
-        marginBottom: '10px',
+        marginBottom: '1rem',
         background: 'none',
         boxShadow: 'none',
     },
@@ -148,17 +148,6 @@ export default function RegisterPage() {
                                 />
                             </Grid>
 
-{/*                            <Grid item xs={12}>
-                                <TextField
-                                    error
-                                    color= "tertiary"
-                                    id="outlined-number"
-                                    label="Dein Alter"
-                                    type="number"
-                                    variant="outlined"
-                                    size="small"
-                                />
-                            </Grid>*/}
 
                             </form>
                         </Grid>
@@ -175,8 +164,7 @@ export default function RegisterPage() {
 
                         <Typography
                             component="div"
-                            text="Hello"
-                            style={{ backgroundColor: 'none', height: '2vh', marginTop: '4.2rem', }} />
+                            style={{ backgroundColor: 'none', height: '2vh', marginTop: '4.7rem', }} />
 
                     </div>
                     </div>

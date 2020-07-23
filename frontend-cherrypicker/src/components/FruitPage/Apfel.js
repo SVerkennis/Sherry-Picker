@@ -29,11 +29,11 @@ const useStyles = makeStyles((theme) => ({
 
     Headline: {
         color: myTheme.palette.primary.contrastText,
-        fontSize: '30px',
-        fontFamily: 'Lato-Black, sans-serif',
-        letterSpacing: '1.6pt',
+        fontFamily: 'Raleway, sans-serif',
+        letterSpacing: '2pt',
+        fontSize: '36px',
         textAlign: 'center',
-        marginTop: '3rem',
+        marginTop: '2rem',
         background: 'none',
         boxShadow: 'none',
     },
@@ -218,7 +218,7 @@ export default function Apfel() {
                 <Typography
                     component="div"
                     text="Hello"
-                    style={{ backgroundColor: 'none', height: '5vh', marginTop: '0.5rem', }} />
+                    style={{ backgroundColor: 'none', height: '5vh', marginTop: '1.1rem', }} />
 
             </Grid>
         </div>
