@@ -21,12 +21,12 @@ const useStyles = makeStyles((theme) => ({
 
     Headline: {
         color: myTheme.palette.primary.contrastText,
-        fontSize: '24px',
-        fontFamily: 'Lato-Black, sans-serif',
-        letterSpacing: '1.6pt',
-        textAlign: 'center',
-        marginTop: '3rem',
-        lineHeight: '2rem',
+        fontFamily: 'Raleway, sans-serif',
+        letterSpacing: '1pt',
+        fontSize: '36px',
+        marginLeft: '0.8em',
+        lineHeight: '2.5rem',
+        marginTop: '2rem',
      //   marginLeft: '1.5em',
         background: 'none',
         boxShadow: 'none',
@@ -38,10 +38,10 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: '22px',
         fontSize: '15px',
         textAlign: 'left',
-        marginLeft: '3.8em',
-        marginRight: '55px',
-        marginTop: '-10px',
-        marginBottom: '-10px',
+        marginLeft: '2.3em',
+        marginRight: '1.5em',
+        marginTop: '-0.8rem',
+        marginBottom: '-1rem',
         background: 'none',
         boxShadow: 'none',
     },
@@ -98,14 +98,15 @@ export default function LandingPage() {
             <Grid container spacing={3}>
 
                 <Grid item xs={12}>
-                    <Paper className={classes.Headline}>HERZLICH <br/>WILLKOMMEN!</Paper>
+                    <Paper className={classes.Headline}>
+                        SCHÖN, <br/>DASS DU DA NUN BIST!</Paper>
                 </Grid>
 
 
                 <Grid item xs={12}>
                     <Paper className={classes.SubHeadline}>
-                        Du bist nun Teil der Sharing Commuity!
-                        Wir freuen uns, dass du mit uns teilst und rettest.
+                        Wir freuen uns sehr, dass du nun Teil der Sharing Community bist!
+                        Du kannst nun zwischen Obst und Gemüse auswählen und dich auf die Suche begeben.
                     </Paper>
                 </Grid>
 
@@ -126,7 +127,7 @@ export default function LandingPage() {
                 <Typography
                     component="div"
                     text="Hello"
-                    style={{ backgroundColor: 'none', height: '10vh', marginTop: '17.1rem', }} />
+                    style={{ backgroundColor: 'none', height: '10vh', marginTop: '14.3rem', }} />
 
             </Grid>
         </div>
