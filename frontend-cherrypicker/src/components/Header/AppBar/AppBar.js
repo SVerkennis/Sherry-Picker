@@ -45,36 +45,44 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Lato-Regular, sans-serif',
     },
 
-    // oval shape
-/*    ovalShape: {
-        background: 'none',
-        backgroundColor: "yellow",
-   //     display: "inline-block",
-        height: "50px",
-        width: "250px",
-        webkitBorderRadius: "0 0 90px 90px",
-        mozBorderRadius: "0 0 90px 90px",
-        borderRadius: "0 0 90px 90px",
-        marginTop: '4rem',
-    },*/
-
     // logo
     CherryLogo: {
         height: '100%',
         marginTop: '2rem',
         marginLeft: '2em',
-        background: 'none',
+    //    background: 'none',
         boxShadow: 'none',
         borderStyle: 'none',
     },
 
     // Lupe
     searchIcon: {
-        background: 'none',
         boxShadow: 'none',
         marginLeft: '0.5em',
         marginTop: '1.4rem',
     },
+
+    // background-green
+        greenShape: {
+            backgroundColor: '#5CDB95',
+            marginLeft: '1.5em',
+            marginRight: '1.5em',
+            marginBottom: '-20%',
+            marginTop: '1%',
+            borderRadius: '22px',
+            backgroundRepeat: 'no-repeat',
+            height: "60px",
+        },
+
+    ovalShape: {
+        backgroundColor: 'white',
+        height: '2rem',
+        width: '14em',
+        marginTop: '-1.7rem',
+        marginLeft: '5em',
+        mozBorderRadius: "0 0 90px 90px",
+        borderRadius: "0 0 90px 90px",
+    }
 
 }));
 
@@ -131,7 +139,7 @@ export default function ProminentAppBar() {
 
                         <Grid item xs={8}>
                             <div>
-                                <div className={classes.ovalShape}/>
+                                <div className={classes.backgroundSnippet}/>
                             </div>
 
                             <div>
@@ -145,8 +153,21 @@ export default function ProminentAppBar() {
                             </div>
                         </Grid>
 
+
                     </Grid>
                 </div>
+
+
+                <Grid container spacing={3}>
+                    <Grid item xs={12}>
+                        <div className={classes.greenShape}/>
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <div className={classes.ovalShape}/>
+                    </Grid>
+                </Grid>
+
             </div>
 
     );

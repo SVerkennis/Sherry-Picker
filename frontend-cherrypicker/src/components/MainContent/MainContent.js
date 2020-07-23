@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: '#5CDB95',
         marginLeft: '1.5em',
         marginRight: '1.5em',
-        marginTop: '2rem',
+        marginTop: '-1rem',
         borderRadius: '22px',
       //  paddingBottom: '7.5rem',
      //   clipPath: 'polygon(49%)',
