@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     appBar: {
-        marginRight: '4.3em',
+        marginRight: '5em',
         marginTop: '17rem',
         maxWidth: '15em',
         maxHeight: '1.7rem',
@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: '0.9em',
         background: 'none',
         boxShadow: 'none',
-        marginTop: '-1rem',
+        marginTop: '-0.6rem',
     },
 
     // NEW MUI component

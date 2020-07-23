@@ -26,12 +26,17 @@ const useStyles = makeStyles((theme) => ({
 
     Headline: {
         color: myTheme.palette.primary.contrastText,
-        fontSize: '24px',
-        fontFamily: 'Lato-Black, sans-serif',
-        letterSpacing: '1.6pt',
-        //textAlign: 'center',
-        marginTop: '3rem',
-        marginLeft: '1.5em',
+        fontFamily: 'Raleway, sans-serif',
+        letterSpacing: '4pt',
+        fontSize: '36px',
+        marginLeft: '1em',
+        lineHeight: '2.5rem',
+        marginTop: '2rem',
+        // fontFamily: 'Lato-Black, sans-serif',
+       // letterSpacing: '1.6pt',
+        //fontSize: '24px',
+       // marginTop: '3rem',
+        //marginLeft: '1.5em',
         background: 'none',
         boxShadow: 'none',
     },
@@ -54,21 +59,24 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '15px',
         textAlign: 'left',
         marginLeft: '5em',
-        marginTop: '1rem',
+        marginTop: '0.4rem',
         marginBottom: '-0.5rem',
         background: 'none',
         boxShadow: 'none',
     },
+
     loginForm: {
         marginLeft: '4.3em',
         marginTop: '-0.4rem',
         '& .MuiTextField-root': {
             margin: theme.spacing(0.5),
             width: '17ch',
+            backgroundColor: myTheme.palette.primary.dark,
         },
 
     backgroundField: {
-        backgroundColor: 'white',
+        backgroundColor: myTheme.palette.secondary.main,
+
     },
 
     },
@@ -122,8 +130,7 @@ export default function ShapeContent() {
 
                 <Grid item xs={12}>
                     <Paper className={classes.SubHeadline}>
-                        Teilt euer überschüssiges und selbstangebautest Obst und Gemüse <br/>
-                        ganz einfach mit Anderen.
+                        Teilt euer wunderbar selbstangebautest <br/> und überschüssiges Obst und Gemüse.
                     </Paper>
                 </Grid>
 
@@ -192,7 +199,7 @@ export default function ShapeContent() {
                 <Typography
                     component="div"
                     text="Hello"
-                    style={{ backgroundColor: 'none', height: '10vh', marginTop: '6rem', }} />
+                    style={{ backgroundColor: 'none', height: '10vh', marginTop: '5.5rem', }} />
 
             </Grid>
         </div>
