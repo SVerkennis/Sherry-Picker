@@ -8,6 +8,7 @@ import Apfel from "../FruitPage/Apfel";
 import VegetablePage from "../VegetablePage/VegetablePage";
 import RegisterPage from "../RegisterPage/RegisterPage";
 import LandingPage from "../LandingPage/LandingPage";
+import Moehre from "../VegetablePage/Moehre";
 
 const useStyles = makeStyles((theme) => ({
 
@@ -47,6 +48,10 @@ export default function MainContent() {
 
                 <Route path="/apfel" exact>
                     <Apfel/>
+                </Route>
+
+                <Route path="/moehre" exact>
+                    <Moehre/>
                 </Route>
 
                 <Route path="/vegetables" exact>

@@ -99,7 +99,7 @@ export default function LandingPage() {
 
                 <Grid item xs={12}>
                     <Paper className={classes.Headline}>
-                        SCHÖN, <br/>DASS DU DA NUN BIST!</Paper>
+                        SCHÖN, <br/>DASS DU NUN BEI UNS BIST!</Paper>
                 </Grid>
 
 

@@ -3,10 +3,11 @@ import Grid from "@material-ui/core/Grid";
 import {makeStyles} from "@material-ui/core/styles";
 import myTheme from "../../styling/muiTheme";
 import Paper from "@material-ui/core/Paper";
-import {Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import FruitButton from "../FruitButtons/Fruitbutton";
 import Typography from "@material-ui/core/Typography";
+import BackArrow from "../backArrows/backArrow"
 
 
 const useStyles = makeStyles((theme) => ({
@@ -31,19 +32,6 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: 'none',
     },
 
-/*    SubHeadline: {
-        color: myTheme.palette.secondary.contrastText,
-        fontFamily: 'Lato-Regular, sans-serif',
-        lineHeight: '22px',
-        fontSize: '15px',
-        textAlign: 'left',
-        marginLeft: '80px',
-        marginRight: '55px',
-        marginTop: '-10px',
-        marginBottom: '-10px',
-        background: 'none',
-        boxShadow: 'none',
-    },*/
 
     buttonApfel: {
         marginLeft: "3em",
@@ -95,7 +83,7 @@ export default function FruitPage() {
 
     return (
 
-        // Überschriften
+        // Headline
         <div className={classes.root}>
 
             <Grid container spacing={3}>
@@ -103,12 +91,6 @@ export default function FruitPage() {
                     <Paper className={classes.Headline}>OBST</Paper>
                 </Grid>
 
-{/*          // Subhead
-               <Grid item xs={12}>
-                    <Paper className={classes.SubHeadline}>
-                        -is healthy as fuck-
-                    </Paper>
-                </Grid>*/}
             </Grid>
 
 
@@ -155,17 +137,11 @@ export default function FruitPage() {
                     />
 
 
-
-                    {/*back icon*/}
-                    <Grid item xs={12}>
-                        <Link to="/landing">
-                            <div className={classes.backIcon}>
-                                <ArrowBackIosIcon fontSize="large"
-                                                  color="primary"
-                                />
-                            </div>
-                        </Link>
-                    </Grid>
+                    <BackArrow
+                        arrowLink="/landing"
+                        arrowName={classes.backIcon}
+                        arrowIcon={<ArrowBackIosIcon fontSize="large" color="primary"/>}
+                    />
 
                     <Typography
                         component="div"

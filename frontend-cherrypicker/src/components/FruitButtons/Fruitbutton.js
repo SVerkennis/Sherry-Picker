@@ -7,7 +7,8 @@ function FruitButton ({buttonName, buttonImage, buttonLink}) {
 
         <Grid item xs={6}>
             <Link to={buttonLink}>
-                <img src={buttonImage} className={buttonName}/>
+                <img src={buttonImage}
+                     className={buttonName}/>
             </Link>
         </Grid>
 

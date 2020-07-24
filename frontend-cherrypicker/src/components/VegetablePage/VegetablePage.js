@@ -3,10 +3,11 @@ import Grid from "@material-ui/core/Grid";
 import {makeStyles} from "@material-ui/core/styles";
 import myTheme from "../../styling/muiTheme";
 import Paper from "@material-ui/core/Paper";
-import {Link}  from "react-router-dom";
+//import {Link}  from "react-router-dom";
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import VegetableButton from "../VegetableButtons/VegetableButton";
 import Typography from "@material-ui/core/Typography";
+import BackArrow from "../backArrows/backArrow";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -110,7 +111,7 @@ export default function VetetablePage() {
                     <VegetableButton
                         buttonName={classes.buttonMoehre}
                         buttonImage="images/moehre.png" alt="moehre-logo"
-                        buttonLink="/apfel"
+                        buttonLink="/moehre"
                     />
 
                     <VegetableButton
@@ -144,16 +145,11 @@ export default function VetetablePage() {
                     />
 
 
-                    {/*back icon*/}
-                    <Grid item xs={12}>
-                        <Link to="/landing">
-                            <div className={classes.backIcon}>
-                                <ArrowBackIosIcon fontSize="large"
-                                                  color="primary"
-                                />
-                            </div>
-                        </Link>
-                    </Grid>
+                    <BackArrow
+                        arrowLink="/landing"
+                        arrowName={classes.backIcon}
+                        arrowIcon={<ArrowBackIosIcon fontSize="large" color="primary"/>}
+                    />
 
                     <Typography
                         component="div"

@@ -120,32 +120,32 @@ export default function Apfel() {
 
     return(
 
-            // Headline und infoText
+        // Headline und infoText
         <div className={classes.root}>
 
             <Grid container spacing={3}>
                 <Grid item xs={12}>
-                    <Paper className={classes.Headline}>APFEL</Paper>
+                    <Paper className={classes.Headline}>MÖHRE</Paper>
                 </Grid>
                 <Grid item xs={12}>
                     <Paper className={classes.infoText}>
-                        Suche dir Anbieter in deiner Nähe & rette ein paar Äpfel.
+                        Suche dir Anbieter in deiner Nähe & rette ein paar Möhren.
                     </Paper>
                 </Grid>
 
                 {/*searchBar*/}
                 <Grid item xs={12}>
-                        <AppBar className={classes.appBar}>
-                            <Toolbar>
-                                <div className={classes.search}>
-                                    <InputBase
-                                        className={classes.inlineText}
-                                        placeholder="Wo willst du suchen?"
-                                        inputProps={{ "aria-label": "search" }}
-                                    />
-                                </div>
-                            </Toolbar>
-                        </AppBar>
+                    <AppBar className={classes.appBar}>
+                        <Toolbar>
+                            <div className={classes.search}>
+                                <InputBase
+                                    className={classes.inlineText}
+                                    placeholder="Wo willst du suchen?"
+                                    inputProps={{ "aria-label": "search" }}
+                                />
+                            </div>
+                        </Toolbar>
+                    </AppBar>
                 </Grid>
 
                 {/*Maps Ausschnitt*/}
@@ -205,15 +205,15 @@ export default function Apfel() {
                         </div>
                     </Link>
                 </Grid>
-                    <Grid item xs={6}>
-                        <Link to="/landing">
-                            <div className={classes.homeIcon}>
-                                <HomeIcon fontSize="large"
-                                          color="primary"
-                                />
-                            </div>
-                        </Link>
-                    </Grid>
+                <Grid item xs={6}>
+                    <Link to="/landing">
+                        <div className={classes.homeIcon}>
+                            <HomeIcon fontSize="large"
+                                      color="primary"
+                            />
+                        </div>
+                    </Link>
+                </Grid>
 
                 <Typography
                     component="div"
