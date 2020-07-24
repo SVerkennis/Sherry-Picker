@@ -11,6 +11,8 @@ import TextField from '@material-ui/core/TextField';
 import Typography from "@material-ui/core/Typography";
 // import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
+import LoginField from "../LoginFields/LoginFields";
+import LoginButton from "../LoginFields/LoginButton";
 
 
 
@@ -152,49 +154,18 @@ export default function ShapeContent() {
                     </Paper>
                 </Grid>
 
-                {/*login textfields!!*/}
-                <Grid item xs={12}>
-                    <form className={classes.loginForm} noValidate autoComplete="off">
-                        <div>
-                            <TextField
-                                className={classes.backgroundField}
-                                error
-                                id="outlined-required"
-                                label="Username"
-                                // defaultValue="Username"
-                                variant="outlined"
-                                placeholder="dein Username"
-                                size="small"
-                            />
 
-                            <TextField
-                                className={classes.backgroundField}
-                                error
-                                id="outlined-password-input"
-                                label="Passwort"
-                                autoComplete="current-password"
-                                variant="outlined"
-                                type="password"
-                                placeholder="dein Passwort"
-                                size="small"
-                            />
-                        </div>
-                    </form>
-                </Grid>
+                <LoginField
+                    loginFieldName={classes.loginForm}
+                    textFieldName={classes.backgroundField}
+                />
 
-                {/*send login!!*/}
-                <Grid item xs={12}>
-                    <Link to="/landing" className={classes.clickButton}>
-                        <Button
-                            variant="contained"
-                            color= "tertiary"
-                            size="medium"
-                            className={classes.sendButton}
-                        >
-                            login
-                        </Button>
-                    </Link>
-                </Grid>
+
+                <LoginButton
+                    loginButtonLink={classes.clickButton}
+                    loginButtonName={classes.sendButton}
+                />
+
 
                 <Typography
                     component="div"
