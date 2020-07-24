@@ -17,6 +17,7 @@ import {Link} from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
 import DoubleBackArrow from "../backArrows/doubleBackArrow"
 import AdressOutput from "../AdressOutput/AdressOutput";
+import HomeButton from "../homeButtons/HomeButton";
 
 
 
@@ -109,15 +110,6 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-// just for homeIcon
-function HomeIcon(props) {
-    return (
-        <SvgIcon {...props}>
-            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-        </SvgIcon>
-    );
-}
-
 export default function Apfel() {
     const classes = useStyles();
 
@@ -160,36 +152,17 @@ export default function Apfel() {
 
                 <AdressOutput
                     adressOutputName={classes.profil}
-                    adressOutputAvatar={<Avatar alt="Paul Hildemann" src="images/paul.png"/>}
-                    adressOutputText={<ListItemText
-                        primary="Paul Hildemann"
-                        secondary={
-                            <React.Fragment>
-                                {' 0208 34 4389 43 '}
-                                <br/>
-                                {' Kreuzstraße 14 '}
-                                <br/>
-                                {' Mülheim an der Ruhr '}
-                            </React.Fragment>
-                        }
-                    />
-                    }/>
+                />
 
                 <DoubleBackArrow
                     doubleArrowLink="/fruits"
                     doubleArrowName={classes.backIcon}
-                    doubleArrowIcon={<ArrowBackIosIcon fontSize="large" color="primary"/>}
                 />
 
-                    <Grid item xs={6}>
-                        <Link to="/landing">
-                            <div className={classes.homeIcon}>
-                                <HomeIcon fontSize="large"
-                                          color="primary"
-                                />
-                            </div>
-                        </Link>
-                    </Grid>
+                <HomeButton
+                    homeButtonLink="/landing"
+                    homeButtonName={classes.homeIcon}
+                />
 
                 <Typography
                     component="div"
