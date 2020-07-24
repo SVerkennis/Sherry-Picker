@@ -4,13 +4,12 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import TextField from "@material-ui/core/TextField";
-import Paper from "@material-ui/core/Paper";
 import myTheme from "../../styling/muiTheme";
-// import Icon from '@material-ui/core/Icon';
-import Button from '@material-ui/core/Button';
-import {Link} from "react-router-dom";
 import SendButton from "./SendButton";
 import EmptyTextField from "./TextFields";
+import RegisterPageHeadline from "./RegisterPageHeadline";
+import RegisterPageSubheadline from "./RegisterPageSubheadline";
+import RegisterPageDecoElement from "./RegisterPageDecoElement";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -26,42 +25,6 @@ const useStyles = makeStyles((theme) => ({
             backgroundColor: myTheme.palette.primary.dark,
         }
     },
-    Headline: {
-        color: myTheme.palette.primary.contrastText,
-        fontFamily: 'Raleway, sans-serif',
-        letterSpacing: '1pt',
-        fontSize: '35px',
-        //marginRight: '1em',
-        textAlign: 'center',
-        marginTop: '1rem',
-        background: 'none',
-        boxShadow: 'none',
-    },
-    SubHeadline: {
-        color: myTheme.palette.secondary.contrastText,
-        fontFamily: 'Lato-Regular, sans-serif',
-        lineHeight: '22px',
-        fontSize: '15px',
-        textAlign: 'center',
-        marginTop: '0.2rem',
-        marginBottom: '1rem',
-        background: 'none',
-        boxShadow: 'none',
-    },
-    sendButton: {
-        // margin: theme.spacing(1),
-        marginTop: '1.3rem',
-        //marginLeft: '0.3em',
-        color: myTheme.palette.primary.main,
-        backgroundColor: myTheme.palette.primary.light,
-        width: '31.5ch',
-    },
-    shareCircle: {
-        maxWidth: '50%',
-        position: 'absolute',
-        bottom: '-1.6rem',
-        right: '0',
-    },
 
 }));
 
@@ -73,24 +36,17 @@ export default function RegisterPage() {
 
         <Container maxWidth="sm">
 
-            <img src="images/shareCircleEcofriendly.png"
-                 alt="share-logo"
-                 className={classes.shareCircle}/>
+            <RegisterPageDecoElement/>
 
             <div>
                 <div className={classes.root}>
                     <Grid container spacing={3}>
                         <form className={classes.inputText} noValidate autoComplete="off">
 
-                            <Grid item xs={12}>
-                                <Paper className={classes.Headline}>TRAG DICH EIN!</Paper>
-                            </Grid>
+                            <RegisterPageHeadline/>
 
-                            <Grid item xs={12}>
-                                <Paper className={classes.SubHeadline}>
-                                    Danach kann es sofort losgehen.
-                                </Paper>
-                            </Grid>
+                            <RegisterPageSubheadline/>
+
 
                             <EmptyTextField
                                 TextFieldLabel={<TextField
@@ -157,11 +113,7 @@ export default function RegisterPage() {
                         </form>
                     </Grid>
 
-
-                    <SendButton
-                        SendButtonName={classes.sendButton}
-                    />
-
+                    <SendButton/>
 
                     <Typography
                         component="div"
