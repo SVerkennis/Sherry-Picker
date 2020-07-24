@@ -5,11 +5,11 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import TextField from "@material-ui/core/TextField";
 import myTheme from "../../styling/muiTheme";
-import SendButton from "./SendButton";
-import EmptyTextField from "./TextFields";
-import RegisterPageHeadline from "./RegisterPageHeadline";
-import RegisterPageSubheadline from "./RegisterPageSubheadline";
-import RegisterPageDecoElement from "./RegisterPageDecoElement";
+import SendButton from "./RegisterSubPages/SendButton";
+import EmptyTextField from "./RegisterSubPages/TextFields";
+import RegisterPageHeadline from "./RegisterSubPages/RegisterPageHeadline";
+import RegisterPageSubheadline from "./RegisterSubPages/RegisterPageSubheadline";
+import RegisterPageDecoElement from "./RegisterSubPages/RegisterPageDecoElement";
 
 
 const useStyles = makeStyles((theme) => ({

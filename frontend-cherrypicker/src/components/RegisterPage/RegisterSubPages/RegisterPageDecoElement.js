@@ -18,7 +18,7 @@ function RegisterPageDecoElement() {
 
     return(
 
-        <img src="images/shareCircleEcofriendly.png"
+        <img src="./images/shareCircleEcofriendly.png"
              alt="share-logo"
              className={classes.shareCircle}/>
     )

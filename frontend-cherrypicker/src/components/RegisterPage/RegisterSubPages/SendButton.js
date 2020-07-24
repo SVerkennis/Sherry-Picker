@@ -2,7 +2,7 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import {makeStyles} from "@material-ui/core/styles";
-import myTheme from "../../styling/muiTheme";
+import myTheme from "../../../styling/muiTheme";
 import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles((theme) => ({
