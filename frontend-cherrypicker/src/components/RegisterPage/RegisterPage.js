@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
@@ -9,6 +9,8 @@ import myTheme from "../../styling/muiTheme";
 // import Icon from '@material-ui/core/Icon';
 import Button from '@material-ui/core/Button';
 import {Link} from "react-router-dom";
+import SendButton from "./SendButton";
+import EmptyTextField from "./TextFields";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -68,31 +70,31 @@ export default function RegisterPage() {
     const classes = useStyles();
 
 
-        return (
+    return (
 
-                <Container maxWidth="sm">
+        <Container maxWidth="sm">
 
-                    <img src="images/shareCircleEcofriendly.png"
-                         alt="share-logo"
-                         className={classes.shareCircle}/>
+            <img src="images/shareCircleEcofriendly.png"
+                 alt="share-logo"
+                 className={classes.shareCircle}/>
 
-                    <div>
-                    <div className={classes.root}>
-                        <Grid container spacing={3}>
-                            <form className={classes.inputText} noValidate autoComplete="off">
-
-                                <Grid item xs={12}>
-                                    <Paper className={classes.Headline}>TRAG DICH EIN!</Paper>
-                                </Grid>
-
-                                <Grid item xs={12}>
-                                    <Paper className={classes.SubHeadline}>
-                                        Danach kann es sofort losgehen.
-                                    </Paper>
-                                </Grid>
+            <div>
+                <div className={classes.root}>
+                    <Grid container spacing={3}>
+                        <form className={classes.inputText} noValidate autoComplete="off">
 
                             <Grid item xs={12}>
-                                <TextField
+                                <Paper className={classes.Headline}>TRAG DICH EIN!</Paper>
+                            </Grid>
+
+                            <Grid item xs={12}>
+                                <Paper className={classes.SubHeadline}>
+                                    Danach kann es sofort losgehen.
+                                </Paper>
+                            </Grid>
+
+                            <EmptyTextField
+                                TextFieldLabel={<TextField
                                     error
                                     id="outlined-required"
                                     label="Wunsch Username"
@@ -100,21 +102,23 @@ export default function RegisterPage() {
                                     type="search"
                                     size="small"
                                 />
-                            </Grid>
+                                }
+                            />
 
-                            <Grid item xs={12}>
-                                <TextField
+                            <EmptyTextField
+                                TextFieldLabel={<TextField
                                     error
                                     id="outlined-required"
                                     label="Deine Email Adresse"
-                                    type="search"
                                     variant="outlined"
+                                    type="search"
                                     size="small"
                                 />
-                            </Grid>
+                                }
+                            />
 
-                            <Grid item xs={12}>
-                                <TextField
+                            <EmptyTextField
+                                TextFieldLabel={<TextField
                                     error
                                     id="outlined-password-input"
                                     label="Password"
@@ -123,21 +127,23 @@ export default function RegisterPage() {
                                     variant="outlined"
                                     size="small"
                                 />
-                            </Grid>
+                                }
+                            />
 
-                            <Grid item xs={12}>
-                                <TextField
+                            <EmptyTextField
+                                TextFieldLabel={<TextField
                                     error
                                     id="outlined-required"
-                                    label="Dein Name, Nachname"
+                                    label="Dein Name & Nachname"
                                     variant="outlined"
                                     type="search"
                                     size="small"
                                 />
-                            </Grid>
+                                }
+                            />
 
-                            <Grid item xs={12}>
-                                <TextField
+                            <EmptyTextField
+                                TextFieldLabel={<TextField
                                     error
                                     id="outlined-required"
                                     label="Adresse"
@@ -146,32 +152,28 @@ export default function RegisterPage() {
                                     type="search"
                                     size="small"
                                 />
-                            </Grid>
+                                }
+                            />
+
+                        </form>
+                    </Grid>
 
 
-                            </form>
-                        </Grid>
-
-                        <Grid item xs={12}>
-                            <Button
-                                variant="contained"
-                                color= "tertiary"
-                                className={classes.sendButton}
-                            >
-                                senden
-                            </Button>
-                        </Grid>
-
-                        <Typography
-                            component="div"
-                            style={{ backgroundColor: 'none', height: '2vh', marginTop: '4.7rem', }} />
-
-                    </div>
-                    </div>
-
-                </Container>
+                    <SendButton
+                        SendButtonName={classes.sendButton}
+                    />
 
 
-        );
+                    <Typography
+                        component="div"
+                        style={{backgroundColor: 'none', height: '2vh', marginTop: '4.7rem',}}/>
+
+                </div>
+            </div>
+
+        </Container>
+
+
+    );
 
 }
