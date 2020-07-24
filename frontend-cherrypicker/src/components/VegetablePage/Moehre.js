@@ -18,6 +18,7 @@ import Typography from "@material-ui/core/Typography";
 import DoubleBackArrow from "../backArrows/doubleBackArrow";
 import HomeButton from "../homeButtons/HomeButton";
 import AdressOutput from "../AdressOutput/AdressOutput";
+import SearchBar from "../SearchBar/SearchBar";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -57,19 +58,6 @@ const useStyles = makeStyles((theme) => ({
     // just the search bar
     grow: {
         flexGrow: 1,
-    },
-
-    appBar: {
-        marginRight: '5em',
-        marginTop: '16.5rem',
-        maxWidth: '15em',
-        maxHeight: '1.7rem',
-        borderRadius: '14px',
-    },
-
-    inlineText: {
-        fontSize: '14px',
-        paddingBottom: '1.6rem',
     },
 
     mapsImage: {
@@ -127,20 +115,7 @@ export default function Apfel() {
                     </Paper>
                 </Grid>
 
-                {/*searchBar*/}
-                <Grid item xs={12}>
-                    <AppBar className={classes.appBar}>
-                        <Toolbar>
-                            <div className={classes.search}>
-                                <InputBase
-                                    className={classes.inlineText}
-                                    placeholder="Wo willst du suchen?"
-                                    inputProps={{ "aria-label": "search" }}
-                                />
-                            </div>
-                        </Toolbar>
-                    </AppBar>
-                </Grid>
+                <SearchBar/>
 
                 {/*Maps Ausschnitt*/}
                 <Grid item xs={12}>

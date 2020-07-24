@@ -69,12 +69,6 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '-40px',
     },
 
-    backIcon: {
-        marginTop: '-2.5em',
-        marginLeft: '10em',
-        opacity: '80%',
-    },
-
 }));
 
 
@@ -136,12 +130,7 @@ export default function FruitPage() {
                         buttonLink="/apfel"
                     />
 
-
-                    <BackArrow
-                        arrowLink="/landing"
-                        arrowName={classes.backIcon}
-                        arrowIcon={<ArrowBackIosIcon fontSize="large" color="primary"/>}
-                    />
+                    <BackArrow/>
 
                     <Typography
                         component="div"

@@ -1,16 +1,37 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
+import {makeStyles} from "@material-ui/core/styles";
+import myTheme from "../../styling/muiTheme";
 
-function LoginField({loginFieldName, textFieldName}) {
+const useStyles = makeStyles((theme) => ({
+
+    loginForm: {
+        marginLeft: '4.3em',
+        marginTop: '-0.4rem',
+        '& .MuiTextField-root': {
+            margin: theme.spacing(0.5),
+            width: '17ch',
+            backgroundColor: myTheme.palette.primary.dark,
+        },
+
+        backgroundField: {
+            backgroundColor: myTheme.palette.secondary.main,
+        },
+    },
+
+}));
+
+function LoginField() {
+    const classes = useStyles();
 
     return(
 
         <Grid item xs={12}>
-            <form className={loginFieldName} noValidate autoComplete="off">
+            <form className={classes.loginForm} noValidate autoComplete="off">
                 <div>
                     <TextField
-                        className={textFieldName}
+                        className={classes.backgroundField}
                         error
                         id="outlined-required"
                         label="Username"
@@ -20,7 +41,7 @@ function LoginField({loginFieldName, textFieldName}) {
                     />
 
                     <TextField
-                        className={textFieldName}
+                        className={classes.backgroundField}
                         error
                         id="outlined-password-input"
                         label="Passwort"

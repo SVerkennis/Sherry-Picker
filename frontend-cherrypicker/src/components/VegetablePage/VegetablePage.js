@@ -144,12 +144,7 @@ export default function VetetablePage() {
                         buttonLink="/apfel"
                     />
 
-
-                    <BackArrow
-                        arrowLink="/landing"
-                        arrowName={classes.backIcon}
-                        arrowIcon={<ArrowBackIosIcon fontSize="large" color="primary"/>}
-                    />
+                    <BackArrow/>
 
                     <Typography
                         component="div"
