@@ -16,6 +16,8 @@ import SvgIcon from "@material-ui/core/SvgIcon";
 import {Link} from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
 import DoubleBackArrow from "../backArrows/doubleBackArrow";
+import HomeButton from "../homeButtons/HomeButton";
+import AdressOutput from "../AdressOutput/AdressOutput";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -156,46 +158,25 @@ export default function Apfel() {
                     </Paper>
                 </Grid>
 
-                {/*name and adress output*/}
-                <Grid item xs={12}>
-                    <List className={classes.profil}>
-                        <ListItem alignItems="flex-start">
-                            <ListItemAvatar>
-                                <Avatar alt="Paul Hildemann" src="images/paul.png" />
-                            </ListItemAvatar>
-                            <ListItemText
-                                primary="Paul Hildemann"
-                                secondary={
-                                    <React.Fragment>
-                                        {' 0208 34 4389 43 '}
-                                        <br/>
-                                        {' Kreuzstraße 14 '}
-                                        <br/>
-                                        {' Mülheim an der Ruhr '}
-                                    </React.Fragment>
-                                }
-                            />
-                        </ListItem>
-                    </List>
-                    {/*<List className={classes.profilTamai}>
-                        <ListItem alignItems="flex-start">
-                            <ListItemAvatar>
-                                <Avatar alt="Tamai Donan" src="images/tamai.png" />
-                            </ListItemAvatar>
-                            <ListItemText
-                                primary="Tamai Donan"
-                                secondary={
-                                    <React.Fragment>
-                                       {' 0208 16 8429 29 '}
-                                     <br/>
-                                        {' Kreuzstraße 14 '}
-                                        <br/>
-                                        {' Mülheim an der Ruhr '}
-                                    </React.Fragment>
-                                } />
-                        </ListItem>
-                    </List>*/}
-                </Grid>
+
+                <AdressOutput
+                    adressOutputName={classes.profil}
+                    adressOutputAvatar={<Avatar alt="Paul Hildemann" src="images/paul.png"/>}
+                    adressOutputText={<ListItemText
+                                       primary="Paul Hildemann"
+                                       secondary={
+                                           <React.Fragment>
+                                               {' 0208 34 4389 43 '}
+                                               <br/>
+                                               {' Kreuzstraße 14 '}
+                                               <br/>
+                                               {' Mülheim an der Ruhr '}
+                                           </React.Fragment>
+                                       }
+                                       />
+                                    }/>
+
+
 
                 <DoubleBackArrow
                     doubleArrowLink="/vegetables"
@@ -203,15 +184,11 @@ export default function Apfel() {
                     doubleArrowIcon={<ArrowBackIosIcon fontSize="large" color="primary"/>}
                 />
 
-                <Grid item xs={6}>
-                    <Link to="/landing">
-                        <div className={classes.homeIcon}>
-                            <HomeIcon fontSize="large"
-                                      color="primary"
-                            />
-                        </div>
-                    </Link>
-                </Grid>
+                <HomeButton
+                    homeButtonLink="/landing"
+                    homeButtonName={classes.homeIcon}
+                    homeButtonIcon={<HomeIcon fontSize="large" color="primary"/>}
+                />
 
                 <Typography
                     component="div"
