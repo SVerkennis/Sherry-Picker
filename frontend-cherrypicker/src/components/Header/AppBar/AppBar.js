@@ -133,6 +133,9 @@ export default function ProminentAppBar() {
                                     <MenuItem onClick={handleClose} className={classes.backgroundColor}>
                                         <Link to={"/register"} className={classes.underlineText}>Registrieren</Link>
                                     </MenuItem>
+                                    <MenuItem onClick={handleClose} className={classes.backgroundColor}>
+                                        <Link to={"/"} className={classes.underlineText}>Login</Link>
+                                    </MenuItem>
                                 </Menu>
                             </div>
                         </Grid>

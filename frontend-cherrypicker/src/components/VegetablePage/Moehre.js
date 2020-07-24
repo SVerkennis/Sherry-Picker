@@ -15,6 +15,7 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import SvgIcon from "@material-ui/core/SvgIcon";
 import {Link} from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
+import DoubleBackArrow from "../backArrows/doubleBackArrow";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -196,15 +197,12 @@ export default function Apfel() {
                     </List>*/}
                 </Grid>
 
-                <Grid item xs={6}>
-                    <Link to="/fruits">
-                        <div className={classes.backIcon}>
-                            <ArrowBackIosIcon fontSize="large"
-                                              color="primary"
-                            />
-                        </div>
-                    </Link>
-                </Grid>
+                <DoubleBackArrow
+                    doubleArrowLink="/vegetables"
+                    doubleArrowName={classes.backIcon}
+                    doubleArrowIcon={<ArrowBackIosIcon fontSize="large" color="primary"/>}
+                />
+
                 <Grid item xs={6}>
                     <Link to="/landing">
                         <div className={classes.homeIcon}>
