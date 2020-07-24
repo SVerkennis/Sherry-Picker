@@ -8,7 +8,7 @@ import VegetablePage from "../VegetablePage/VegetablePage";
 import RegisterPage from "../RegisterPage/RegisterPage";
 import LandingPage from "../LandingPage/LandingPage";
 import Moehre from "../VegetablePage/Moehre";
-import BackgroundForm from "./BackgroundForm";
+import BackgroundForm from "./BackgroundForm/BackgroundForm";
 
 export default function MainContent() {
     return (

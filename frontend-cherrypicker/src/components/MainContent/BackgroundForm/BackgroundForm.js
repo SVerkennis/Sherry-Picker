@@ -2,13 +2,13 @@ import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import {Route, Switch} from "react-router-dom";
-import FruitPage from "../FruitPage/FruitPage";
-import Apfel from "../FruitPage/Apfel";
-import Moehre from "../VegetablePage/Moehre";
-import VegetablePage from "../VegetablePage/VegetablePage";
-import RegisterPage from "../RegisterPage/RegisterPage";
-import LandingPage from "../LandingPage/LandingPage";
-import ShapeContent from "./ShapeContent";
+import FruitPage from "../../FruitPage/FruitPage";
+import Apfel from "../../FruitPage/Apfel";
+import Moehre from "../../VegetablePage/Moehre";
+import VegetablePage from "../../VegetablePage/VegetablePage";
+import RegisterPage from "../../RegisterPage/RegisterPage";
+import LandingPage from "../../LandingPage/LandingPage";
+import ShapeContent from "./../ShapeContent";
 
 const useStyles = makeStyles((theme) => ({
 

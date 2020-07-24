@@ -13,11 +13,6 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         lineHeight: '2.5rem',
         marginTop: '2rem',
-        // fontFamily: 'Lato-Black, sans-serif',
-        // letterSpacing: '1.6pt',
-        //fontSize: '24px',
-        // marginTop: '3rem',
-        //marginLeft: '1.5em',
         background: 'none',
         boxShadow: 'none',
     }

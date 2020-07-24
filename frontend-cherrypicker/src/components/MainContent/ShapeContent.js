@@ -33,7 +33,7 @@ export default function ShapeContent() {
 
         <div className={classes.root}>
 
-                <img src="images/shareCircle.png"
+                <img src="./images/shareCircle.png"
                      alt="share-logo"
                      className={classes.shareCircle}/>
 
