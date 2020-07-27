@@ -7,7 +7,7 @@ import myTheme from "../../styling/muiTheme";
 const useStyles = makeStyles((theme) => ({
 
     loginForm: {
-        marginLeft: '4.3em',
+        marginLeft: '4.6em',
         marginTop: '-0.4rem',
         '& .MuiTextField-root': {
             margin: theme.spacing(0.5),

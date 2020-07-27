@@ -9,11 +9,12 @@ const useStyles = makeStyles((theme) => ({
         color: myTheme.palette.secondary.contrastText,
         fontFamily: 'Lato-Regular, sans-serif',
         lineHeight: '1.3rem',
-        fontSize: '15px',
+        fontSize: '14px',
         marginTop: '-0.5rem',
         textAlign: 'center',
         background: 'none',
         boxShadow: 'none',
+        letterSpacing: '1.5pt',
     }
 }));
 
@@ -24,7 +25,7 @@ function ShapeContentSubheadline() {
 
         <Grid item xs={12}>
             <Paper className={classes.SubHeadline}>
-                Teilt euer wunderbar selbstangebautest <br/> und überschüssiges Obst und Gemüse.
+                Teile dein selbstangebautest &<br/>  überschüssiges Obst und Gemüse.
             </Paper>
         </Grid>
 

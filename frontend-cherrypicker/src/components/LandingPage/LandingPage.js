@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: '-1rem',
         background: 'none',
         boxShadow: 'none',
+        letterSpacing: '0.5pt',
     },
 
     Hashtag: {
@@ -77,7 +78,6 @@ const useStyles = makeStyles((theme) => ({
         right: '0',
     },
 
-
 }));
 
 
@@ -105,8 +105,8 @@ export default function LandingPage() {
 
                 <Grid item xs={12}>
                     <Paper className={classes.SubHeadline}>
-                        Wir freuen uns sehr, dass du nun Teil der Sharing Community bist!
-                        Du kannst nun zwischen Obst und Gemüse auswählen und dich auf die Suche begeben.
+                        Wir freuen uns, dass du Teil der Sharing Community bist!
+                        <br/>Du kannst zwischen Obst und Gemüse auswählen.
                     </Paper>
                 </Grid>
 

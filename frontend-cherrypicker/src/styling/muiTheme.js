@@ -22,6 +22,8 @@ const myTheme = createMuiTheme ({
         },
         error: {
             main: '#FFFFFF',
+            // light wird noch nicht genutzt
+            light: '#798897',
         }
     },
 

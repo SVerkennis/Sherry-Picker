@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     sendButton: {
         // margin: theme.spacing(1),
         marginTop: '-1rem',
-        marginLeft: '5.2em',
+        marginLeft: '5.6em',
         color: myTheme.palette.primary.main,
         backgroundColor: myTheme.palette.primary.light,
         width: '22ch',
