@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 }));
+// search bar auf apfel/möhre page
 
 function SearchBar() {
     const classes = useStyles();

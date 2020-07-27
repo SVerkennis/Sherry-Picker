@@ -39,19 +39,26 @@ export default function ShapeContent() {
 
             <Grid container spacing={3}>
               <ShapeContentHeadline/>
+
               <ShapeContentSubheadline/>
             </Grid>
 
 
             <Grid container spacing={3}>
+
                 <ShapeContentLoginText/>
+
                 <LoginField/>
+
                 <LoginButton/>
+
                 <Typography
                     component="div"
                     text="Hello"
                     style={{ backgroundColor: 'none', height: '10vh', marginTop: '5.5rem', }} />
+
             </Grid>
+
         </div>
     );
 }
