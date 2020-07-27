@@ -3,10 +3,10 @@ import Grid from "@material-ui/core/Grid";
 import {makeStyles} from "@material-ui/core/styles";
 import myTheme from "../../styling/muiTheme";
 import Paper from "@material-ui/core/Paper";
-import {Link}  from "react-router-dom";
+// import {Link}  from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
 import FruitVegetableButton from "./FruitVegetableButton";
-import FruitButton from "../FruitButtons/Fruitbutton";
+// import FruitButton from "../FruitButtons/Fruitbutton";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -122,7 +122,6 @@ export default function LandingPage() {
                     buttonImage="images/gemuese.png" alt="gemuese-logo"
                     buttonLink="/vegetables"
                 />
-
 
                 <Typography
                     component="div"
