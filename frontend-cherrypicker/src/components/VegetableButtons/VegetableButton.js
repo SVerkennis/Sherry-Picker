@@ -8,7 +8,9 @@ function VegetableButton({buttonName, buttonImage, buttonLink}) {
 
         <Grid item xs={6}>
             <Link to={buttonLink}>
-                <img src={buttonImage} className={buttonName}/>
+                <img src={buttonImage}
+                     alt="vegetablebutton-logo"
+                     className={buttonName}/>
             </Link>
         </Grid>
 
