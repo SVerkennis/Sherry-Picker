@@ -120,13 +120,9 @@ export default function ProminentAppBar() {
                                 >
 
                                     <DropDownItemHome/>
-
                                     <DropDownItemObst/>
-
                                     <DropDownItemGemuese/>
-
                                     <DropDownItemRegistrieren/>
-
                                     <DropDownItemLogin/>
 
                                 </Menu>

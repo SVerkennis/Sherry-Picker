@@ -1,12 +1,13 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import {makeStyles} from "@material-ui/core/styles";
-import myTheme from "../../styling/muiTheme";
-import Paper from "@material-ui/core/Paper";
+// import myTheme from "../../styling/muiTheme";
+// import Paper from "@material-ui/core/Paper";
 // import {Link}  from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
 import FruitVegetableButton from "./FruitVegetableButton";
-// import FruitButton from "../FruitButtons/Fruitbutton";
+import LandingPageHeadline from "./LandingPageHeadline";
+import LandingPageSubHeadline from "./LandingPageSubHeadline";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -17,46 +18,6 @@ const useStyles = makeStyles((theme) => ({
     paper: {
         padding: theme.spacing(2),
         color: theme.palette.text.secondary,
-    },
-
-    Headline: {
-        color: myTheme.palette.primary.contrastText,
-        fontFamily: 'Raleway, sans-serif',
-        letterSpacing: '1pt',
-        fontSize: '36px',
-        textAlign: 'center',
-        lineHeight: '2.5rem',
-        marginTop: '2rem',
-     //   marginLeft: '1.5em',
-        background: 'none',
-        boxShadow: 'none',
-    },
-
-    SubHeadline: {
-        color: myTheme.palette.secondary.contrastText,
-        fontFamily: 'Lato-Regular, sans-serif',
-        lineHeight: '22px',
-        fontSize: '15px',
-        textAlign: 'center',
-        marginLeft: '2.3em',
-        marginRight: '1.5em',
-        marginTop: '-0.8rem',
-        marginBottom: '-1rem',
-        background: 'none',
-        boxShadow: 'none',
-        letterSpacing: '0.5pt',
-    },
-
-    Hashtag: {
-        background: 'none',
-        boxShadow: 'none',
-        color: myTheme.palette.primary.main,
-        fontSize: '30px',
-        fontFamily: 'Lato-Black, sans-serif',
-        letterSpacing: '1.6pt',
-        marginLeft: '2.3em',
-        marginTop: '-10px',
-        opacity: '80%',
     },
 
     buttonOne: {
@@ -97,18 +58,9 @@ export default function LandingPage() {
 
             <Grid container spacing={3}>
 
-                <Grid item xs={12}>
-                    <Paper className={classes.Headline}>
-                        SCHÖN, <br/>DASS DU NUN BEI UNS BIST!</Paper>
-                </Grid>
+                <LandingPageHeadline/>
 
-
-                <Grid item xs={12}>
-                    <Paper className={classes.SubHeadline}>
-                        Wir freuen uns, dass du Teil der Sharing Community bist!
-                        <br/>Du kannst zwischen Obst und Gemüse auswählen.
-                    </Paper>
-                </Grid>
+                <LandingPageSubHeadline/>
 
 
                 <FruitVegetableButton
