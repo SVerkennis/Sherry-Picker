@@ -13,6 +13,11 @@ import {Menu, MenuItem} from "@material-ui/core";
 import {Link} from "react-router-dom";
 import myTheme from "../../../styling/muiTheme";
 import Paper from '@material-ui/core/Paper';
+import DropDownItemHome from "./DropDownItemHome";
+import DropDownItemObst from "./DropDownItemObst";
+import DropDownItemGemuese from "./DropDownItemGemuese";
+import DropDownItemRegistrieren from "./DropDownItemRegistrieren";
+import DropDownItemLogin from "./DropDownItemLogin";
 
 const useStyles = makeStyles((theme) => ({
 
@@ -32,17 +37,9 @@ const useStyles = makeStyles((theme) => ({
         background: 'none',
         boxShadow: 'none',
     },
-    backgroundColor: {
-        backgroundColor: 'white',
-    },
     buttonMenu: {
         marginLeft: '1.8em',
         marginTop: '1rem',
-    },
-    underlineText: {
-        textDecoration: 'none',
-        color: myTheme.palette.secondary.main,
-        fontFamily: 'Lato-Regular, sans-serif',
     },
 
     // logo
@@ -121,21 +118,17 @@ export default function ProminentAppBar() {
                                     open={Boolean(anchorEl)}
                                     onClose={handleClose}
                                 >
-                                    <MenuItem onClick={handleClose} className={classes.backgroundColor}>
-                                        <Link to={"/landing"} className={classes.underlineText}>Home</Link>
-                                    </MenuItem>
-                                    <MenuItem onClick={handleClose} className={classes.backgroundColor}>
-                                        <Link to={"/fruits"} className={classes.underlineText}>Obst</Link>
-                                    </MenuItem>
-                                    <MenuItem onClick={handleClose} className={classes.backgroundColor}>
-                                        <Link to={"/vegetables"} className={classes.underlineText}>Gemüse</Link>
-                                    </MenuItem>
-                                    <MenuItem onClick={handleClose} className={classes.backgroundColor}>
-                                        <Link to={"/register"} className={classes.underlineText}>Registrieren</Link>
-                                    </MenuItem>
-                                    <MenuItem onClick={handleClose} className={classes.backgroundColor}>
-                                        <Link to={"/"} className={classes.underlineText}>Login</Link>
-                                    </MenuItem>
+
+                                    <DropDownItemHome/>
+
+                                    <DropDownItemObst/>
+
+                                    <DropDownItemGemuese/>
+
+                                    <DropDownItemRegistrieren/>
+
+                                    <DropDownItemLogin/>
+
                                 </Menu>
                             </div>
                         </Grid>
