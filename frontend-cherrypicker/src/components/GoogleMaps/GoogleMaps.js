@@ -13,7 +13,7 @@ const mapContainerStyle = {
     marginLeft: '2em',
     marginTop: '0.5rem',
     marginBottom: '2rem',
-    borderRadius: '8px',
+    borderRadius: '10px',
 };
 
 const center = {
