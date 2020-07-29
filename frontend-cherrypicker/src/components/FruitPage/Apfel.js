@@ -108,22 +108,18 @@ export default function Apfel() {
 
                 {/*Maps Ausschnitt*/}
                 <Grid item xs={12}>
+
                     <Paper className={classes.mapsImage}>
                         <img src="images/mapsImage.png" alt="mapsImage-logo"/>
                     </Paper>
+
                 </Grid>
 
-                <AdressOutput
-                    adressOutputName={classes.profil}
-                />
+                <AdressOutput adressOutputName={classes.profil}/>
 
-                <DoubleBackArrow
-                    doubleArrowLink="/fruits"
-                />
+                <DoubleBackArrow doubleArrowLink="/fruits"/>
 
-                <HomeButton
-                    homeButtonLink="/landing"
-                />
+                <HomeButton homeButtonLink="/landing"/>
 
                 <Typography
                     component="div"
