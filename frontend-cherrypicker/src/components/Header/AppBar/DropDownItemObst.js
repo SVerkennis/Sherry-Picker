@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 function DropDownItemObst({}) {
     const classes = useStyles();
 
-    const [setAnchorEl] = React.useState(null);
+    const [anchorEl, setAnchorEl] = React.useState(null);
 
     const handleClose = () => {
         setAnchorEl(null);
