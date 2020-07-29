@@ -9,8 +9,8 @@ const useStyles = makeStyles((theme) => ({
 
     appBar: {
         marginRight: '4.5em',
-        marginTop: '16.5rem',
-        maxWidth: '14.5em',
+        marginTop: '12.5rem',
+        maxWidth: '16em',
         maxHeight: '1.7rem',
         borderRadius: '14px',
     },

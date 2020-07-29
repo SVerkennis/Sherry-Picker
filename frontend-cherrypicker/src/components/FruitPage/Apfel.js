@@ -19,6 +19,7 @@ import DoubleBackArrow from "../backArrows/doubleBackArrow"
 import AdressOutput from "../AdressOutput/AdressOutput";
 import HomeButton from "../homeButtons/HomeButton";
 import SearchBar from "../SearchBar/SearchBar";
+import GoogleMaps from "../GoogleMaps/GoogleMaps";
 
 
 
@@ -60,13 +61,12 @@ const useStyles = makeStyles((theme) => ({
     grow: {
         flexGrow: 1,
     },
-
-    mapsImage: {
+/*    mapsImage: {
         marginLeft: '0.9em',
         background: 'none',
         boxShadow: 'none',
         marginTop: '-0.6rem',
-    },
+    },*/
 
     // NEW MUI component
     profil: {
@@ -98,21 +98,20 @@ export default function Apfel() {
                 <Grid item xs={12}>
                     <Paper className={classes.Headline}>APFEL</Paper>
                 </Grid>
-                <Grid item xs={12}>
+{/*                <Grid item xs={12}>
                     <Paper className={classes.infoText}>
                         Suche dir Anbieter in deiner Nähe <br/> & rette ein paar Äpfel.
                     </Paper>
-                </Grid>
+                </Grid>*/}
 
                 <SearchBar/>
 
                 {/*Maps Ausschnitt*/}
                 <Grid item xs={12}>
-
-                    <Paper className={classes.mapsImage}>
+{/*                    <Paper className={classes.mapsImage}>
                         <img src="images/mapsImage.png" alt="mapsImage-logo"/>
-                    </Paper>
-
+                    </Paper>*/}
+                <GoogleMaps/>
                 </Grid>
 
                 <AdressOutput adressOutputName={classes.profil}/>
@@ -124,7 +123,7 @@ export default function Apfel() {
                 <Typography
                     component="div"
                     text="Hello"
-                    style={{ backgroundColor: 'none', height: '5vh', marginTop: '1.1rem', }}
+                    style={{ backgroundColor: 'none', height: '5vh', marginTop: '0.4rem', }}
                 />
 
             </Grid>

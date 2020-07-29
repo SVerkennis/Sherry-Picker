@@ -19,6 +19,7 @@ import DoubleBackArrow from "../backArrows/doubleBackArrow";
 import HomeButton from "../homeButtons/HomeButton";
 import AdressOutput from "../AdressOutput/AdressOutput";
 import SearchBar from "../SearchBar/SearchBar";
+import GoogleMaps from "../GoogleMaps/GoogleMaps";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -101,19 +102,20 @@ export default function Apfel() {
                     <Paper className={classes.Headline}>MÖHRE</Paper>
                 </Grid>
 
-                <Grid item xs={12}>
+{/*                <Grid item xs={12}>
                     <Paper className={classes.infoText}>
                         Suche dir Anbieter in deiner Nähe <br/> & rette ein paar Möhren.
                     </Paper>
-                </Grid>
+                </Grid>*/}
 
                 <SearchBar/>
 
                 {/*Maps Ausschnitt*/}
                 <Grid item xs={12}>
-                    <Paper className={classes.mapsImage}>
+                    {/*                    <Paper className={classes.mapsImage}>
                         <img src="images/mapsImage.png" alt="mapsImage-logo"/>
-                    </Paper>
+                    </Paper>*/}
+                    <GoogleMaps/>
                 </Grid>
 
 
@@ -132,7 +134,7 @@ export default function Apfel() {
                 <Typography
                     component="div"
                     text="Hello"
-                    style={{ backgroundColor: 'none', height: '5vh', marginTop: '1.1rem', }}
+                    style={{ backgroundColor: 'none', height: '5vh', marginTop: '0.4rem', }}
                 />
 
             </Grid>
