@@ -2,7 +2,17 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import {Link} from "react-router-dom";
 import SvgIcon from "@material-ui/core/SvgIcon";
+import {makeStyles} from "@material-ui/core/styles";
 
+const useStyles = makeStyles((theme) => ({
+
+    homeIcon: {
+        marginTop: '-1.9rem',
+        opacity: '90%',
+        marginLeft: '0.em',
+    },
+
+}));
 
 function HomeIcon(props) {
     return (
@@ -12,13 +22,14 @@ function HomeIcon(props) {
     );
 }
 
-function HomeButton({homeButtonLink, homeButtonName, homeButtonIcon}) {
+function HomeButton({homeButtonLink}) {
+    const classes = useStyles();
 
     return(
 
         <Grid item xs={6}>
             <Link to={homeButtonLink}>
-                <div className={homeButtonName}>
+                <div className={classes.homeIcon}>
                     <HomeIcon fontSize="large" color="primary"/>
                 </div>
             </Link>

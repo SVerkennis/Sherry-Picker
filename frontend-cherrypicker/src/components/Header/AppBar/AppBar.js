@@ -10,6 +10,10 @@ import DropDownItemObst from "./DropDownItemObst";
 import DropDownItemGemuese from "./DropDownItemGemuese";
 import DropDownItemRegistrieren from "./DropDownItemRegistrieren";
 import DropDownItemLogin from "./DropDownItemLogin";
+import TextField from "@material-ui/core/TextField";
+import InputAdornment from '@material-ui/core/InputAdornment';
+import App from "../../../App";
+import ReactDOM from "react-dom"
 
 const useStyles = makeStyles((theme) => ({
 
@@ -133,8 +137,24 @@ export default function ProminentAppBar() {
 
                         <Grid item xs={2}>
                             <div>
-                                <SearchIcon className={classes.searchIcon}/>
+                                <SearchIcon
+                                    className={classes.searchIcon}
+                                />
                             </div>
+{/*                            <div className="App">
+                            <TextField
+                                id="standard-bare"
+                                defaultValue="suche"
+                                margin="normal"
+                                InputProps={{
+                                    endAdornment: (
+                                      <InputAdornment position="start">
+                                          <SearchIcon/>
+                                      </InputAdornment>
+                                    )
+                                }}
+                            />
+                            </div>*/}
                         </Grid>
 
 

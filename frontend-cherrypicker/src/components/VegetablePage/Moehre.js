@@ -84,16 +84,6 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: '3em',
     },
 
-    backIcon: {
-        marginTop: '-1.9rem',
-        marginLeft: '8.7em',
-        opacity: '90%',
-    },
-    homeIcon: {
-        marginTop: '-1.9rem',
-        opacity: '90%',
-        marginLeft: '0.em',
-    },
 
 }));
 
@@ -106,12 +96,14 @@ export default function Apfel() {
         <div className={classes.root}>
 
             <Grid container spacing={3}>
+
                 <Grid item xs={12}>
                     <Paper className={classes.Headline}>MÖHRE</Paper>
                 </Grid>
+
                 <Grid item xs={12}>
                     <Paper className={classes.infoText}>
-                        Suche dir Anbieter in deiner Nähe & rette ein paar Möhren.
+                        Suche dir Anbieter in deiner Nähe <br/> & rette ein paar Möhren.
                     </Paper>
                 </Grid>
 
@@ -131,18 +123,17 @@ export default function Apfel() {
 
                 <DoubleBackArrow
                     doubleArrowLink="/vegetables"
-                    doubleArrowName={classes.backIcon}
                 />
 
                 <HomeButton
                     homeButtonLink="/landing"
-                    homeButtonName={classes.homeIcon}
                 />
 
                 <Typography
                     component="div"
                     text="Hello"
-                    style={{ backgroundColor: 'none', height: '5vh', marginTop: '1.1rem', }} />
+                    style={{ backgroundColor: 'none', height: '5vh', marginTop: '1.1rem', }}
+                />
 
             </Grid>
         </div>

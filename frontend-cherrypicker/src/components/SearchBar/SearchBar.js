@@ -8,9 +8,9 @@ import {makeStyles} from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
 
     appBar: {
-        marginRight: '5em',
+        marginRight: '5.5em',
         marginTop: '16.5rem',
-        maxWidth: '15em',
+        maxWidth: '14em',
         maxHeight: '1.7rem',
         borderRadius: '14px',
     },
