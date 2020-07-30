@@ -1,8 +1,8 @@
 import React from "react";
 import {GoogleMap, useLoadScript} from "@react-google-maps/api";
 import MapStyles from "../GoogleMaps/MapStyles"
-import usePlacesAutocomplete from "use-places-autocomplete";
-import {Combobox, ComboboxInput} from "@reach/combobox";
+import usePlacesAutocomplete, { getGeocode, getLatLng,} from "use-places-autocomplete";
+import {Combobox, ComboboxInput, ComboboxPopover, ComboboxOption} from "@reach/combobox";
 import {makeStyles} from "@material-ui/core/styles";
 
 
@@ -16,8 +16,8 @@ const useStyles = makeStyles((theme) => ({
         height: '1.5rem',
         border: 'none',
         marginBottom: '0.5rem',
+        zIndex: '10',
     }
-
 }));
 
 const libraries = ["places"]
@@ -41,39 +41,56 @@ const options = {
     styles: MapStyles,
     disableDefaultUI: true,
     zoomControl: true,
-}
+};
 
 
 export default function GoogleMaps() {
-
 
 const {isLoaded, loadError} = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
     libraries,
 });
 
+    const mapRef = React.useRef();
+    const onMapLoad = React.useCallback((map) => {
+        mapRef.current = map;
+    }, []);
+
+    const panTo = React.useCallback(({ lat, lng }) => {
+        mapRef.current.panTo({ lat, lng });
+        mapRef.current.setZoom(14);
+    }, []);
+
     if (loadError) return "Error loading maps";
     if (!isLoaded) return "Loading Maps";
 
+
     return(
-<div>
-            <Search/>
+        <div>
+
+            <Search panTo={ panTo }/>
+
             <GoogleMap
+                id="map"
                 mapContainerStyle={mapContainerStyle}
                 zoom={13}
                 center={center}
                 options={options}
+                onLoad={onMapLoad}
             />
-</div>
-    )
+
+        </div>
+    );
 }
 
 
-function Search() {
+function Search({ panTo }) {
+    const classes = useStyles();
+
     const {
         ready, value,
         suggestions: {status, data},
-        setValue, clearSuggestion,
+        setValue, clearSuggestions,
     } = usePlacesAutocomplete({
         requestOptions: {
             location: {lat: () => 51.227656, lng: () => 6.765940},
@@ -81,12 +98,22 @@ function Search() {
         },
     });
 
-    const classes = useStyles();
 
     return (
         <div className={classes.searchBox}>
-        <Combobox onSelect={(address) => {
-            console.log(address);
+
+        <Combobox
+            onSelect={ async(address) => {
+                setValue(address, false);
+                clearSuggestions();
+
+            try {
+                const results = await getGeocode({ address });
+                const { lat, lng } = await getLatLng(results[0]);
+                panTo({ lat, lng });
+            } catch (error) {
+                console.log("error!")
+            }
         }}
         >
             <ComboboxInput
@@ -98,7 +125,13 @@ function Search() {
                 disabled={!ready}
                 placeholder="Wo willst du suchen?"
             />
+            <ComboboxPopover>
+                {status === "OK" && data.map(({id, description}) => (
+                    <ComboboxOption key={id} value={description} />
+                ))}
+            </ComboboxPopover>
         </Combobox>
+
         </div>
     );
 }
