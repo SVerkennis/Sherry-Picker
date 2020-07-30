@@ -12,11 +12,13 @@ const useStyles = makeStyles((theme) => ({
 },
     searchStyle: {
         borderRadius: '10px',
-        width: '19.3em',
+        width: '18.6em',
         height: '1.5rem',
         border: 'none',
         marginBottom: '0.5rem',
+        marginLeft: '',
         zIndex: '10',
+        paddingLeft: '1em',
     }
 }));
 
@@ -58,7 +60,7 @@ const {isLoaded, loadError} = useLoadScript({
 
     const panTo = React.useCallback(({ lat, lng }) => {
         mapRef.current.panTo({ lat, lng });
-        mapRef.current.setZoom(14);
+        mapRef.current.setZoom(12);
     }, []);
 
     if (loadError) return "Error loading maps";
@@ -123,7 +125,7 @@ function Search({ panTo }) {
                     setValue(e.target.value);
                 }}
                 disabled={!ready}
-                placeholder="Wo willst du suchen?"
+                placeholder="Wo möchtest du suchen?"
             />
             <ComboboxPopover>
                 {status === "OK" && data.map(({id, description}) => (

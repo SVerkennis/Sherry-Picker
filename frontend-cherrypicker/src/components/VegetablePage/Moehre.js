@@ -102,17 +102,12 @@ export default function Apfel() {
                     <Paper className={classes.Headline}>MÖHRE</Paper>
                 </Grid>
 
-{/*                <Grid item xs={12}>
-                    <Paper className={classes.infoText}>
-                        Suche dir Anbieter in deiner Nähe <br/> & rette ein paar Möhren.
-                    </Paper>
-                </Grid>*/}
 
-                <SearchBar/>
+{/*                <SearchBar/>*/}
 
                 {/*Maps Ausschnitt*/}
                 <Grid item xs={12}>
-                    {/*                    <Paper className={classes.mapsImage}>
+{/*                    <Paper className={classes.mapsImage}>
                         <img src="images/mapsImage.png" alt="mapsImage-logo"/>
                     </Paper>*/}
                     <GoogleMaps/>

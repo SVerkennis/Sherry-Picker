@@ -14,10 +14,10 @@ function AdressOutput({adressOutputName}) {
             <List className={adressOutputName}>
                 <ListItem alignItems="flex-start">
                     <ListItemAvatar>
-                        <Avatar alt="Paul Hildemann" src="images/paul.png"/>
+                        <Avatar alt="Tamai Hildemann" src="images/tamai.png"/>
                     </ListItemAvatar>
                     <ListItemText
-                        primary="Paul Hildemann"
+                        primary="Tamai Hildemann"
                         secondary={
                             <React.Fragment>
                                 {' 0208 34 4389 43 '}
