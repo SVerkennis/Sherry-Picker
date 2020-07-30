@@ -1,15 +1,30 @@
 import React from "react";
 import {GoogleMap, useLoadScript} from "@react-google-maps/api";
 import MapStyles from "../GoogleMaps/MapStyles"
-// import usePlacesAutocomplete, {} from "use-places-autocomplete";
-// import {Combobox, ComboboxInput} from "@reach/combobox";
+import usePlacesAutocomplete from "use-places-autocomplete";
+import {Combobox, ComboboxInput} from "@reach/combobox";
+import {makeStyles} from "@material-ui/core/styles";
 
+
+const useStyles = makeStyles((theme) => ({
+    searchBox: {
+        marginLeft: '2em',
+},
+    searchStyle: {
+        borderRadius: '10px',
+        width: '19.3em',
+        height: '1.5rem',
+        border: 'none',
+        marginBottom: '0.5rem',
+    }
+
+}));
 
 const libraries = ["places"]
 
 const mapContainerStyle = {
     width: '70vw',
-    minHeight: '240px',
+    minHeight: '230px',
     marginLeft: '2em',
     marginTop: '0.5rem',
     marginBottom: '2rem',
@@ -42,7 +57,7 @@ const {isLoaded, loadError} = useLoadScript({
 
     return(
 <div>
-{/*            <Search/>*/}
+            <Search/>
             <GoogleMap
                 mapContainerStyle={mapContainerStyle}
                 zoom={13}
@@ -53,7 +68,7 @@ const {isLoaded, loadError} = useLoadScript({
     )
 }
 
-/*
+
 function Search() {
     const {
         ready, value,
@@ -61,17 +76,21 @@ function Search() {
         setValue, clearSuggestion,
     } = usePlacesAutocomplete({
         requestOptions: {
-            location: {lat: () => 50.937531, lng: () => 6.960279},
+            location: {lat: () => 51.227656, lng: () => 6.765940},
             radius: 200 * 1000,
         },
     });
 
+    const classes = useStyles();
+
     return (
+        <div className={classes.searchBox}>
         <Combobox onSelect={(address) => {
             console.log(address);
         }}
         >
             <ComboboxInput
+                className={classes.searchStyle}
                 value={value}
                 onChange={(e) => {
                     setValue(e.target.value);
@@ -80,5 +99,6 @@ function Search() {
                 placeholder="Wo willst du suchen?"
             />
         </Combobox>
+        </div>
     );
-}*/
+}

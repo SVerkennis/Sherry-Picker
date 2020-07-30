@@ -98,13 +98,9 @@ export default function Apfel() {
                 <Grid item xs={12}>
                     <Paper className={classes.Headline}>APFEL</Paper>
                 </Grid>
-{/*                <Grid item xs={12}>
-                    <Paper className={classes.infoText}>
-                        Suche dir Anbieter in deiner Nähe <br/> & rette ein paar Äpfel.
-                    </Paper>
-                </Grid>*/}
 
-                <SearchBar/>
+
+ {/*               <SearchBar/>*/}
 
                 {/*Maps Ausschnitt*/}
                 <Grid item xs={12}>
