@@ -3,24 +3,11 @@ import {makeStyles} from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import myTheme from "../../styling/muiTheme";
-// import AppBar from "@material-ui/core/AppBar";
-// import Toolbar from "@material-ui/core/Toolbar";
-// import InputBase from "@material-ui/core/InputBase";
-// import List from '@material-ui/core/List';
-// import ListItem from '@material-ui/core/ListItem';
-// import ListItemText from '@material-ui/core/ListItemText';
-// import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-// import Avatar from '@material-ui/core/Avatar';
-// import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-// import SvgIcon from "@material-ui/core/SvgIcon";
-// import {Link} from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
 import DoubleBackArrow from "../backArrows/doubleBackArrow"
-import AdressOutput from "../AdressOutput/AdressOutput";
 import HomeButton from "../homeButtons/HomeButton";
-import SearchBar from "../SearchBar/SearchBar";
 import GoogleMaps from "../GoogleMaps/GoogleMaps";
-
+import AddressOutput from "../AdressOutput/AdressOutput";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -44,46 +31,6 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: 'none',
     },
 
-    infoText: {
-        color: myTheme.palette.secondary.contrastText,
-        fontFamily: 'Lato-Regular, sans-serif',
-        lineHeight: '22px',
-        fontSize: '15px',
-        marginLeft: '3em',
-        marginRight: '3em',
-        marginTop: '-0.8rem',
-        marginBottom: '-10px',
-        background: 'none',
-        boxShadow: 'none',
-    },
-
-    // just the search bar
-    grow: {
-        flexGrow: 1,
-    },
-/*    mapsImage: {
-        marginLeft: '0.9em',
-        background: 'none',
-        boxShadow: 'none',
-        marginTop: '-0.6rem',
-    },*/
-
-    // NEW MUI component
-    profil: {
-        color: myTheme.palette.secondary.contrastText,
-        background: 'none',
-        boxShadow: 'none',
-        marginTop: '-4rem',
-        marginLeft: '3em',
-    },
-    profilTamai: {
-        color: myTheme.palette.secondary.contrastText,
-        background: 'none',
-        boxShadow: 'none',
-        marginTop: '-1rem',
-        marginLeft: '3em',
-    },
-
 }));
 
 export default function Apfel() {
@@ -91,26 +38,19 @@ export default function Apfel() {
 
     return(
 
-            // Headline und infoText
         <div className={classes.root}>
 
             <Grid container spacing={3}>
+
                 <Grid item xs={12}>
                     <Paper className={classes.Headline}>APFEL</Paper>
                 </Grid>
 
-
- {/*               <SearchBar/>*/}
-
-                {/*Maps Ausschnitt*/}
                 <Grid item xs={12}>
-{/*                    <Paper className={classes.mapsImage}>
-                        <img src="images/mapsImage.png" alt="mapsImage-logo"/>
-                    </Paper>*/}
                 <GoogleMaps/>
                 </Grid>
 
-                <AdressOutput adressOutputName={classes.profil}/>
+                <AddressOutput/>
 
                 <DoubleBackArrow doubleArrowLink="/fruits"/>
 

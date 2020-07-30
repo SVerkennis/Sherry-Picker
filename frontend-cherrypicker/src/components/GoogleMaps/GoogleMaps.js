@@ -4,6 +4,7 @@ import MapStyles from "../GoogleMaps/MapStyles"
 import usePlacesAutocomplete, { getGeocode, getLatLng,} from "use-places-autocomplete";
 import {Combobox, ComboboxInput, ComboboxPopover, ComboboxOption} from "@reach/combobox";
 import {makeStyles} from "@material-ui/core/styles";
+import myTheme from "../../styling/muiTheme";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -12,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
 },
     searchStyle: {
         borderRadius: '10px',
-        width: '18.6em',
+        minWidth: '18.6em',
         height: '1.5rem',
         border: 'none',
         marginBottom: '0.5rem',
@@ -26,10 +27,10 @@ const libraries = ["places"]
 
 const mapContainerStyle = {
     width: '70vw',
-    minHeight: '230px',
+    minHeight: '220px',
     marginLeft: '2em',
     marginTop: '0.5rem',
-    marginBottom: '2rem',
+    marginBottom: '2.7rem',
     borderRadius: '10px',
     boxShadow: '14px 13px 24px -16px rgba(113,135,153,1)',
 };
