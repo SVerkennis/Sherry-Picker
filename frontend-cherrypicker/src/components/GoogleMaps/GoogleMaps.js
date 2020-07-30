@@ -14,11 +14,12 @@ const mapContainerStyle = {
     marginTop: '0.5rem',
     marginBottom: '2rem',
     borderRadius: '10px',
+    boxShadow: '14px 13px 24px -16px rgba(113,135,153,1)',
 };
 
 const center = {
-    lat: 51.427215,
-    lng: 6.881186,
+    lat: 51.227656,
+    lng: 6.765940,
 };
 
 const options = {
