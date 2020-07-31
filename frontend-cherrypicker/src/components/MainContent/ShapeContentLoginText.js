@@ -31,7 +31,7 @@ function ShapeContentLoginText() {
     return(
         <Grid item xs={12}>
             <Paper className={classes.loginText}>
-                Log dich jetzt ein.
+                Logg dich jetzt ein.
                 <br/>
                 Oder registrier dich
                 <Link to="/register" className={classes.registerClick}>
