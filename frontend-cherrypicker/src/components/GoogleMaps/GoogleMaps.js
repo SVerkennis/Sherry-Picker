@@ -10,7 +10,7 @@ import myTheme from "../../styling/muiTheme";
 const useStyles = makeStyles((theme) => ({
     searchBox: {
         marginLeft: '2em',
-},
+    },
     searchStyle: {
         borderRadius: '10px',
         minWidth: '18.6em',
@@ -20,8 +20,18 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: '',
         zIndex: '10',
         paddingLeft: '1em',
-    }
+        color: myTheme.palette.primary.contrastText,
+    },
+    searchInput: {
+        backgroundColor: 'white',
+        listStyle: 'none',
+        borderRadius: '10px',
+        marginTop: '0.5rem',
+        padding: '0.5em 0.5em',
+        color: myTheme.palette.primary.contrastText,
+    },
 }));
+
 
 const libraries = ["places"]
 
@@ -128,7 +138,9 @@ function Search({ panTo }) {
                 disabled={!ready}
                 placeholder="Wo möchtest du suchen?"
             />
-            <ComboboxPopover>
+            <ComboboxPopover
+                className={classes.searchInput}
+            >
                 {status === "OK" && data.map(({id, description}) => (
                     <ComboboxOption key={id} value={description} />
                 ))}
@@ -138,3 +150,4 @@ function Search({ panTo }) {
         </div>
     );
 }
+
