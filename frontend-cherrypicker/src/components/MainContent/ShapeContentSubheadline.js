@@ -25,7 +25,7 @@ function ShapeContentSubheadline() {
 
         <Grid item xs={12}>
             <Paper className={classes.SubHeadline}>
-                Teile dein selbstangebautest &<br/>  überschüssiges Obst und Gemüse.
+                Teile dein selbstangebautes &<br/>  überschüssiges Obst und Gemüse.
             </Paper>
         </Grid>
 
