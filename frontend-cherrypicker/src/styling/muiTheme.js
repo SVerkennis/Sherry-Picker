@@ -16,10 +16,6 @@ const myTheme = createMuiTheme ({
             dark: '#00B388',
             contrastText: '#4C8360',
         },
-        tertiary: {
-            //for later
-            main: 'white',
-        },
         error: {
             main: '#FFFFFF',
             // light wird noch nicht genutzt
